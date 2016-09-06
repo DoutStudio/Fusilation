@@ -4,6 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Turnt : MonoBehaviour
 {
+    //adding commment for new commit
 
     public float torque = 50f;
 
@@ -50,5 +51,6 @@ public class Turnt : MonoBehaviour
         transform.localRotation = defRot;
         transform.localScale = defScale;
         body.velocity = Vector3.zero;
+        body.angularVelocity = 0f;
     }
 }
