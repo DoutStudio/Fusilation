@@ -17,7 +17,6 @@ public class Flicker : MonoBehaviour
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
-        StartCoroutine(Fade());
         flickerSpeed = Random.Range(minimumFlickerSpeed, maximumFlickerSpeed);
     }
 

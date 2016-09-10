@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starCount: 10000
-  spawnAreaRadius: 100
+  spawnAreaRadius: 400
   minZ: 20
   maxZ: 80
   starPrefab: {fileID: 1000013823710796, guid: b5c37981959b1484196104efce97b41f, type: 2}
@@ -300,9 +300,9 @@ MonoBehaviour:
   starSpawnCenter: {x: 0, y: 0, z: 0}
   colors:
   - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0.09019608, b: 1, a: 0}
-  DarkenVariant: 0.25
+  - {r: 1, g: 0.375, b: 0.375, a: 0}
+  - {r: 0.375, g: 0.43137258, b: 1, a: 0}
+  DarkenVariant: 0.85
 --- !u!4 &1318499441
 Transform:
   m_ObjectHideFlags: 0

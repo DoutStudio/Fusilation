@@ -28,13 +28,13 @@ public class StarSpawnerControl : MonoBehaviour
         for (int i = 0; i < starCount; i++)
         {
             Vector2 spawnZone = Random.insideUnitCircle * spawnAreaRadius;
-            GameObject star = (GameObject)Instantiate(starPrefab, 
+            GameObject star = (GameObject)Instantiate(starPrefab,
                 new Vector3(spawnZone.x, spawnZone.y, Random.Range(minZ, maxZ)),
                 Quaternion.identity);
             Flicker starScript = star.GetComponent<Flicker>();
 
-            starScript.startColor = Color.Lerp(colors[Random.Range(0, colors.Length)], Color.black, Random.Range(0, DarkenVariant));
-            starScript.endColor = Color.Lerp(starScript.startColor, Color.black, Random.Range(0f, 1f));
+            starScript.startColor = Color.Lerp(colors[Random.Range(0, colors.Length)], Color.white, Random.Range(0, DarkenVariant));
+            starScript.endColor = Color.Lerp(starScript.startColor, Color.white, Random.Range(0f, 1f));
             star.transform.SetParent(starParent.transform);
         }
     }
