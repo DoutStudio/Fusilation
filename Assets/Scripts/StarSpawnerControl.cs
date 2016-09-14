@@ -16,7 +16,7 @@ public class StarSpawnerControl : MonoBehaviour
     [ColorUsage(false)]
     public Color[] colors;
     [Range(0f, 1f)]
-    public float DarkenVariant = 0;
+    public float BrightnessVariant = 0;
 
     // Use this for initialization
     void Start()
@@ -33,7 +33,7 @@ public class StarSpawnerControl : MonoBehaviour
                 Quaternion.identity);
             Flicker starScript = star.GetComponent<Flicker>();
 
-            starScript.startColor = Color.Lerp(colors[Random.Range(0, colors.Length)], Color.white, Random.Range(0, DarkenVariant));
+            starScript.startColor = Color.Lerp(colors[Random.Range(0, colors.Length)], Color.white, Random.Range(0, BrightnessVariant));
             starScript.endColor = Color.Lerp(starScript.startColor, Color.white, Random.Range(0f, 1f));
             star.transform.SetParent(starParent.transform);
         }
