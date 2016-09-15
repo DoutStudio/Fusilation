@@ -13,9 +13,9 @@ public class buttonChange : MonoBehaviour {
 	void Update () {
 	
 	}
-    public void SwitchScreen(string sceneName)
+    public void SwitchScreen(int screenNumber)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(screenNumber);
     }
 
 }
