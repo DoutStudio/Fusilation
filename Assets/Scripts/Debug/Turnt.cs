@@ -6,7 +6,7 @@ public class Turnt : MonoBehaviour
 {
     //adding commment for new commit
 
-    public float torque = 50f;
+    public float Torque = 50f;
 
     private Vector3 defPos;
     private Quaternion defRot;
@@ -33,11 +33,11 @@ public class Turnt : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            body.AddTorque(torque * Time.fixedDeltaTime);
+            body.AddTorque(Torque * Time.fixedDeltaTime);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            body.AddTorque(-torque * Time.fixedDeltaTime);
+            body.AddTorque(-Torque * Time.fixedDeltaTime);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {

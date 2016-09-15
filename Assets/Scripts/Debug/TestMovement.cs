@@ -4,8 +4,8 @@ using System.Collections;
 public class TestMovement : MonoBehaviour
 {
 
-    public float speed = 0.05f;
-    public float waitTime = 5;
+    public float Speed = 0.05f;
+    public float WaitTime = 5;
     bool flip = true;
     float timer = 0f;
 
@@ -20,11 +20,11 @@ public class TestMovement : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= waitTime)
+        if (timer >= WaitTime)
         {
             timer = 0f;
             flip = !flip;
         }
-        transform.position += transform.up * (flip ? speed : -speed);
+        transform.position += transform.up * (flip ? Speed : -Speed);
     }
 }

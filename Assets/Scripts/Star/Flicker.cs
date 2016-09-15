@@ -5,11 +5,11 @@ using System.Collections;
 public class Flicker : MonoBehaviour
 {
 
-    public float minimumFlickerSpeed = 0.3f;
-    public float maximumFlickerSpeed = 1f;
+    public float MinimumFlickerSpeed = 1f;
+    public float MaximumFlickerSpeed = 3f;
     private float flickerSpeed;
-    public Color startColor = Color.white;
-    public Color endColor = Color.black;
+    public Color StartColor = Color.white;
+    public Color EndColor = Color.black;
     private SpriteRenderer render;
     private float elapsedTime = 0f;
 
@@ -17,7 +17,7 @@ public class Flicker : MonoBehaviour
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
-        flickerSpeed = Random.Range(minimumFlickerSpeed, maximumFlickerSpeed);
+        flickerSpeed = Random.Range(MinimumFlickerSpeed, MaximumFlickerSpeed);
     }
 
     IEnumerator Fade()
@@ -27,11 +27,11 @@ public class Flicker : MonoBehaviour
             if(elapsedTime >= flickerSpeed)
             {
                 elapsedTime -= flickerSpeed;
-                Color temp = startColor;
-                startColor = endColor;
-                endColor = temp;
+                Color temp = StartColor;
+                StartColor = EndColor;
+                EndColor = temp;
             }
-            render.color = Color.Lerp(startColor, endColor, elapsedTime / flickerSpeed);
+            render.color = Color.Lerp(StartColor, EndColor, elapsedTime / flickerSpeed);
             elapsedTime += 0.1f;
             yield return new WaitForSeconds(0.1f);
         }

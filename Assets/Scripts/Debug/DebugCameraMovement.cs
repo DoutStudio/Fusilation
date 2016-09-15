@@ -4,7 +4,7 @@ using System.Collections;
 public class DebugCameraMovement : MonoBehaviour
 {
 
-    public float speed = 1f;
+    public float Speed = 1f;
 
     // Use this for initialization
     void Start()
@@ -17,19 +17,19 @@ public class DebugCameraMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            transform.Translate(0, speed, 0);
+            transform.Translate(0, Speed, 0);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.Translate(0, -speed, 0);
+            transform.Translate(0, -Speed, 0);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(-speed, 0, 0);
+            transform.Translate(-Speed, 0, 0);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(speed, 0, 0);
+            transform.Translate(Speed, 0, 0);
         }
     }
 }
