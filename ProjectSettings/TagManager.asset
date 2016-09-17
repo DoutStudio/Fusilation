@@ -6,6 +6,9 @@ TagManager:
   tags:
   - AttackModuleListItem
   - LatchSlot
+  - Ship
+  - Turret
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Bullet
   - 
   - 
   - 
