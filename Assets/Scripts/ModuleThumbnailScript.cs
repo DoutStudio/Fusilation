@@ -1,20 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using System;
 
 public class ModuleThumbnailScript : MonoBehaviour ,
-    IDragHandler {
+    IPointerExitHandler
+{
 
     public GameObject shipModule;
-
-    public bool isHeld;
-
-
+    
 
 	// Use this for initialization
 	void Start () {
-        isHeld = false;
+        // check to see if the slot connector module is installed
+        if (shipModule.GetComponent<ConnectModuleScript>() == null)
+        {
+            shipModule.AddComponent<ConnectModuleScript>();
+        }
+        // check if the rigid body is added
+        if (shipModule.GetComponent<Rigidbody>() == null)
+        {
+            shipModule.AddComponent<Rigidbody>();
+            shipModule.GetComponent<Rigidbody>().useGravity = false;
+        }
+        // check if the module has a collider
+        if (shipModule.GetComponent<Collider>() == null)
+        {
+            shipModule.AddComponent<SphereCollider>();
+            shipModule.GetComponent<SphereCollider>().isTrigger = true;
+        }
+
+        // Set the name of the list item
+        Transform childTransform = transform.FindChild("ItemNameText");
+        childTransform.GetComponent<Text>().text = name;
+
     }
 	
 	// Update is called once per frame
@@ -24,16 +44,18 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
     public void SpawnModuleAtMousePosition()
     {
-        isHeld = false;
         Vector3 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mPos.z = 0;
-        Instantiate(shipModule, mPos, Quaternion.identity);
+        GameObject module = (GameObject) Instantiate(shipModule, mPos, Quaternion.identity);
+        module.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         Debug.Log("held is false");
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("draggin");
-        isHeld = true;
+        if (Input.GetMouseButton(0))
+        {
+            SpawnModuleAtMousePosition();
+        }
     }
 }

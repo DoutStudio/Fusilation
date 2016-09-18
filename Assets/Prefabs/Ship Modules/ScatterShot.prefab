@@ -246,7 +246,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
   m_Color: {r: 0.0015973647, g: 0.072413795, b: 0.072413795, a: 1}
@@ -279,7 +279,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
   m_Color: {r: 0.0015973647, g: 0.072413795, b: 0.072413795, a: 1}
@@ -312,7 +312,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
   m_Color: {r: 0.0015973647, g: 0.072413795, b: 0.072413795, a: 1}
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
   m_Color: {r: 0.0015973647, g: 0.072413795, b: 0.072413795, a: 1}
@@ -378,7 +378,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 252478099
+  m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
   m_Color: {r: 1, g: 0.007352948, b: 0, a: 1}
@@ -411,7 +411,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
   m_Color: {r: 0.0015973647, g: 0.072413795, b: 0.072413795, a: 1}
