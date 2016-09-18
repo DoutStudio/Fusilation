@@ -9,6 +9,7 @@ TagManager:
   - Ship
   - Turret
   - Bullet
+  - MovePoint
   layers:
   - Default
   - TransparentFX
