@@ -7,12 +7,11 @@ public class GunController : MonoBehaviour
     public GameObject Bullet;
     public GameObject BulletSpawner;
     public float FireRate = 1f;
-    float timer = 0f;
 
-    Rigidbody2D parentBody;
 
-    [Range(0f, 2f)]
     public float Power = 0.1f;
+    float timer = 0f;
+    Rigidbody2D parentBody;
 
     void Start()
     {
@@ -28,7 +27,7 @@ public class GunController : MonoBehaviour
             timer = 0f;
             GameObject newBullet = (GameObject)Instantiate(Bullet, BulletSpawner.transform.position, transform.rotation);
             Rigidbody2D bulletBody = newBullet.GetComponent<Rigidbody2D>();
-            if(parentBody)
+            if (parentBody)
             {
                 bulletBody.velocity = parentBody.velocity;
             }
