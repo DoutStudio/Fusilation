@@ -48,7 +48,12 @@ public class ConnectModuleScript : MonoBehaviour {
                 isOverSlot = false;
                 moduleTransform.position = currentHoveredSlot.transform.position;
                 currentHoveredSlot.SetActive(false);
-                Debug.Log("set");
+                //Debug.Log("set");
+            }
+            else
+            {
+                // if we are not over a slot then remove the module from existence
+                Destroy(moduleTransform.gameObject);
             }
         }
 	}
