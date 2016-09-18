@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - AttackModuleListItem
+  - LatchSlot
   - Ship
   - Turret
   - Bullet
@@ -49,4 +51,7 @@ TagManager:
     locked: 0
   - name: Ship
     uniqueID: 1625841697
+    locked: 0
+  - name: ShipPart
+    uniqueID: 3709775315
     locked: 0
