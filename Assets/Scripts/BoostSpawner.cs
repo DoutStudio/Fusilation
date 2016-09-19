@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// [Not in use]
+/// Spawns boost prefabs in a semi-random pattern
+/// </summary>
 public class BoostSpawner : MonoBehaviour
 {
 
@@ -10,7 +15,6 @@ public class BoostSpawner : MonoBehaviour
 
     GameObject boostParent;
 
-    // Use this for initialization
     void Start()
     {
         boostParent = GameObject.Find("BoostParent");

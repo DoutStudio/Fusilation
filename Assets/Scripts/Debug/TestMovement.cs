@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// Uses the physics body of an object to move to a set of points
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class TestMovement : MonoBehaviour
 {
@@ -12,7 +16,7 @@ public class TestMovement : MonoBehaviour
     private float lastSqrMag;
     private int curP = 0;
 
-    // Use this for initialization
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -21,7 +25,6 @@ public class TestMovement : MonoBehaviour
         desiredVelocity = directionalVector;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float sqrMag = (MovePoints[curP].transform.position - transform.position).sqrMagnitude;

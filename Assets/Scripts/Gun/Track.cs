@@ -1,18 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+
+/// <summary>
+/// Ryan Scopio
+/// Turns turret to track target
+/// Uses predecive firing to lead target
+/// </summary>
 [RequireComponent(typeof(GunController))]
 public class Track : MonoBehaviour
 {
 
-    public Transform Target;
+    public GameObject Target;
     public float TurnSpeed = 5;
-    public Transform interceptionPoint;
+    Vector3 interceptionPoint;
 
     Rigidbody2D targetBody;
     GunController gun;
     float bulletSpeed;
 
-    // Use this for initialization
     void Start()
     {
         targetBody = Target.GetComponent<Rigidbody2D>();
@@ -20,28 +25,25 @@ public class Track : MonoBehaviour
         bulletSpeed = gun.Bullet.GetComponent<Rigidbody2D>().velocity.magnitude;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Target)
         { // enemy alive and at sight: aim at him!
 
-            //use target velocity once ship has regular movement
+            //Calculate intercept point
             Vector3 IC = CalculateInterceptCourse(targetBody.position, targetBody.velocity, transform.position, gun.Power);
             if (IC != Vector3.zero)
             {
                 IC.Normalize();
                 float interceptionTime = FindClosestPointOfApproach(targetBody.position, targetBody.velocity, transform.position, IC * gun.Power);
-                interceptionPoint.position = targetBody.position + targetBody.velocity * interceptionTime;
+                interceptionPoint = targetBody.position + targetBody.velocity * interceptionTime;
             }
 
-            Transform aimTarget = interceptionPoint;
-            //transform.LookAt(aimTarget, transform.up);
-
-
-            Quaternion rot = Quaternion.FromToRotation(Vector3.up, aimTarget.position);
+            //Slerp turn isntead of snap
+            Vector3 aimTarget = interceptionPoint;
+            Quaternion rot = Quaternion.FromToRotation(Vector3.up, aimTarget);
             transform.rotation = Quaternion.Slerp(transform.rotation, rot, TurnSpeed * Time.deltaTime);
-            
+
 
             // you may shoot here
         }
@@ -52,6 +54,14 @@ public class Track : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// This makes children cry at night
+    /// </summary>
+    /// <param name="aTargetPos"></param>
+    /// <param name="aTargetSpeed"></param>
+    /// <param name="aInterceptorPos"></param>
+    /// <param name="aInterceptorSpeed"></param>
+    /// <returns></returns>
     public static Vector3 CalculateInterceptCourse(Vector3 aTargetPos, Vector3 aTargetSpeed, Vector3 aInterceptorPos, float aInterceptorSpeed)
     {
         Vector3 targetDir = aTargetPos - aInterceptorPos;

@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// Fades objects sprite renderer back and forth between two colors
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class Flicker : MonoBehaviour
 {
-
     public float MinimumFlickerSpeed = 1f;
     public float MaximumFlickerSpeed = 3f;
     private float flickerSpeed;
@@ -13,7 +16,6 @@ public class Flicker : MonoBehaviour
     private SpriteRenderer render;
     private float elapsedTime = 0f;
 
-    // Use this for initialization
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
@@ -22,9 +24,9 @@ public class Flicker : MonoBehaviour
 
     IEnumerator Fade()
     {
-        while(true)
+        while (true)
         {
-            if(elapsedTime >= flickerSpeed)
+            if (elapsedTime >= flickerSpeed)
             {
                 elapsedTime -= flickerSpeed;
                 Color temp = StartColor;

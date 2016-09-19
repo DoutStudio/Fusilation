@@ -6,13 +6,10 @@ public class DebugCameraMovement : MonoBehaviour
 
     public float Speed = 1f;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    /// <summary>
+    /// Ryan Scopio
+    /// Translate camera with arrow keys
+    /// </summary>
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))

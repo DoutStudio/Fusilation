@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// Fires a bullet from this object at a defined fire rate
+/// </summary>
+[RequireComponent(typeof(Rigidbody2D))]
 public class GunController : MonoBehaviour
 {
-
     public GameObject Bullet;
     public GameObject BulletSpawner;
     public float FireRate = 1f;
-
 
     public float Power = 0.1f;
     float timer = 0f;
@@ -18,7 +21,6 @@ public class GunController : MonoBehaviour
         parentBody = transform.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;

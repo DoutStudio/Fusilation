@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// [Not in use] Fades objects sprite rendere and deletes it upon invisibility
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
-public class Fade : MonoBehaviour {
+public class Fade : MonoBehaviour
+{
 
     public float FadeRate = 1f;
     public bool QuickEnd = false;
