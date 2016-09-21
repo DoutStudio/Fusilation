@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// Defines object damage and interaction with other objects health
+/// </summary>
 [RequireComponent(typeof(PolygonCollider2D))]
 public class BulletController : MonoBehaviour
 {
 
     public float Damage = 1;
 
-    // Use this for initialization
     void Start()
     {
         GameObject parent = GameObject.Find("ProjectileParent");

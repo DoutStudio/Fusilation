@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// [Not in use]
+/// Shrinks object over time
+/// Deletes item when too small
+/// </summary>
 public class Shrink : MonoBehaviour
 {
 
     public float ShrinkRate = 1;
 
-    // Use this for initialization
     void Start()
     {
         StartCoroutine(ShrinkRoutine());

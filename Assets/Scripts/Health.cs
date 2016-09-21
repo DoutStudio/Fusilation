@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// [Not in use]
+/// Dictates health of an object
+/// Alpha value correlates to health %
+/// Regenative health an option
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class Health : MonoBehaviour
 {
@@ -12,7 +19,6 @@ public class Health : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
-    // Use this for initialization
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,7 +29,6 @@ public class Health : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         spriteRenderer.color = new Color(spriteRenderer.color.a, spriteRenderer.color.g, spriteRenderer.color.b, CurrentHealth / MaxHealth);

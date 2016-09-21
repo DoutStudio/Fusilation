@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// [Remove on Release] Useless script for testing purposes
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class Turnt : MonoBehaviour
 {

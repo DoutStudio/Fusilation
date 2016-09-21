@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Ryan Scopio
+/// Spawns a # stars within a certain area
+/// Can also overwrite the Flicker script colors
+/// </summary>
 public class StarSpawnerControl : MonoBehaviour
 {
 
@@ -18,7 +23,6 @@ public class StarSpawnerControl : MonoBehaviour
     [Range(0f, 1f)]
     public float BrightnessVariant = 0;
 
-    // Use this for initialization
     void Start()
     {
         if (Colors.Length == 0)

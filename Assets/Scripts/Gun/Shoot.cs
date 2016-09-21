@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-
+/// <summary>
+/// Ryan Scopio
+/// [Not in use/better script created]Simple firing of projectile
+/// </summary>
+[RequireComponent(typeof(Rigidbody2D))]
 public class Shoot : MonoBehaviour
 {
-
     public GameObject Projectile;
     public GameObject Spawner;
     public float FireRate = 1f;
     float timer;
     Rigidbody2D parentBody;
 
-    // Use this for initialization
     void Start()
     {
         parentBody = transform.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
