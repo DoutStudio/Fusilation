@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
+using UnityEditor;
 
 public class ModuleThumbnailScript : MonoBehaviour ,
     IPointerExitHandler
@@ -33,8 +34,13 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
         // Set the name of the list item
         Transform childTransform = transform.FindChild("ItemNameText");
-        childTransform.GetComponent<Text>().text = name;
+        childTransform.GetComponent<Text>().text = shipModule.name;
 
+        // Set thumbnail image
+        Texture2D texture = AssetPreview.GetAssetPreview(shipModule);
+        Transform imageTransform = transform.FindChild("ItemThumbnailImage");
+        Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
+        imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
     }
 	
 	// Update is called once per frame
