@@ -5247,7 +5247,7 @@ Prefab:
         type: 2}
       propertyPath: shipModule
       value: 
-      objectReference: {fileID: 1000010483315832, guid: 228fbf0a70f2bc44cb8ac2bfe25e3e0b,
+      objectReference: {fileID: 1000010483315832, guid: 34a092f6858686049a8a41bfd6fdae61,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b1f936ee660534498fa8a6cc9602d80, type: 2}
