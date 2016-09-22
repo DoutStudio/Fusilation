@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Basic Turret
+  description: Max 5 Damage, Fires 5 shots, 1 Damage per shot
 --- !u!114 &114000013391476944
 MonoBehaviour:
   m_ObjectHideFlags: 1

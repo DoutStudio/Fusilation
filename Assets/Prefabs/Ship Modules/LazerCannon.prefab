@@ -51,6 +51,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012316993508}
+  - 114: {fileID: 114000012716597228}
   m_Layer: 0
   m_Name: LazerCannon
   m_TagString: Untagged
@@ -129,6 +130,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012316993508}
   m_RootOrder: 2
+--- !u!114 &114000012716597228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012800045484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Lazer Cannon
+  description: Max 6 Damage, Fires in a beam, Cannot miss
 --- !u!212 &212000010178733136
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipModule: {fileID: 0}
-  isHeld: 0
+  shipStatPanel: {fileID: 0}
 --- !u!114 &114000012249612508
 MonoBehaviour:
   m_ObjectHideFlags: 1

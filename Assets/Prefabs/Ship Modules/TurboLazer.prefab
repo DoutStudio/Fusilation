@@ -67,6 +67,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013767910154}
+  - 114: {fileID: 114000012725314756}
   m_Layer: 0
   m_Name: TurboLazer
   m_TagString: Untagged
@@ -249,6 +250,19 @@ Transform:
   - {fileID: 4000010632375170}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000012725314756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011052300276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: TurboLazer
+  description: Max 50 Damage, Takes 1 turn to charge, Cannot be dodged
 --- !u!212 &212000010527192772
 SpriteRenderer:
   m_ObjectHideFlags: 1

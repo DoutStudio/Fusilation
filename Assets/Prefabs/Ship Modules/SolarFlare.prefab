@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011658041314}
+  - 114: {fileID: 114000013080140638}
   m_Layer: 0
   m_Name: SolarFlare
   m_TagString: Untagged
@@ -99,6 +100,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011658041314}
   m_RootOrder: 1
+--- !u!114 &114000013080140638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011408367736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Solar Flare
+  description: Deals 10 Damage per turn, cannot be dodged
 --- !u!212 &212000011782549134
 SpriteRenderer:
   m_ObjectHideFlags: 1

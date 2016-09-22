@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013980136956}
+  - 114: {fileID: 114000011268746130}
   m_Layer: 0
   m_Name: cloak
   m_TagString: Untagged
@@ -69,6 +70,19 @@ Transform:
   - {fileID: 4000011415609556}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000011268746130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014166694166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Cloaking
+  description: 'Active Abilty: 10% of turn damage misses, cool down 10 turns'
 --- !u!212 &212000010752783830
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011097058108}
+  - 114: {fileID: 114000013820993572}
   m_Layer: 0
   m_Name: RoyalMissle
   m_TagString: Untagged
@@ -279,6 +280,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011097058108}
   m_RootOrder: 6
+--- !u!114 &114000013820993572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010984521362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Royal Homing Missles
+  description: Max 30 Damage, Fires 15 shots, 2 Damage per shot
 --- !u!212 &212000010034767138
 SpriteRenderer:
   m_ObjectHideFlags: 1

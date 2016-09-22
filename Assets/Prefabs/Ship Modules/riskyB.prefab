@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011966558056}
+  - 114: {fileID: 114000011271650538}
   m_Layer: 0
   m_Name: riskyB
   m_TagString: Untagged
@@ -99,6 +100,20 @@ Transform:
   - {fileID: 4000011561281102}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000011271650538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012667253640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Risky Business
+  description: Does No damage until user is below 25% health, Deals 25 Damage per
+    turn, cannot be dodged
 --- !u!212 &212000010409375528
 SpriteRenderer:
   m_ObjectHideFlags: 1

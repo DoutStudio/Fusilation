@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012870174072}
+  - 114: {fileID: 114000011336014878}
   m_Layer: 0
   m_Name: MediumTurret
   m_TagString: Untagged
@@ -129,6 +130,19 @@ Transform:
   - {fileID: 4000011428065900}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000011336014878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012571558200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Medium Turret
+  description: Max 10 Damage, Fires 10 shots, 1 Damage per shot
 --- !u!212 &212000011522181736
 SpriteRenderer:
   m_ObjectHideFlags: 1

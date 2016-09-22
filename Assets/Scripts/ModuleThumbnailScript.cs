@@ -6,14 +6,26 @@ using System;
 using UnityEditor;
 
 public class ModuleThumbnailScript : MonoBehaviour ,
-    IPointerExitHandler
+    IPointerExitHandler,
+    IPointerDownHandler,
+    IPointerUpHandler
 {
 
     public GameObject shipModule;
+
+    event EventHandler itemSelected;
+
+    public GameObject shipStatPanel; // all have a ref but whatevs
+
+    private bool downReset = true;
     
 
 	// Use this for initialization
 	void Start () {
+
+        // subscribe event
+        itemSelected += GameObject.Find("ShipStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+
         // check to see if the slot connector module is installed
         if (shipModule.GetComponent<ConnectModuleScript>() == null)
         {
@@ -45,7 +57,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 	
 	// Update is called once per frame
 	void Update () {
-
+        
     }
 
     public void SpawnModuleAtMousePosition()
@@ -63,5 +75,22 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         {
             SpawnModuleAtMousePosition();
         }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        EventHandler handler = itemSelected;
+        if (downReset && handler != null)
+        {
+            ItemSelectedArgs args = new ItemSelectedArgs();
+            args.gameObject = shipModule;
+            handler(this, args);
+            downReset = false;
+        }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        downReset = true;
     }
 }
