@@ -3,16 +3,29 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
+using UnityEditor;
 
 public class ModuleThumbnailScript : MonoBehaviour ,
-    IPointerExitHandler
+    IPointerExitHandler,
+    IPointerDownHandler,
+    IPointerUpHandler
 {
 
     public GameObject shipModule;
+
+    event EventHandler itemSelected;
+
+    public GameObject shipStatPanel; // all have a ref but whatevs
+
+    private bool downReset = true;
     
 
 	// Use this for initialization
 	void Start () {
+
+        // subscribe event
+        itemSelected += GameObject.Find("ShipStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+
         // check to see if the slot connector module is installed
         if (shipModule.GetComponent<ConnectModuleScript>() == null)
         {
@@ -33,13 +46,18 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
         // Set the name of the list item
         Transform childTransform = transform.FindChild("ItemNameText");
-        childTransform.GetComponent<Text>().text = name;
+        childTransform.GetComponent<Text>().text = shipModule.name;
 
+        // Set thumbnail image
+        Texture2D texture = AssetPreview.GetAssetPreview(shipModule);
+        Transform imageTransform = transform.FindChild("ItemThumbnailImage");
+        Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
+        imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        
     }
 
     public void SpawnModuleAtMousePosition()
@@ -57,5 +75,22 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         {
             SpawnModuleAtMousePosition();
         }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        EventHandler handler = itemSelected;
+        if (downReset && handler != null)
+        {
+            ItemSelectedArgs args = new ItemSelectedArgs();
+            args.gameObject = shipModule;
+            handler(this, args);
+            downReset = false;
+        }
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        downReset = true;
     }
 }

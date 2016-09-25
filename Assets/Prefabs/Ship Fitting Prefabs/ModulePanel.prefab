@@ -122,7 +122,6 @@ GameObject:
   - 222: {fileID: 222000013960430040}
   - 114: {fileID: 114000010716642792}
   - 114: {fileID: 114000010132534442}
-  - 114: {fileID: 114000011337118112}
   m_Layer: 5
   m_Name: ModulePanel
   m_TagString: Untagged
@@ -324,17 +323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
---- !u!114 &114000011337118112
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012635096058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e47ae5766a8834ead9156b57e73ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012246505984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -492,7 +480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipModule: {fileID: 1000013141783824, guid: 15c16e878b4fd2c4dbdd61942de4db9e, type: 2}
-  isHeld: 0
 --- !u!114 &114000013581491638
 MonoBehaviour:
   m_ObjectHideFlags: 1
