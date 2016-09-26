@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1717922791}
-  TurnSpeed: 100
+  TurnSpeed: 1000
 --- !u!114 &1084349460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,8 +593,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 1000012848553818, guid: d21918bd6e2baee4fafe125c7c7a9783, type: 2}
   BulletSpawner: {fileID: 330450405}
-  FireRate: 1
-  Power: 10
+  FireRate: 0.4
+  Power: 4
 --- !u!1 &1158783807
 GameObject:
   m_ObjectHideFlags: 0

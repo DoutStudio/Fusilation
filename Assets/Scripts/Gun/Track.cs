@@ -41,9 +41,12 @@ public class Track : MonoBehaviour
 
             //Slerp turn isntead of snap
             Vector3 aimTarget = interceptionPoint;
-            Quaternion rot = Quaternion.FromToRotation(Vector3.up, aimTarget);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rot, TurnSpeed * Time.deltaTime);
 
+            Vector3 diff = aimTarget - transform.position;
+            diff.Normalize();
+            float rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            //transform.rotation = Quaternion.Euler(0, 0, rot - 90);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, rot - 90), TurnSpeed * Time.deltaTime);
 
             // you may shoot here
         }
