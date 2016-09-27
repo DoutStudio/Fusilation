@@ -4,6 +4,7 @@ using System.Collections;
 /// <summary>
 /// Ryan Scopio
 /// Fires a bullet from this object at a defined fire rate
+/// IF projectile is a seeker, this requires a targeting computer; probably a safer way to do this
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class GunController : MonoBehaviour
@@ -19,6 +20,7 @@ public class GunController : MonoBehaviour
     void Start()
     {
         parentBody = transform.GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
@@ -33,7 +35,17 @@ public class GunController : MonoBehaviour
             {
                 bulletBody.velocity = parentBody.velocity;
             }
-            bulletBody.AddRelativeForce(Vector2.up * Power, ForceMode2D.Impulse);
+
+            Seek seeker = newBullet.GetComponent<Seek>();
+            if (seeker)
+            {
+                seeker.Target = GetComponent<TargetingComputer>().Target;
+                seeker.Power = Power;
+            }
+            else
+            {
+                bulletBody.AddRelativeForce(Vector2.up * Power, ForceMode2D.Impulse);
+            }
         }
     }
 }

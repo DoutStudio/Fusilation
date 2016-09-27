@@ -6,11 +6,11 @@ using System.Collections;
 /// Turns turret to track target
 /// Uses predecive firing to lead target
 /// </summary>
-[RequireComponent(typeof(GunController))]
+[RequireComponent(typeof(GunController), typeof(TargetingComputer))]
 public class Track : MonoBehaviour
 {
 
-    public GameObject Target;
+
     public float TurnSpeed = 5;
     Vector3 interceptionPoint;
 
@@ -18,8 +18,14 @@ public class Track : MonoBehaviour
     GunController gun;
     float bulletSpeed;
 
+    private TargetingComputer TargetComputer;
+    private GameObject Target;
+
     void Start()
     {
+        TargetComputer = GetComponent<TargetingComputer>();
+        Target = TargetComputer.Target;
+
         targetBody = Target.GetComponent<Rigidbody2D>();
         gun = GetComponent<GunController>();
         bulletSpeed = gun.Bullet.GetComponent<Rigidbody2D>().velocity.magnitude;
@@ -27,6 +33,7 @@ public class Track : MonoBehaviour
 
     void Update()
     {
+        Target = TargetComputer.Target;
         if (Target)
         { // enemy alive and at sight: aim at him!
 
