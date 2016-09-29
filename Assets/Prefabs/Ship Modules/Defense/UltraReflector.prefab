@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012019301390}
   m_Layer: 0
-  m_Name: UltraDeflector
+  m_Name: UltraReflector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
