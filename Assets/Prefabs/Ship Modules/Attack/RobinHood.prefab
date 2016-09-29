@@ -68,6 +68,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011456802172}
   - 114: {fileID: 114000010989381044}
+  - 114: {fileID: 114000011795407684}
+  - 54: {fileID: 54000011765638496}
+  - 135: {fileID: 135000010172944654}
   m_Layer: 0
   m_Name: RobinHood
   m_TagString: Untagged
@@ -160,6 +163,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011456802172}
   m_RootOrder: 2
+--- !u!54 &54000011765638496
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012321782722}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000010989381044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,6 +191,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Robin Hood MarkV
   description: Steals 3 health per projectile hit (Does not count lazers)
+--- !u!114 &114000011795407684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012321782722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135000010172944654
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012321782722}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011120324262
 SpriteRenderer:
   m_ObjectHideFlags: 1
