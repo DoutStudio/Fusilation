@@ -52,6 +52,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010112110818}
   - 114: {fileID: 114000011056094942}
+  - 114: {fileID: 114000013018085404}
+  - 54: {fileID: 54000010584944910}
+  - 135: {fileID: 135000012493339590}
   m_Layer: 0
   m_Name: BlackHole
   m_TagString: Untagged
@@ -220,6 +223,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010112110818}
   m_RootOrder: 3
+--- !u!54 &54000010584944910
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010949394084}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114000011056094942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,6 +252,29 @@ MonoBehaviour:
   title: Black Hole Module
   description: 'Active Ability: 1 Shots enemy ship, leaves user with 1 health next
     round (user cannot die that round), cd is once, is a projectile'
+--- !u!114 &114000013018085404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010949394084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135000012493339590
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010949394084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011552251852
 SpriteRenderer:
   m_ObjectHideFlags: 1
