@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000013060271740}
   - 114: {fileID: 114000012639175254}
   - 114: {fileID: 114000011901989300}
+  - 58: {fileID: 58000010191984006}
   m_Layer: 0
   m_Name: Autocannon
   m_TagString: Turret
@@ -165,6 +166,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!58 &58000010191984006
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011969296208}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 15
 --- !u!61 &61000012532038190
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -191,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  TargetBody: {fileID: 0}
   SimplePointToTarget: 0
   TurnSpeed: 20
 --- !u!114 &114000012639175254
@@ -204,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141b35227b05b684992aef639c4d4c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurnSpeed: 20
 --- !u!114 &114000013060271740
 MonoBehaviour:
   m_ObjectHideFlags: 1

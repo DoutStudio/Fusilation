@@ -6,7 +6,7 @@ using System.Collections;
 /// Fires a bullet from this object at a defined fire rate
 /// IF projectile is a seeker, this requires a targeting computer; probably a safer way to do this
 /// </summary>
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TargetingComputer))]
 public class GunController : MonoBehaviour
 {
     public GameObject Bullet;
@@ -16,17 +16,19 @@ public class GunController : MonoBehaviour
     public float Power = 0.1f;
     float timer = 0f;
     Rigidbody2D parentBody;
+    TargetingComputer targComp;
 
     void Start()
     {
         parentBody = transform.GetComponent<Rigidbody2D>();
+        targComp = GetComponent<TargetingComputer>();
 
     }
 
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= FireRate)
+        if (timer >= FireRate && targComp.Target)
         {
             timer = 0f;
             GameObject newBullet = (GameObject)Instantiate(Bullet, BulletSpawner.transform.position, transform.rotation);

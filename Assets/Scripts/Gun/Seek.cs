@@ -23,6 +23,7 @@ public class Seek : MonoBehaviour
 
     void Update()
     {
+
         //Pointing To the Object
         Vector3 diff = Target.transform.position - transform.position;
         diff.Normalize();

@@ -11,7 +11,7 @@ public class Track : MonoBehaviour
 {
 
 
-    public float TurnSpeed = 5;
+    private float TurnSpeed = 0;
     Vector3 interceptionPoint;
 
     Rigidbody2D targetBody;
@@ -25,8 +25,9 @@ public class Track : MonoBehaviour
     {
         TargetComputer = GetComponent<TargetingComputer>();
         Target = TargetComputer.Target;
+        targetBody = TargetComputer.TargetBody;
+        TurnSpeed = TargetComputer.TurnSpeed;
 
-        targetBody = Target.GetComponent<Rigidbody2D>();
         gun = GetComponent<GunController>();
         bulletSpeed = gun.Bullet.GetComponent<Rigidbody2D>().velocity.magnitude;
     }
@@ -34,16 +35,17 @@ public class Track : MonoBehaviour
     void Update()
     {
         Target = TargetComputer.Target;
+        targetBody = TargetComputer.TargetBody;
         if (Target)
         { // enemy alive and at sight: aim at him!
 
             //Calculate intercept point
-            Vector3 IC = CalculateInterceptCourse(targetBody.position, targetBody.velocity, transform.position, gun.Power);
+            Vector3 IC = CalculateInterceptCourse(Target.transform.position, targetBody.velocity, transform.position, gun.Power);
             if (IC != Vector3.zero)
             {
                 IC.Normalize();
-                float interceptionTime = FindClosestPointOfApproach(targetBody.position, targetBody.velocity, transform.position, IC * gun.Power);
-                interceptionPoint = targetBody.position + targetBody.velocity * interceptionTime;
+                float interceptionTime = FindClosestPointOfApproach(Target.transform.position, targetBody.velocity, transform.position, IC * gun.Power);
+                interceptionPoint = (Vector2)Target.transform.position + targetBody.velocity * interceptionTime;
             }
 
             //Slerp turn isntead of snap

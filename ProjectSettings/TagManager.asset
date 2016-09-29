@@ -10,6 +10,7 @@ TagManager:
   - Turret
   - Bullet
   - MovePoint
+  - Core
   layers:
   - Default
   - TransparentFX
