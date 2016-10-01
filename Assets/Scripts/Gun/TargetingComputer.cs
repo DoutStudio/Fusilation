@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 using System.Collections;
 
 /// <summary>
@@ -37,11 +38,11 @@ public class TargetingComputer : MonoBehaviour
     {
         if (!Target)
         {
-            if (collision.gameObject.tag == "Ship")
+            if (collision.gameObject.tag == "Ship") // && collision is not parent of current object
             {
-                GameObject[] cores = GameObject.FindGameObjectsWithTag("Core");
                 //check which target the ship is set to, default now is hull so...
-                Target = cores[Random.Range(0, cores.Length - 1)];
+                Transform[] cores = collision.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();
+                Target = cores[Random.Range(0, cores.Length)].gameObject;
                 TargetBody = collision.gameObject.GetComponent<Rigidbody2D>();
             }
         }

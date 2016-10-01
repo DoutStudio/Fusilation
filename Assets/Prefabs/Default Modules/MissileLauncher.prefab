@@ -88,6 +88,7 @@ GameObject:
   - 50: {fileID: 50000011875506436}
   - 114: {fileID: 114000013124581022}
   - 114: {fileID: 114000014291862480}
+  - 58: {fileID: 58000012606010136}
   m_Layer: 0
   m_Name: MissileLauncher
   m_TagString: Turret
@@ -181,6 +182,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58000012606010136
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013378339062}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.5
 --- !u!60 &60000011879761216
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -262,8 +277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  TargetBody: {fileID: 0}
   SimplePointToTarget: 1
-  TurnSpeed: 20
+  TurnSpeed: 100
 --- !u!212 &212000011724672682
 SpriteRenderer:
   m_ObjectHideFlags: 1

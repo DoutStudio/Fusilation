@@ -208,7 +208,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetBody: {fileID: 0}
   SimplePointToTarget: 0
-  TurnSpeed: 20
+  TurnSpeed: 100
 --- !u!114 &114000012639175254
 MonoBehaviour:
   m_ObjectHideFlags: 1
