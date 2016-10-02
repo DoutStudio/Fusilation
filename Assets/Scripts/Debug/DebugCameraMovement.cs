@@ -5,6 +5,10 @@ public class DebugCameraMovement : MonoBehaviour
 {
 
     public float Speed = 1f;
+    public bool Track = false;
+    public Transform Target;
+    public Vector3 Offset;
+    public Vector3 Rotation;
 
     /// <summary>
     /// Ryan Scopio
@@ -28,5 +32,17 @@ public class DebugCameraMovement : MonoBehaviour
         {
             transform.Translate(Speed, 0, 0);
         }
+
+        if (Track)
+        {
+            transform.position = new Vector3(Target.position.x + Offset.x, Target.position.y + Offset.y, transform.position.z);
+            transform.rotation = Quaternion.Euler(Rotation);
+        }
+
     }
+
+
+
+
+
 }

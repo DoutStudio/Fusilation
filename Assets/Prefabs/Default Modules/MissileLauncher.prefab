@@ -246,7 +246,7 @@ MonoBehaviour:
   Bullet: {fileID: 1000011042644456, guid: 0ed1f7d599ea5b7418528aaf9ea1e80e, type: 2}
   BulletSpawner: {fileID: 1000010720217446}
   FireRate: 1
-  Power: 3
+  Power: 10
 --- !u!114 &114000014291862480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,7 +261,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetBody: {fileID: 0}
   SimplePointToTarget: 1
-  TurnSpeed: 100
+  TurnSpeed: 20
 --- !u!212 &212000011724672682
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -292,7 +292,7 @@ SpriteRenderer:
   m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 736449ba05c7668469c9c9da49f4a824, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7372549, g: 0.07450981, b: 0.07450981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212000012900409942
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3e1c28f3426c87942acc52d9093543a3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7352941, g: 0.07569203, b: 0.07569203, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212000013182608938
@@ -358,6 +358,6 @@ SpriteRenderer:
   m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 736449ba05c7668469c9c9da49f4a824, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7372549, g: 0.07450981, b: 0.07450981, a: 1}
   m_FlipX: 0
   m_FlipY: 0

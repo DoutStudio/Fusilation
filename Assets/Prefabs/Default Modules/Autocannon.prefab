@@ -190,7 +190,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetBody: {fileID: 0}
   SimplePointToTarget: 0
-  TurnSpeed: 100
+  TurnSpeed: 200
 --- !u!114 &114000012639175254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,7 +247,7 @@ SpriteRenderer:
   m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 085d84c410cdb7a44bddbf6c34f12a9a, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.14509805, g: 0.21176472, b: 0.52156866, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212000012774034346
@@ -280,6 +280,6 @@ SpriteRenderer:
   m_SortingLayerID: -585191981
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f0006b8f0f101e047a6fff6d342c3241, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1458694, g: 0.21072966, b: 0.52205884, a: 1}
   m_FlipX: 0
   m_FlipY: 0

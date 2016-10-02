@@ -153,6 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+  Target: {fileID: 0}
+  Creator: {fileID: 0}
+  Explosion: {fileID: 1000013595791696, guid: 68d351f4184e67b4da4dccc66c997d00, type: 2}
 --- !u!114 &114000011955016798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurnSpeed: 20
-  Target: {fileID: 0}
   Power: 1
 --- !u!212 &212000010906023524
 SpriteRenderer:

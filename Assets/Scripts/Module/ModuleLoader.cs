@@ -14,8 +14,9 @@ public class ModuleLoader : MonoBehaviour
 
         foreach (Transform slot in latchSlots)
         {
-            GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
+            GameObject module = (GameObject)Instantiate(Modules[Random.Range(0,Modules.Length)], slot.transform.position, slot.transform.rotation);
             module.transform.parent = slot.root.FindChild("Modules");
+            module.layer = 10;
         }
     }
 }

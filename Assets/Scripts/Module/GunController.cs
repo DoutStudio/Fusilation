@@ -32,6 +32,10 @@ public class GunController : MonoBehaviour
         {
             timer = 0f;
             GameObject newBullet = (GameObject)Instantiate(Bullet, BulletSpawner.transform.position, transform.rotation);
+            BulletController newBullCon = newBullet.GetComponent<BulletController>();
+            newBullCon.Target = targComp.Target;
+            newBullCon.Creator = transform.root.gameObject;
+
             Rigidbody2D bulletBody = newBullet.GetComponent<Rigidbody2D>();
             if (parentBody)
             {
@@ -41,7 +45,6 @@ public class GunController : MonoBehaviour
             Seek seeker = newBullet.GetComponent<Seek>();
             if (seeker)
             {
-                seeker.Target = GetComponent<TargetingComputer>().Target;
                 seeker.Power = Power;
             }
             else

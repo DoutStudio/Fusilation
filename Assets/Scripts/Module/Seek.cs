@@ -7,17 +7,18 @@ using System.Collections;
 /// intitial impulse force should carry it to target
 /// maybe later add actual movement torwards target
 /// </summary>
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(BulletController))]
 public class Seek : MonoBehaviour
 {
     public float TurnSpeed = 20;
     [HideInInspector]
-    public GameObject Target;
-    [HideInInspector]
     public float Power = 1;
+
+    private GameObject Target;
 
     void Start()
     {
+        Target = GetComponent<BulletController>().Target;
     }
 
 

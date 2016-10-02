@@ -10,9 +10,16 @@ public class BulletController : MonoBehaviour
 {
 
     public float Damage = 1;
+    [HideInInspector]
+    public GameObject Target;
+    [HideInInspector]
+    public GameObject Creator;
+
+    public GameObject Explosion;
 
     void Start()
     {
+
         GameObject parent = GameObject.Find("ProjectileParent");
         if (parent)
         {
@@ -20,9 +27,9 @@ public class BulletController : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag != "Turret" && collision.transform.tag != "Bullet")
+        if (collision.transform.tag == Target.tag && collision.transform.root.gameObject != Creator)
         {
             Health itemHealth = collision.gameObject.GetComponent<Health>();
             if (itemHealth)
@@ -30,6 +37,10 @@ public class BulletController : MonoBehaviour
                 itemHealth.CurrentHealth -= Damage;
             }
             //create explosion
+            if (Explosion)
+            {
+                ((GameObject)Instantiate(Explosion, transform.position, Quaternion.Euler(Vector3.zero))).transform.parent = GameObject.Find("ExplosionParent").transform;
+            }
             Destroy(transform.gameObject);
         }
     }

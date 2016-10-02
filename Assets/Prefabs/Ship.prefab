@@ -190,7 +190,7 @@ GameObject:
   - 4: {fileID: 4000013079913022}
   - 212: {fileID: 212000013097363470}
   m_Layer: 0
-  m_Name: Core
+  m_Name: Core1
   m_TagString: Core
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ GameObject:
   - 4: {fileID: 4000010432053124}
   - 212: {fileID: 212000010072433398}
   m_Layer: 0
-  m_Name: Core
+  m_Name: Core0
   m_TagString: Core
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,7 @@ GameObject:
   - 4: {fileID: 4000012476495044}
   - 212: {fileID: 212000010106198390}
   m_Layer: 0
-  m_Name: Core
+  m_Name: Core2
   m_TagString: Core
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,6 +1582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b264ddebc86ca547b4502db2e5a42db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Modules: []
 --- !u!212 &212000010072433398
 SpriteRenderer:
   m_ObjectHideFlags: 1
