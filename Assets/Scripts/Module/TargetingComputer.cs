@@ -38,7 +38,7 @@ public class TargetingComputer : MonoBehaviour
     {
         if (!Target)
         {
-            if (collision.gameObject.tag == "Ship") // && collision is not parent of current object
+            if (collision.gameObject.tag == "Ship" && collision.gameObject != transform.root.gameObject)
             {
                 //check which target the ship is set to, default now is hull so...
                 Transform[] cores = collision.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();

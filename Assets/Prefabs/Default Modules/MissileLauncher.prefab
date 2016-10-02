@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013520723654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ProjectileSpawn
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - 4: {fileID: 4000013700584798}
   - 212: {fileID: 212000011724672682}
   - 60: {fileID: 60000012701380634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PointLeft
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - 4: {fileID: 4000013271658274}
   - 212: {fileID: 212000013182608938}
   - 60: {fileID: 60000013897907786}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PointRight
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - 4: {fileID: 4000014115278312}
   - 212: {fileID: 212000012900409942}
   - 60: {fileID: 60000011879761216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Turret
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -85,11 +85,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010522920736}
-  - 50: {fileID: 50000011875506436}
   - 114: {fileID: 114000013124581022}
   - 114: {fileID: 114000014291862480}
   - 58: {fileID: 58000012606010136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MissileLauncher
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -165,23 +164,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010522920736}
   m_RootOrder: 0
---- !u!50 &50000011875506436
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013378339062}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &58000012606010136
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -195,7 +177,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 7.5
+  m_Radius: 15
 --- !u!60 &60000011879761216
 PolygonCollider2D:
   m_ObjectHideFlags: 1

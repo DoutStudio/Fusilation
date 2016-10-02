@@ -6,7 +6,7 @@ using System.Collections;
 /// Fires a bullet from this object at a defined fire rate
 /// IF projectile is a seeker, this requires a targeting computer; probably a safer way to do this
 /// </summary>
-[RequireComponent(typeof(Rigidbody2D), typeof(TargetingComputer))]
+[RequireComponent(typeof(TargetingComputer))]
 public class GunController : MonoBehaviour
 {
     public GameObject Bullet;
@@ -20,7 +20,7 @@ public class GunController : MonoBehaviour
 
     void Start()
     {
-        parentBody = transform.GetComponent<Rigidbody2D>();
+        parentBody = transform.root.GetComponent<Rigidbody2D>();
         targComp = GetComponent<TargetingComputer>();
 
     }

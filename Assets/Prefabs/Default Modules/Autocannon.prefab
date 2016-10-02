@@ -19,12 +19,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011957623912}
-  - 50: {fileID: 50000013712270726}
   - 114: {fileID: 114000013060271740}
   - 114: {fileID: 114000012639175254}
   - 114: {fileID: 114000011901989300}
   - 58: {fileID: 58000010191984006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Autocannon
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -39,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013408616548}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ProjectileSpawn
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -56,7 +55,7 @@ GameObject:
   - 4: {fileID: 4000012125742632}
   - 212: {fileID: 212000012774034346}
   - 58: {fileID: 58000010066823632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Turret
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -73,7 +72,7 @@ GameObject:
   - 4: {fileID: 4000012967333024}
   - 212: {fileID: 212000012487450818}
   - 61: {fileID: 61000012532038190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Turret
   m_Icon: {fileID: 0}
@@ -135,23 +134,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011957623912}
   m_RootOrder: 2
---- !u!50 &50000013712270726
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011969296208}
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &58000010066823632
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -179,7 +161,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 30
 --- !u!61 &61000012532038190
 BoxCollider2D:
   m_ObjectHideFlags: 1
