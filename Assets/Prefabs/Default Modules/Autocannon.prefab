@@ -190,7 +190,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetBody: {fileID: 0}
   SimplePointToTarget: 0
-  TurnSpeed: 200
+  TurnSpeed: 15
 --- !u!114 &114000012639175254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,7 +216,8 @@ MonoBehaviour:
   Bullet: {fileID: 1000012848553818, guid: d21918bd6e2baee4fafe125c7c7a9783, type: 2}
   BulletSpawner: {fileID: 1000012038751608}
   FireRate: 1
-  Power: 10
+  Delay: 2
+  Power: 15
 --- !u!212 &212000012487450818
 SpriteRenderer:
   m_ObjectHideFlags: 1

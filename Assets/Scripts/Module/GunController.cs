@@ -12,45 +12,48 @@ public class GunController : MonoBehaviour
     public GameObject Bullet;
     public GameObject BulletSpawner;
     public float FireRate = 1f;
+    public float Delay = 0f;
+    private float fireDelay;
 
     public float Power = 0.1f;
     float timer = 0f;
-    Rigidbody2D parentBody;
     TargetingComputer targComp;
 
     void Start()
     {
-        parentBody = transform.root.GetComponent<Rigidbody2D>();
         targComp = GetComponent<TargetingComputer>();
-
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= FireRate && targComp.Target)
+        if (targComp.Target)
         {
-            timer = 0f;
-            GameObject newBullet = (GameObject)Instantiate(Bullet, BulletSpawner.transform.position, transform.rotation);
-            BulletController newBullCon = newBullet.GetComponent<BulletController>();
-            newBullCon.Target = targComp.Target;
-            newBullCon.Creator = transform.root.gameObject;
+            timer += Time.deltaTime;
+            if (timer >= FireRate + fireDelay)
+            {
+                fireDelay = 0f;
+                timer = 0f;
+                GameObject newBullet = (GameObject)Instantiate(Bullet, BulletSpawner.transform.position, transform.rotation);
 
-            Rigidbody2D bulletBody = newBullet.GetComponent<Rigidbody2D>();
-            if (parentBody)
-            {
-                bulletBody.velocity = parentBody.velocity;
-            }
+                BulletController newBullCon = newBullet.GetComponent<BulletController>();
+                newBullCon.Target = targComp.Target;
+                newBullCon.Creator = transform.root.gameObject;
 
-            Seek seeker = newBullet.GetComponent<Seek>();
-            if (seeker)
-            {
-                seeker.Power = Power;
+                Seek seeker = newBullet.GetComponent<Seek>();
+                if (seeker)
+                {
+                    seeker.Power = Power;
+                }
+                else
+                {
+                    Rigidbody2D bulletBody = newBullet.GetComponent<Rigidbody2D>();
+                    bulletBody.AddRelativeForce(Vector2.up * Power, ForceMode2D.Impulse);
+                }
             }
-            else
-            {
-                bulletBody.AddRelativeForce(Vector2.up * Power, ForceMode2D.Impulse);
-            }
+        }
+        else
+        {
+            fireDelay = Delay;
         }
     }
 }

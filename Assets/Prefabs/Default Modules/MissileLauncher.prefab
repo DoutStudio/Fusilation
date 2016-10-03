@@ -246,6 +246,7 @@ MonoBehaviour:
   Bullet: {fileID: 1000011042644456, guid: 0ed1f7d599ea5b7418528aaf9ea1e80e, type: 2}
   BulletSpawner: {fileID: 1000010720217446}
   FireRate: 1
+  Delay: 0
   Power: 10
 --- !u!114 &114000014291862480
 MonoBehaviour:
@@ -261,7 +262,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   TargetBody: {fileID: 0}
   SimplePointToTarget: 1
-  TurnSpeed: 20
+  TurnSpeed: 5
 --- !u!212 &212000011724672682
 SpriteRenderer:
   m_ObjectHideFlags: 1
