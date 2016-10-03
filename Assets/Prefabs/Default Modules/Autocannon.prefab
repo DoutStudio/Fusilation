@@ -216,7 +216,7 @@ MonoBehaviour:
   Bullet: {fileID: 1000012848553818, guid: d21918bd6e2baee4fafe125c7c7a9783, type: 2}
   BulletSpawner: {fileID: 1000012038751608}
   FireRate: 1
-  Delay: 2
+  Delay: 1
   Power: 15
 --- !u!212 &212000012487450818
 SpriteRenderer:
