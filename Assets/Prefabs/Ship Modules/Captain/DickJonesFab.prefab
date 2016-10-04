@@ -9,36 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000011667427188}
+  m_RootGameObject: {fileID: 1000010842566462}
   m_IsPrefabParent: 1
---- !u!1 &1000011376842020
+--- !u!1 &1000010842566462
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000013206435552}
-  - 212: {fileID: 212000010198558634}
-  m_Layer: 0
-  m_Name: DickJones
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000011667427188
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000011391275782}
-  - 114: {fileID: 114000010151420634}
-  - 54: {fileID: 54000013307690318}
-  - 135: {fileID: 135000012798643842}
-  - 114: {fileID: 114000011694381438}
+  - 4: {fileID: 4000010852388496}
+  - 114: {fileID: 114000010059059554}
+  - 54: {fileID: 54000012006228008}
+  - 135: {fileID: 135000010730413676}
+  - 114: {fileID: 114000012393587436}
   m_Layer: 0
   m_Name: DickJonesFab
   m_TagString: Untagged
@@ -46,39 +30,55 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000011391275782
+--- !u!1 &1000011765233798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012326486216}
+  - 212: {fileID: 212000011187956212}
+  m_Layer: 0
+  m_Name: DickJones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010852388496
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011667427188}
+  m_GameObject: {fileID: 1000010842566462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.6369306, y: 0.31567666, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000013206435552}
+  - {fileID: 4000012326486216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!4 &4000013206435552
+--- !u!4 &4000012326486216
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011376842020}
+  m_GameObject: {fileID: 1000011765233798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.9494247, y: -1.1319714, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000011391275782}
+  m_Father: {fileID: 4000010852388496}
   m_RootOrder: 0
---- !u!54 &54000013307690318
+--- !u!54 &54000012006228008
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011667427188}
+  m_GameObject: {fileID: 1000010842566462}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -88,23 +88,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010151420634
+--- !u!114 &114000010059059554
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011667427188}
+  m_GameObject: {fileID: 1000010842566462}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000011694381438
+--- !u!114 &114000012393587436
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011667427188}
+  m_GameObject: {fileID: 1000010842566462}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
@@ -114,24 +114,24 @@ MonoBehaviour:
   description: 'Active Ability: Sacrifices a random module to remove a random module
     on the enemy ship'
   type: 3
---- !u!135 &135000012798643842
+--- !u!135 &135000010730413676
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011667427188}
+  m_GameObject: {fileID: 1000010842566462}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!212 &212000010198558634
+--- !u!212 &212000011187956212
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011376842020}
+  m_GameObject: {fileID: 1000011765233798}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
