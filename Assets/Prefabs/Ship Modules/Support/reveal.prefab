@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Reveal
   description: Uncloaks modules
+  type: 2
 --- !u!135 &135000010991885474
 SphereCollider:
   m_ObjectHideFlags: 1

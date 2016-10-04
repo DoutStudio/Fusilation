@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
+using UnityEditor;
+
 
 
 public class SelectedItemScript : MonoBehaviour {
@@ -21,16 +23,21 @@ public class SelectedItemScript : MonoBehaviour {
 
     public void SelectedItemScript_itemSelected(object sender, EventArgs e)
     {
-        Debug.Log("test");
+        //Debug.Log("test");
 
         GameObject obj = ((ItemSelectedArgs)e).gameObject;
 
         titleTextScript.text = obj.GetComponent<DescriptionScript>().title;
         descTextScript.text = obj.GetComponent<DescriptionScript>().description;
-    }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
+        // check if it's the captain
+        if (obj.GetComponent<DescriptionScript>().type == DescriptionScript.ModuleType.CAPTAIN)
+        {
+            // Set thumbnail image
+            Texture2D texture = AssetPreview.GetAssetPreview(obj);
+            Transform imageTransform = transform.FindChild("ThumbnailImage");
+            Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
+            imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
+        }
+    }
 }

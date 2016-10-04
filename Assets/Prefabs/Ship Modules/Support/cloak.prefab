@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Cloaking
   description: 'Active Abilty: 10% of turn damage misses, cool down 10 turns'
+  type: 2
 --- !u!114 &114000012948249610
 MonoBehaviour:
   m_ObjectHideFlags: 1

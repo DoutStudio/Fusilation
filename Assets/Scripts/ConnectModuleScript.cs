@@ -34,7 +34,7 @@ public class ConnectModuleScript : MonoBehaviour {
         if (isDragging)
         {
             moduleTransform.position = mouseWorldPosition;
-            if (currentHoveredSlot && !currentHoveredSlot.active) // .active is obsolete
+            if (currentHoveredSlot && !currentHoveredSlot.active) // .active is obsolete -- your mom's obsolete
             {
                 currentHoveredSlot.SetActive(true);
             }

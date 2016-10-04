@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Solar Flare Collector
   description: If oposing player has a Solar Flare, heals 15 health per turn
+  type: 1
 --- !u!135 &135000013262081996
 SphereCollider:
   m_ObjectHideFlags: 1

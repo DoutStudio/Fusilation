@@ -24,7 +24,14 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 	void Start () {
 
         // subscribe event
-        itemSelected += GameObject.Find("ShipStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+        if (shipModule.GetComponent<DescriptionScript>().type == DescriptionScript.ModuleType.CAPTAIN)
+        {
+            itemSelected += GameObject.Find("CaptainStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+        }
+        else
+        {
+            itemSelected += GameObject.Find("ShipStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+        }
 
         // check to see if the slot connector module is installed
         if (shipModule.GetComponent<ConnectModuleScript>() == null)
@@ -71,7 +78,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && shipModule.GetComponent<ConnectModuleScript>().enabled)
         {
             SpawnModuleAtMousePosition();
         }
