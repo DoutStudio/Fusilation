@@ -54,6 +54,8 @@ GameObject:
   - 114: {fileID: 114000010516462068}
   - 54: {fileID: 54000010492674354}
   - 135: {fileID: 135000014245841030}
+  - 114: {fileID: 114000011227240640}
+  - 114: {fileID: 114000012866116344}
   m_Layer: 0
   m_Name: MediumShield
   m_TagString: Untagged
@@ -158,6 +160,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011227240640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011242536038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012866116344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011242536038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 
+  description: 
+  type: 1
 --- !u!135 &135000014245841030
 SphereCollider:
   m_ObjectHideFlags: 1

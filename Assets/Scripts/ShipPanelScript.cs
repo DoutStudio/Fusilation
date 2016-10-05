@@ -28,9 +28,4 @@ public class ShipPanelScript : MonoBehaviour
 
         Debug.Log(listItemModules.Length);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-    }
 }

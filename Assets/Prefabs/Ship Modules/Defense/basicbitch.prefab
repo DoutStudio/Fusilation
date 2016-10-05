@@ -38,6 +38,8 @@ GameObject:
   - 114: {fileID: 114000011194112496}
   - 54: {fileID: 54000010180978784}
   - 135: {fileID: 135000011011201436}
+  - 114: {fileID: 114000012608029622}
+  - 114: {fileID: 114000012797816352}
   m_Layer: 0
   m_Name: basicbitch
   m_TagString: Untagged
@@ -128,6 +130,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000012608029622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010322978260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012797816352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010322978260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 
+  description: 
+  type: 1
 --- !u!135 &135000011011201436
 SphereCollider:
   m_ObjectHideFlags: 1

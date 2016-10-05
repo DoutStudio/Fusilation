@@ -7,6 +7,7 @@ public class ConnectModuleScript : MonoBehaviour {
 
     Transform moduleTransform;
 
+    private static bool userCanMouse = false;
     bool isDragging;
     bool isOverSlot;
     GameObject currentHoveredSlot;
@@ -37,6 +38,7 @@ public class ConnectModuleScript : MonoBehaviour {
             if (currentHoveredSlot && !currentHoveredSlot.active) // .active is obsolete -- your mom's obsolete
             {
                 currentHoveredSlot.SetActive(true);
+                currentHoveredSlot.GetComponent<BoxCollider>().enabled = true;
             }
         }
         if (!Input.GetMouseButton(0) && isDragging)
@@ -48,6 +50,7 @@ public class ConnectModuleScript : MonoBehaviour {
                 isOverSlot = false;
                 moduleTransform.position = currentHoveredSlot.transform.position;
                 currentHoveredSlot.SetActive(false);
+                currentHoveredSlot.GetComponent<BoxCollider>().enabled = false;
                 //Debug.Log("set");
             }
             else
@@ -60,10 +63,16 @@ public class ConnectModuleScript : MonoBehaviour {
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && userCanMouse)
         {
             isDragging = true;
+            userCanMouse = false;
         }
+    }
+
+    void OnMouseUp()
+    {
+        userCanMouse = true;
     }
 
     void OnTriggerEnter(Collider other)

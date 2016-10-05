@@ -18,7 +18,8 @@ public class ModuleThumbnailScript : MonoBehaviour ,
     public GameObject shipStatPanel; // all have a ref but whatevs
 
     private bool downReset = true;
-    
+
+    private static bool spawnReset = true; // MWAHAHAHAHA
 
 	// Use this for initialization
 	void Start () {
@@ -57,6 +58,10 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
         // Set thumbnail image
         Texture2D texture = AssetPreview.GetAssetPreview(shipModule);
+        if (texture == null)
+        {
+            Debug.Log("the thing happed");
+        }
         Transform imageTransform = transform.FindChild("ItemThumbnailImage");
         Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
         imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
@@ -78,9 +83,10 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0) && shipModule.GetComponent<ConnectModuleScript>().enabled)
+        if (Input.GetMouseButton(0) && shipModule.GetComponent<ConnectModuleScript>().enabled && spawnReset)
         {
             SpawnModuleAtMousePosition();
+            spawnReset = false;
         }
     }
 
@@ -99,5 +105,6 @@ public class ModuleThumbnailScript : MonoBehaviour ,
     public void OnPointerUp(PointerEventData eventData)
     {
         downReset = true;
+        spawnReset = true;
     }
 }
