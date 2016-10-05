@@ -57,14 +57,26 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         childTransform.GetComponent<Text>().text = shipModule.name;
 
         // Set thumbnail image
-        Texture2D texture = AssetPreview.GetAssetPreview(shipModule);
+        Texture2D texture = null;
+        while (!texture)
+        {
+            // Asset Preview runs assynchonously with main instantiation thread
+            // texture might not be available on first call
+            texture = AssetPreview.GetAssetPreview(shipModule);
+        }
+
         if (texture == null)
         {
-            Debug.Log("the thing happed");
+            Debug.Log("Could not load texture from" + shipModule.name + "{" + (shipModule != null) + "}");
+        }
+        else
+        {
+            Debug.Log("Texture loaded from" + shipModule.name + "{" + (shipModule != null) + "}");
         }
         Transform imageTransform = transform.FindChild("ItemThumbnailImage");
         Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
         imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
+        imageTransform.GetComponent<Image>().sprite = spriteThumbnail;
     }
 	
 	// Update is called once per frame
