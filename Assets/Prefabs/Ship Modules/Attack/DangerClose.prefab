@@ -178,7 +178,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011299415206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.008, y: 1.084, z: 2445.036}
+  m_LocalPosition: {x: -0.008, y: 1.084, z: 0}
   m_LocalScale: {x: 0.52002245, y: 2.9749994, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -191,7 +191,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010600248712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.069, y: 2.728, z: 2445.036}
+  m_LocalPosition: {x: -1.069, y: 2.728, z: 0}
   m_LocalScale: {x: 0.6375812, y: 0.26610124, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -230,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012975514264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.095, y: 1.365, z: 2445.036}
+  m_LocalPosition: {x: -1.095, y: 1.365, z: 0}
   m_LocalScale: {x: 0.52002245, y: 2.9749994, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -244,7 +244,7 @@ Transform:
   m_GameObject: {fileID: 1000012277661418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010599773044}
@@ -264,7 +264,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012414988074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.987, y: 2.764, z: 2445.036}
+  m_LocalPosition: {x: 0.987, y: 2.764, z: 0}
   m_LocalScale: {x: 0.6375812, y: 0.26610124, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -277,7 +277,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011731978412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.979, y: 1.411, z: 2445.036}
+  m_LocalPosition: {x: 0.979, y: 1.411, z: 0}
   m_LocalScale: {x: 0.52002245, y: 2.9749994, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -312,6 +312,7 @@ MonoBehaviour:
   title: Danger Close
   description: Max 100 Damage, Fires 5 Shots, 20 Damage per shot, each shot that misses
     damages your ship
+  type: 0
 --- !u!114 &114000013261278380
 MonoBehaviour:
   m_ObjectHideFlags: 1

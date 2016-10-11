@@ -38,7 +38,6 @@ GameObject:
   - 114: {fileID: 114000011135285778}
   - 54: {fileID: 54000012725576556}
   - 135: {fileID: 135000010101902014}
-  - 114: {fileID: 114000010379798038}
   - 114: {fileID: 114000011712925374}
   m_Layer: 0
   m_Name: Stop
@@ -89,17 +88,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010379798038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014168273898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000011135285778
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -26,6 +26,6 @@ public class ShipPanelScript : MonoBehaviour
             newItem.transform.SetParent(transform);
         }
 
-        Debug.Log(listItemModules.Length);
+        //Debug.Log(listItemModules.Length);
     }
 }

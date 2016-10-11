@@ -54,7 +54,6 @@ GameObject:
   - 114: {fileID: 114000010139760012}
   - 54: {fileID: 54000011182524340}
   - 135: {fileID: 135000011822478758}
-  - 114: {fileID: 114000013882129958}
   - 114: {fileID: 114000011767452278}
   m_Layer: 0
   m_Name: BasicShield
@@ -144,17 +143,6 @@ MonoBehaviour:
   title: 
   description: 
   type: 1
---- !u!114 &114000013882129958
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014007544518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &135000011822478758
 SphereCollider:
   m_ObjectHideFlags: 1
