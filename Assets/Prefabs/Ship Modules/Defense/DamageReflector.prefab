@@ -38,7 +38,6 @@ GameObject:
   - 114: {fileID: 114000012159091250}
   - 54: {fileID: 54000013335688398}
   - 135: {fileID: 135000012795808972}
-  - 114: {fileID: 114000011432041990}
   - 114: {fileID: 114000012231375518}
   m_Layer: 0
   m_Name: DamageReflector
@@ -269,17 +268,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000011432041990
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010622267622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012159091250
 MonoBehaviour:
   m_ObjectHideFlags: 1

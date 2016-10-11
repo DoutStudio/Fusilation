@@ -322,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: TurboLazer
   description: Max 50 Damage, Takes 1 turn to charge, Cannot be dodged
+  type: 0
 --- !u!135 &135000013391292200
 SphereCollider:
   m_ObjectHideFlags: 1

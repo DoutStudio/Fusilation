@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Solar Flare
   description: Deals 10 Damage per turn, cannot be dodged
+  type: 0
 --- !u!135 &135000011139641922
 SphereCollider:
   m_ObjectHideFlags: 1

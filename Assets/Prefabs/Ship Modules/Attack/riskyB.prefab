@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010576244172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03435397, y: -0.4183749, z: 2445.0352}
+  m_LocalPosition: {x: 0.03435397, y: -0.4183749, z: 0}
   m_LocalScale: {x: 0.48207864, y: 0.5245688, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013861435480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.054353952, y: -0.19837499, z: 2445.0352}
+  m_LocalPosition: {x: 0.054353952, y: -0.19837499, z: 0}
   m_LocalScale: {x: 1.8533942, y: 1.7336621, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -132,6 +132,7 @@ MonoBehaviour:
   title: Risky Business
   description: Does No damage until user is below 25% health, Deals 25 Damage per
     turn, cannot be dodged
+  type: 0
 --- !u!114 &114000011596842190
 MonoBehaviour:
   m_ObjectHideFlags: 1
