@@ -69,10 +69,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         {
             Debug.Log("Could not load texture from" + shipModule.name + "{" + (shipModule != null) + "}");
         }
-        else
-        {
-            Debug.Log("Texture loaded from" + shipModule.name + "{" + (shipModule != null) + "}");
-        }
+
         Transform imageTransform = transform.FindChild("ItemThumbnailImage");
         Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
         imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;

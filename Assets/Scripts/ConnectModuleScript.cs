@@ -35,7 +35,7 @@ public class ConnectModuleScript : MonoBehaviour {
         if (isDragging)
         {
             moduleTransform.position = mouseWorldPosition;
-            if (currentHoveredSlot && !currentHoveredSlot.active) // .active is obsolete -- your mom's obsolete
+            if (currentHoveredSlot && !currentHoveredSlot.activeSelf) 
             {
                 currentHoveredSlot.SetActive(true);
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = true;

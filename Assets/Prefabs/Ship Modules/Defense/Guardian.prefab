@@ -118,7 +118,6 @@ GameObject:
   - 114: {fileID: 114000011352666684}
   - 54: {fileID: 54000010491252578}
   - 135: {fileID: 135000013579257474}
-  - 114: {fileID: 114000010798694524}
   - 114: {fileID: 114000014101018824}
   m_Layer: 0
   m_Name: Guardian
@@ -239,17 +238,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114000010798694524
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013999333530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000011352666684
 MonoBehaviour:
   m_ObjectHideFlags: 1
