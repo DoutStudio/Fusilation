@@ -14,6 +14,9 @@ public class TargetingComputer : MonoBehaviour
     public bool SimplePointToTarget = false;
     public float TurnSpeed = 20;
 
+    [HideInInspector]
+    public Vector3 defaultRotation;
+
     void Update()
     {
         //PointToTarget
@@ -24,6 +27,14 @@ public class TargetingComputer : MonoBehaviour
             float rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, rot - 90), TurnSpeed * Time.deltaTime);
         }
+        
+        //rotate to default
+        if(!Target)
+        {
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(defaultRotation), TurnSpeed * Time.deltaTime);
+        }
+
+       
     }
 
     public void OnTriggerExit2D(Collider2D collision)

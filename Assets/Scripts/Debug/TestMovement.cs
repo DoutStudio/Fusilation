@@ -10,6 +10,7 @@ public class TestMovement : MonoBehaviour
 {
     public float Speed = 2f;
     public GameObject[] MovePoints;
+    public float TurnSpeed = 5;
 
     Rigidbody2D body;
     private Vector3 desiredVelocity;
@@ -27,6 +28,12 @@ public class TestMovement : MonoBehaviour
 
     void Update()
     {
+        //point to move point
+        Vector3 diff = MovePoints[curP].transform.position - transform.position;
+        diff.Normalize();
+        float rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, rot - 90), TurnSpeed * Time.deltaTime);
+
         float sqrMag = (MovePoints[curP].transform.position - transform.position).sqrMagnitude;
         if (sqrMag > lastSqrMag)
         {

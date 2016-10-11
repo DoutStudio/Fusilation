@@ -12,10 +12,26 @@ public class ModuleLoader : MonoBehaviour
         Transform[] latchSlots;
         latchSlots = transform.GetComponentsInChildren<Transform>().Where(x => x.tag == "LatchSlot").ToArray();
 
-        foreach (Transform slot in latchSlots)
+        Transform[] leftSlots = transform.FindChild("LatchSlots").GetComponentsInChildren<Transform>().Where(x => x.tag == "LeftSlot").ToArray();
+        Transform[] rightSlots = transform.FindChild("LatchSlots").GetComponentsInChildren<Transform>().Where(x => x.tag == "RightSlot").ToArray();
+        Transform[] centerSlots = transform.FindChild("LatchSlots").GetComponentsInChildren<Transform>().Where(x => x.tag == "LeftCenter").ToArray();
+
+        foreach (Transform slot in leftSlots)
         {
-            GameObject module = (GameObject)Instantiate(Modules[Random.Range(0,Modules.Length)], slot.transform.position, slot.transform.rotation);
+            GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
             module.transform.parent = slot.root.FindChild("Modules");
+            Vector3 rot = new Vector3(0, 0, 90);
+            module.GetComponent<TargetingComputer>().defaultRotation = rot;
+            module.transform.Rotate(rot);
+            module.layer = 10;
+        }
+        foreach (Transform slot in rightSlots)
+        {
+            GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
+            module.transform.parent = slot.root.FindChild("Modules");
+            Vector3 rot = new Vector3(0, 0, -90);
+            module.GetComponent<TargetingComputer>().defaultRotation = rot;
+            module.transform.Rotate(rot);
             module.layer = 10;
         }
     }

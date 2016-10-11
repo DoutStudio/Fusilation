@@ -11,6 +11,9 @@ TagManager:
   - Bullet
   - MovePoint
   - Core
+  - LeftSlot
+  - RightSlot
+  - CenterSlot
   layers:
   - Default
   - TransparentFX
