@@ -340,8 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: BFS Shield
+  description: 50 health
   type: 1
 --- !u!114 &114000012246017334
 MonoBehaviour:

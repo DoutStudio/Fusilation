@@ -698,8 +698,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: 420 Blazin
+  description: 'Active Ability: Cannot attack this turn but heal 100 health this turn'
   type: 1
 --- !u!114 &114000011810356622
 MonoBehaviour:
