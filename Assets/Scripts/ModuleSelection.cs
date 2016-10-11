@@ -10,23 +10,22 @@ public class ModuleSelection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        string currentObject = this.gameObject.name;
-        popup = GameObject.Find("messageBoxText").GetComponent<Text>();
-        descriptionS = GameObject.Find(currentObject).GetComponent<DescriptionScript>();
+        popup = GameObject.Find("messageBoxTextEnemy").GetComponent<Text>();
+        string hello = "LatchSlotLoad";
+        descriptionS = GameObject.Find(hello).GetComponent<DescriptionScript>();
         descriptionText = descriptionS.description;
 	}
 
     void Update()
     {
+        if(Input.GetMouseButton(0))
+        {
+            ChangeText(popup, descriptionText);
+        }
     }
 
     public void ChangeText (Text popUp, string moduleDescription)
     {
         popUp.text = moduleDescription;
-    }
-
-    void OnMouseDown()
-    {
-        ChangeText(popup, descriptionText);
     }
 }
