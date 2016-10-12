@@ -3097,7 +3097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f50b3b85e6d0d4489f665d4b920b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cachesize: 100
+  assetCount: 100
 --- !u!1001 &1152455691
 Prefab:
   m_ObjectHideFlags: 0
