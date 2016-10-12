@@ -87,7 +87,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         mPos.z = 0;
         GameObject module = (GameObject) Instantiate(shipModule, mPos, Quaternion.identity);
         module.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        Debug.Log("held is false");
+        //Debug.Log("held is false");
     }
 
     public void OnPointerExit(PointerEventData eventData)
