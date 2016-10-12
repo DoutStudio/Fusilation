@@ -878,6 +878,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012822246800, guid: c156d2f40fbf2b44da14238a2efbcf50,
+        type: 2}
+      propertyPath: FolderName
+      value: Attack
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: c156d2f40fbf2b44da14238a2efbcf50, type: 2}
@@ -1334,6 +1339,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 0.43382353
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012822246800, guid: c156d2f40fbf2b44da14238a2efbcf50,
+        type: 2}
+      propertyPath: FolderName
+      value: Captain
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c156d2f40fbf2b44da14238a2efbcf50, type: 2}
@@ -1897,11 +1907,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 461420178}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!224 &553717390 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224000014021637076, guid: c156d2f40fbf2b44da14238a2efbcf50,
-    type: 2}
-  m_PrefabInternal: {fileID: 109485277}
 --- !u!1 &646269476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2950,6 +2955,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1000011966792204, guid: 8592081e374dc24499f9944575611eda,
         type: 2}
+    - target: {fileID: 114000012822246800, guid: c156d2f40fbf2b44da14238a2efbcf50,
+        type: 2}
+      propertyPath: FolderName
+      value: Support
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c156d2f40fbf2b44da14238a2efbcf50, type: 2}
   m_IsPrefabParent: 0
@@ -3596,6 +3606,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012822246800, guid: c156d2f40fbf2b44da14238a2efbcf50,
+        type: 2}
+      propertyPath: FolderName
+      value: Defense
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c156d2f40fbf2b44da14238a2efbcf50, type: 2}
@@ -4390,37 +4405,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011762081874, guid: c156d2f40fbf2b44da14238a2efbcf50,
     type: 2}
   m_PrefabInternal: {fileID: 109485277}
---- !u!114 &1503563093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1503563092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efea0134ff15b4248a223032e6e8639f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Content: {fileID: 553717390}
-  m_Horizontal: 0
-  m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 30
-  m_Viewport: {fileID: 0}
-  m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 0}
-  m_HorizontalScrollbarVisibility: 0
-  m_VerticalScrollbarVisibility: 0
-  m_HorizontalScrollbarSpacing: 0
-  m_VerticalScrollbarSpacing: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1550692409
 GameObject:
   m_ObjectHideFlags: 0

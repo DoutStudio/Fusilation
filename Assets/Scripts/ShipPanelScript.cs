@@ -7,15 +7,17 @@ using UnityEditor;
 public class ShipPanelScript : MonoBehaviour
 {
     // A list of all ship modules in this panel
-    public GameObject[] listItemModules;
+    // public GameObject[] listItemModules;
+    public string FolderName;
     public GameObject listItem;
 
 
     private GameObject statPanel;
+    private const string rootFolderName = "Ship Modules\\";
 
 	// Use this for initialization
 	void Start () {
-        //listItemModules = Resources.LoadAll<GameObject>("Attack");
+        GameObject[] listItemModules = Resources.LoadAll<GameObject>(rootFolderName + FolderName);
         statPanel = GameObject.Find("ShipStatsPanel");
 
         for (int i = 0; i < listItemModules.Length; ++i)
