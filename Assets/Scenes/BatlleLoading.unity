@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c71ba5a7b0da446a1946a7509e7255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteToSelect: {fileID: 0}
+  tempGO: {fileID: 1000011345272194, guid: 4f492e1994b682448810a0abf9b79363, type: 2}
 --- !u!212 &225971932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -582,6 +582,9 @@ MonoBehaviour:
   title: Default
   description: Nigeronia
   type: 0
+  firerate: 0
+  delay: 0
+  power: 0
 --- !u!1 &237057596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,7 +2855,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 320}
+  m_AnchoredPosition: {x: -30, y: 248}
   m_SizeDelta: {x: 224.1, y: 76.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681391216

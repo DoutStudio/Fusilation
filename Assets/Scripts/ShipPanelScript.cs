@@ -28,6 +28,7 @@ public class ShipPanelScript : MonoBehaviour
                 GameObject newItem = Instantiate(listItem);
                 newItem.GetComponent<ModuleThumbnailScript>().shipModule = listItemModules[i];
                 newItem.GetComponent<ModuleThumbnailScript>().shipStatPanel = statPanel;
+            newItem.GetComponent<ConnectModuleScript>().enabled = true;
                 newItem.transform.SetParent(transform);
             }
         //}
