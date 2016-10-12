@@ -124,7 +124,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011408367736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
@@ -143,6 +143,9 @@ MonoBehaviour:
   title: Solar Flare
   description: Deals 10 Damage per turn, cannot be dodged
   type: 0
+  firerate: 0
+  delay: 0
+  power: 0
 --- !u!135 &135000011139641922
 SphereCollider:
   m_ObjectHideFlags: 1

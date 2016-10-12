@@ -16,4 +16,9 @@ public class DescriptionScript : MonoBehaviour {
     public string description;
 
     public ModuleType type;
+
+    // Module Attributes
+    public float firerate;
+    public float delay;
+    public float power;
 }

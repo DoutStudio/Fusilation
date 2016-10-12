@@ -5,9 +5,10 @@ using System.IO;
 
 public class ClickChange : MonoBehaviour {
 
-    public Sprite spriteToSelect;
+    //public Sprite spriteToSelect;
     SpriteRenderer render;
     Sprite tempSprite;
+    public GameObject tempGO;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +40,10 @@ public class ClickChange : MonoBehaviour {
 	void Update () {
 	    if(Input.GetMouseButtonDown(0))
         {
-            render.color = Color.blue;
+            //render.color = Color.blue;
+            GameObject dunno = Resources.Load<GameObject>("Ship Modules\\Attack\\BasicTurret");
+            Instantiate(tempGO, render.transform.position, Quaternion.identity);
+            Destroy(render.gameObject);
         }
 	}
 }

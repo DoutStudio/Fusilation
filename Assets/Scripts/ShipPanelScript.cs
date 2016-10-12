@@ -17,17 +17,28 @@ public class ShipPanelScript : MonoBehaviour
 
 	// Use this for initialization
 	void Start () {
-        GameObject[] listItemModules = Resources.LoadAll<GameObject>(rootFolderName + FolderName);
-        statPanel = GameObject.Find("ShipStatsPanel");
+        //while (!AssetPreview.IsLoadingAssetPreviews())
+        //{
+            //StartCoroutine(WaitForResourceLoad(10));
+            GameObject[] listItemModules = Resources.LoadAll<GameObject>(rootFolderName + FolderName);
+            statPanel = GameObject.Find("ShipStatsPanel");
 
-        for (int i = 0; i < listItemModules.Length; ++i)
-        {
-            GameObject newItem = Instantiate(listItem);
-            newItem.GetComponent<ModuleThumbnailScript>().shipModule = listItemModules[i];
-            newItem.GetComponent<ModuleThumbnailScript>().shipStatPanel = statPanel;
-            newItem.transform.SetParent(transform);
-        }
+            for (int i = 0; i < listItemModules.Length; ++i)
+            {
+                GameObject newItem = Instantiate(listItem);
+                newItem.GetComponent<ModuleThumbnailScript>().shipModule = listItemModules[i];
+                newItem.GetComponent<ModuleThumbnailScript>().shipStatPanel = statPanel;
+            newItem.GetComponent<ConnectModuleScript>().enabled = true;
+                newItem.transform.SetParent(transform);
+            }
+        //}
+        //Debug.Log("Loading done for " + FolderName);
 
         //Debug.Log(listItemModules.Length);
     }
+
+    //private IEnumerator WaitForResourceLoad(int v)
+    //{
+    //    yield return new WaitForSeconds(v);
+    //}
 }

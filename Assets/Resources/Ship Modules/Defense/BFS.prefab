@@ -343,13 +343,16 @@ MonoBehaviour:
   title: BFS Shield
   description: 50 health
   type: 1
+  firerate: 0
+  delay: 0
+  power: 0
 --- !u!114 &114000012246017334
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010313164594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
