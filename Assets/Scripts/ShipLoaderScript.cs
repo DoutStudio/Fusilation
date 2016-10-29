@@ -13,7 +13,7 @@ public class ShipLoaderScript : MonoBehaviour {
             playerShip.transform.position = point2.position;
             TestMovement moveScript = playerShip.GetComponent<TestMovement>();
             moveScript.enabled = true;
-            moveScript.Speed = 10;
+            moveScript.FloatSpeed = 10;
             moveScript.MovePoints = new GameObject[2];
             moveScript.MovePoints[0] = GameObject.Find("MovePoint1");
             moveScript.MovePoints[1] = GameObject.Find("MovePoint2");

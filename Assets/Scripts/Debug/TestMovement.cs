@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Ryan Scopio
@@ -8,8 +9,12 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class TestMovement : MonoBehaviour
 {
-    public float Speed = 2f;
+    public float FloatSpeed = 2f;
+    public float WarpSpeed = 200f;
+    private float speed;
     public GameObject[] MovePoints;
+    public List<GameObject> WarpPoints;
+    public List<GameObject> StopPoints;
     public float TurnSpeed = 5;
 
     Rigidbody2D body;
@@ -20,10 +25,17 @@ public class TestMovement : MonoBehaviour
 
     void Start()
     {
+        speed = FloatSpeed;
         body = GetComponent<Rigidbody2D>();
-        Vector3 directionalVector = (MovePoints[curP].transform.position - transform.position).normalized * Speed;
+        Vector3 directionalVector = (MovePoints[curP].transform.position - transform.position).normalized * speed;
         lastSqrMag = Mathf.Infinity;
         desiredVelocity = directionalVector;
+
+
+
+        //WarpPoints = new List<GameObject>();
+        //StopPoints = new List<GameObject>();
+
     }
 
     void Update()
@@ -51,12 +63,21 @@ public class TestMovement : MonoBehaviour
     {
         if (collision.gameObject == MovePoints[curP])
         {
+            if (WarpPoints.Contains(collision.gameObject))
+            {
+                speed = WarpSpeed;
+            }
+            if (StopPoints.Contains(collision.gameObject))
+            {
+                speed = FloatSpeed;
+            }
+
             curP++;
             if (curP >= MovePoints.Length)
             {
                 curP = 0;
             }
-            Vector3 directionalVector = (MovePoints[curP].transform.position - transform.position).normalized * Speed;
+            Vector3 directionalVector = (MovePoints[curP].transform.position - transform.position).normalized * speed;
             lastSqrMag = Mathf.Infinity;
             desiredVelocity = directionalVector;
         }
