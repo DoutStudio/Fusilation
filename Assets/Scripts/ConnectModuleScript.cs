@@ -54,11 +54,14 @@ public class ConnectModuleScript : MonoBehaviour {
                 currentHoveredSlot.GetComponent<Renderer>().enabled = false;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = false;
                 moduleTransform.parent = currentHoveredSlot.transform;
+                currentHoveredSlot.SendMessageUpwards("ModuleHasBeenAttached", moduleTransform.gameObject);
                 //Debug.Log("set");
             }
             else
             {
                 // if we are not over a slot then remove the module from existence
+                Debug.Log("Module not attached -- Destroying Module");
+                moduleTransform.SendMessageUpwards("ModuleHasBeenRemoved", moduleTransform.gameObject);
                 Destroy(moduleTransform.gameObject);
             }
         }
