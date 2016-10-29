@@ -8,7 +8,7 @@ public class DebugCameraMovement : MonoBehaviour
     public bool Track = false;
     public Transform Target;
     public Vector3 Offset;
-    public Vector3 Rotation;
+    //public Vector3 Rotation;
 
     /// <summary>
     /// Ryan Scopio
@@ -36,7 +36,7 @@ public class DebugCameraMovement : MonoBehaviour
         if (Track)
         {
             transform.position = new Vector3(Target.position.x + Offset.x, Target.position.y + Offset.y, transform.position.z);
-            transform.rotation = Quaternion.Euler(Rotation);
+            //transform.rotation = Quaternion.Euler(Rotation);
         }
 
     }

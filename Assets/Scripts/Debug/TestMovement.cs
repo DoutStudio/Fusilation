@@ -31,8 +31,6 @@ public class TestMovement : MonoBehaviour
         lastSqrMag = Mathf.Infinity;
         desiredVelocity = directionalVector;
 
-
-
         //WarpPoints = new List<GameObject>();
         //StopPoints = new List<GameObject>();
 
