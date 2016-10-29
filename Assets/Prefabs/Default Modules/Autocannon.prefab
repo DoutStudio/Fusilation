@@ -191,6 +191,7 @@ MonoBehaviour:
   TargetBody: {fileID: 0}
   SimplePointToTarget: 0
   TurnSpeed: 15
+  defaultRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012639175254
 MonoBehaviour:
   m_ObjectHideFlags: 1

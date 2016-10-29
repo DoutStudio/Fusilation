@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SettingsScene.unity
   - enabled: 1
     path: Assets/Scenes/HelpScene.unity
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
