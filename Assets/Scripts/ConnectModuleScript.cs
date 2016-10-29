@@ -35,9 +35,10 @@ public class ConnectModuleScript : MonoBehaviour {
         if (isDragging)
         {
             moduleTransform.position = mouseWorldPosition;
-            if (currentHoveredSlot && !currentHoveredSlot.activeSelf) 
+            if (currentHoveredSlot && !currentHoveredSlot.GetComponent<Renderer>().enabled) 
             {
-                currentHoveredSlot.SetActive(true);
+                //currentHoveredSlot.SetActive(true);
+                currentHoveredSlot.GetComponent<Renderer>().enabled = true;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = true;
             }
         }
@@ -49,8 +50,10 @@ public class ConnectModuleScript : MonoBehaviour {
             {
                 isOverSlot = false;
                 moduleTransform.position = currentHoveredSlot.transform.position;
-                currentHoveredSlot.SetActive(false);
+                //currentHoveredSlot.SetActive(false);
+                currentHoveredSlot.GetComponent<Renderer>().enabled = false;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = false;
+                moduleTransform.parent = currentHoveredSlot.transform;
                 //Debug.Log("set");
             }
             else

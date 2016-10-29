@@ -522,6 +522,9 @@ MonoBehaviour:
   title: 
   description: 
   type: 1
+  firerate: 0
+  delay: 0
+  power: 0
 --- !u!114 &114000014228010800
 MonoBehaviour:
   m_ObjectHideFlags: 1

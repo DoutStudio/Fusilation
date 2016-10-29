@@ -28,17 +28,8 @@ public class ShipPanelScript : MonoBehaviour
                 GameObject newItem = Instantiate(listItem);
                 newItem.GetComponent<ModuleThumbnailScript>().shipModule = listItemModules[i];
                 newItem.GetComponent<ModuleThumbnailScript>().shipStatPanel = statPanel;
-            newItem.GetComponent<ConnectModuleScript>().enabled = true;
-                newItem.transform.SetParent(transform);
+            listItemModules[i].GetComponent<ConnectModuleScript>().enabled = true;
+            newItem.transform.SetParent(transform);
             }
-        //}
-        //Debug.Log("Loading done for " + FolderName);
-
-        //Debug.Log(listItemModules.Length);
     }
-
-    //private IEnumerator WaitForResourceLoad(int v)
-    //{
-    //    yield return new WaitForSeconds(v);
-    //}
 }
