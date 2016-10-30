@@ -40,7 +40,9 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
         PlayerPrefs.SetInt("isSaved", 1);
 
         // save the ship id
-        PlayerPrefs.SetString("Ship", shipGameObject.name);
+        string shipName = shipGameObject.name.Replace("(Clone)", "");
+        PlayerPrefs.SetString("Ship", shipName);
+
         
         // For Each fitting slot
         // save the id of each valid module
@@ -74,6 +76,7 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
         GameObject ship = Resources.Load("Ships/" + shipName) as GameObject;
 
         ship = Instantiate(ship);
+        
 
         // Find valid ship modules
         // For each valid ship module
@@ -101,22 +104,30 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
                     Debug.Log("The module " + moduleName + " could not be loaded");
                 }
                 GameObject moduleInGame = Instantiate(module, fittingSlots.GetChild(i).transform.position, Quaternion.identity) as GameObject; // might need location
-                moduleInGame.GetComponent<ConnectModuleScript>().enabled = false;
+                //moduleInGame.GetComponent<ConnectModuleScript>().isOverSlot = true;
+                moduleInGame.GetComponent<ConnectModuleScript>().currentHoveredSlot = fittingSlots.GetChild(i).gameObject;
                 moduleInGame.transform.parent = fittingSlots.GetChild(i).transform;
             }
-            fittingSlots.GetChild(i).GetComponent<Renderer>().enabled = false;
+            //fittingSlots.GetChild(i).GetComponent<Renderer>().enabled = false;
         }
 
         return ship;
     }
 
-    public static void SaveCaptainName(string captainName)
+    public static void SavePlayerCaptain(GameObject shipGameObject)
     {
-        PlayerPrefs.SetString("Captain", captainName);
+        // save captain if applicable (if thats how you spell it)
+        if (shipGameObject.GetComponent<ShipProperties>().captain)
+        {
+            string capName = shipGameObject.GetComponent<ShipProperties>().captain.name.Replace("(Clone)", "");
+            PlayerPrefs.SetString("Captain", capName);
+        }
     }
 
-    public static string LoadCaptainName()
+    public static GameObject LoadPlayerCaptain()
     {
-        return PlayerPrefs.GetString("Captain");
+        string capName = PlayerPrefs.GetString("Captain");
+        GameObject captain = Resources.Load<GameObject>("Ship Modules/Captain/" + capName);
+        return captain;
     }
 }

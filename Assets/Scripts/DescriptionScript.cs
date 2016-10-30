@@ -17,10 +17,10 @@ public class DescriptionScript : MonoBehaviour {
     public ModuleType type;
 
     // Attack Module Attributes
-    public float firerate;
-    //public float delay;
-    public float power;
-    public float attackSpeedBuff;
+    //public float firerate;
+    ////public float delay;
+    //public float power;
+    //public float attackSpeedBuff;
 
     // Defense Module Attributes
 

@@ -2,15 +2,15 @@
 using System.Collections;
 using System;
 
-public class NeverActivateCondition : ModuleCondition
+public class CooldownCondition : ModuleCondition
 {
     public override void initCondition()
     {
-        // do nothing
+        throw new NotImplementedException();
     }
 
     public override bool isConditionFilled()
     {
-        return false;
+        throw new NotImplementedException();
     }
 }
