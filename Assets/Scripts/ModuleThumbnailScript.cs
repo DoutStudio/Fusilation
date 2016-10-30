@@ -32,12 +32,14 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         else
         {
             itemSelected += GameObject.Find("ShipStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+
         }
 
         // check to see if the slot connector module is installed
         if (shipModule.GetComponent<ConnectModuleScript>() == null)
         {
-            shipModule.AddComponent<ConnectModuleScript>();
+            //shipModule.AddComponent<ConnectModuleScript>();
+            //shipModule.GetComponent<ConnectModuleScript>().enabled = true;
         }
         // check if the rigid body is added
         if (shipModule.GetComponent<Rigidbody>() == null)
@@ -62,7 +64,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         {
             // Asset Preview runs assynchonously with main instantiation thread
             // texture might not be available on first call
-            texture = AssetPreview.GetAssetPreview(shipModule);
+            texture = AssetPreview.GetAssetPreview(shipModule); // pulling the prefab
         }
 
         if (texture == null)
@@ -86,13 +88,16 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         Vector3 mPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mPos.z = 0;
         GameObject module = (GameObject) Instantiate(shipModule, mPos, Quaternion.identity);
-        module.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        module.GetComponent<ConnectModuleScript>().enabled = true;
+        //module.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         //Debug.Log("held is false");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (Input.GetMouseButton(0) && shipModule.GetComponent<ConnectModuleScript>().enabled && spawnReset)
+        //ConnectModuleScript connectScript = shipModule.GetComponent<ConnectModuleScript>();
+        //bool value = connectScript.enabled;
+        if (Input.GetMouseButton(0) && spawnReset)
         {
             SpawnModuleAtMousePosition();
             spawnReset = false;

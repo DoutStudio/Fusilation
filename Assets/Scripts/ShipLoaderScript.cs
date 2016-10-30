@@ -29,6 +29,7 @@ public class ShipLoaderScript : MonoBehaviour {
             {
                 captain = Instantiate(captain);
                 captain.transform.parent = playerShip.transform;
+                captain.GetComponentInChildren<Renderer>().enabled = false;
                 playerShip.GetComponent<ShipProperties>().captain = captain;
                 ItemSelectedArgs args = new ItemSelectedArgs();
                 args.gameObject = captain;
@@ -62,6 +63,7 @@ public class ShipLoaderScript : MonoBehaviour {
         {
             captain = Instantiate(captain);
             captain.transform.parent = playerShip.transform;
+            captain.GetComponent<ConnectModuleScript>().enabled = false;
             playerShip.GetComponent<ShipProperties>().captain = captain;
         }
         //Transform point2 = GameObject.Find("MovePoint2").transform;

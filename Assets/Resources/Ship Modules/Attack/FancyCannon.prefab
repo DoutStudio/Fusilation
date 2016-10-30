@@ -154,11 +154,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013351817044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000014108460258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,9 +175,6 @@ MonoBehaviour:
   title: Fancy Cannon
   description: Max 25 Damage, Fires 1 shot, 25 damage per shot
   type: 0
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!135 &135000013525938526
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public abstract class ModuleEffect : MonoBehaviour
     void Start()
     {
         // used as temporary condition
+        
         effectCondition = new NeverActivateCondition();
     }
 

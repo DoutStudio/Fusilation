@@ -105,6 +105,7 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
                 }
                 GameObject moduleInGame = Instantiate(module, fittingSlots.GetChild(i).transform.position, Quaternion.identity) as GameObject; // might need location
                 //moduleInGame.GetComponent<ConnectModuleScript>().isOverSlot = true;
+                moduleInGame.GetComponent<ConnectModuleScript>().enabled = true;
                 moduleInGame.GetComponent<ConnectModuleScript>().currentHoveredSlot = fittingSlots.GetChild(i).gameObject;
                 moduleInGame.transform.parent = fittingSlots.GetChild(i).transform;
             }
