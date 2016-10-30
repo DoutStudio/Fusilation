@@ -15,6 +15,7 @@ TagManager:
   - RightSlot
   - CenterSlot
   - Camera
+  - Captain
   layers:
   - Default
   - TransparentFX

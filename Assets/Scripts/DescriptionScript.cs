@@ -11,14 +11,18 @@ public class DescriptionScript : MonoBehaviour {
         CAPTAIN
     }
 
+    // Generic Properties
     public string title;
-
     public string description;
-
     public ModuleType type;
 
-    // Module Attributes
-    public float firerate;
-    public float delay;
-    public float power;
+    // Attack Module Attributes
+    //public float firerate;
+    ////public float delay;
+    //public float power;
+    //public float attackSpeedBuff;
+
+    // Defense Module Attributes
+
+    // Support Module Attributes
 }

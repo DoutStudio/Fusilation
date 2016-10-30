@@ -23,6 +23,8 @@ GameObject:
   - 54: {fileID: 54000012716190024}
   - 135: {fileID: 135000013844842882}
   - 114: {fileID: 114000010017371326}
+  - 114: {fileID: 114000012483567950}
+  - 114: {fileID: 114000011724232476}
   m_Layer: 0
   m_Name: BasicAttackSpeed
   m_TagString: Untagged
@@ -132,9 +134,6 @@ MonoBehaviour:
   title: '!!TITLE NOTE SET!!'
   description: '!!DESC NOT SET!!'
   type: 0
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!114 &114000011590128946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +145,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011724232476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010164253240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012483567950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010164253240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8380c09f14f7a4c8428ad2f565825a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+  effectCondition: {fileID: 0}
+  attackSpeedMultiplier: 0
 --- !u!135 &135000013844842882
 SphereCollider:
   m_ObjectHideFlags: 1

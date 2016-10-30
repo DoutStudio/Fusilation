@@ -18,7 +18,8 @@ public class LaunchButtonScript : MonoBehaviour {
     {
         GameObject shipObject = GameObject.FindGameObjectWithTag("Ship");
         ShipSaveLoadScript.SavePlayerShip(shipObject);
-        // TODO: save captain
-        SceneManager.LoadScene(battleScene);
+        ShipSaveLoadScript.SavePlayerCaptain(shipObject);
+        // TODO: load next scene
+        //SceneManager.LoadScene(battleScene);
 	}
 }

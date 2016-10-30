@@ -9,8 +9,8 @@ using UnityEditor;
 
 public class SelectedItemScript : MonoBehaviour {
 
-    Text titleTextScript;
-    Text descTextScript;
+    public Text titleTextScript;
+    public Text descTextScript;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +38,8 @@ public class SelectedItemScript : MonoBehaviour {
             Transform imageTransform = transform.FindChild("ThumbnailImage");
             Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
             imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
+
+            GameObject.FindGameObjectWithTag("Ship").GetComponent<ShipProperties>().captain = obj;
         }
     }
 }

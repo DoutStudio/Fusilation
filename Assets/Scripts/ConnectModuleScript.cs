@@ -5,12 +5,16 @@ using System;
 
 public class ConnectModuleScript : MonoBehaviour {
 
-    Transform moduleTransform;
+    //Transform moduleTransform;
 
     private static bool userCanMouse = false;
     bool isDragging;
-    bool isOverSlot;
-    GameObject currentHoveredSlot;
+
+    [HideInInspector]
+    public bool isOverSlot = false;
+
+    [HideInInspector]
+    public GameObject currentHoveredSlot = null;
 
     Vector3 mouseWorldPosition
     {
@@ -24,17 +28,17 @@ public class ConnectModuleScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        moduleTransform = GetComponent<Transform>(); // unneeded
+        //moduleTransform = GetComponent<Transform>(); // unneeded
         isDragging = true;
-        isOverSlot = false;
-        currentHoveredSlot = null;
+        //isOverSlot = false;
+        //currentHoveredSlot = null;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (isDragging)
         {
-            moduleTransform.position = mouseWorldPosition;
+            transform.position = mouseWorldPosition;
             if (currentHoveredSlot && !currentHoveredSlot.GetComponent<Renderer>().enabled) 
             {
                 //currentHoveredSlot.SetActive(true);
@@ -49,17 +53,20 @@ public class ConnectModuleScript : MonoBehaviour {
             if (isOverSlot)
             {
                 isOverSlot = false;
-                moduleTransform.position = currentHoveredSlot.transform.position;
+                transform.position = currentHoveredSlot.transform.position;
                 //currentHoveredSlot.SetActive(false);
                 currentHoveredSlot.GetComponent<Renderer>().enabled = false;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = false;
-                moduleTransform.parent = currentHoveredSlot.transform;
+                transform.parent = currentHoveredSlot.transform;
+                currentHoveredSlot.SendMessageUpwards("ModuleHasBeenAttached", transform.gameObject);
                 //Debug.Log("set");
             }
             else
             {
                 // if we are not over a slot then remove the module from existence
-                Destroy(moduleTransform.gameObject);
+                Debug.Log("Module not attached -- Destroying Module");
+                transform.SendMessageUpwards("ModuleHasBeenRemoved", transform.gameObject);
+                Destroy(transform.gameObject);
             }
         }
 	}

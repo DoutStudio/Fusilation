@@ -258,6 +258,7 @@ GameObject:
   - 50: {fileID: 50000012735351852}
   - 114: {fileID: 114000013502266040}
   - 60: {fileID: 60000013953899610}
+  - 114: {fileID: 114000013835902672}
   m_Layer: 0
   m_Name: FederationFrigate
   m_TagString: Ship
@@ -1270,6 +1271,20 @@ MonoBehaviour:
   Speed: 2
   MovePoints: []
   TurnSpeed: 5
+--- !u!114 &114000013835902672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013164041186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6369123759a5f2143ad8722142627192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageBuffMultiplier: 1
+  attackSpeedBuffMultiplier: 1
+  modules: []
 --- !u!212 &212000010049019080
 SpriteRenderer:
   m_ObjectHideFlags: 1
