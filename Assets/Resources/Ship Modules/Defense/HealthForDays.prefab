@@ -279,6 +279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000013597380042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -290,12 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Health for days
+  description: Regen 50 heatlh per turn but take 10% more damage and do 10% less damage
   type: 1
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!135 &135000010123056066
 SphereCollider:
   m_ObjectHideFlags: 1

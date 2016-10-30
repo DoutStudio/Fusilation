@@ -34,9 +34,13 @@ public class SelectedItemScript : MonoBehaviour {
         if (obj.GetComponent<DescriptionScript>().type == DescriptionScript.ModuleType.CAPTAIN)
         {
             // Set thumbnail image
-            Texture2D texture = AssetPreview.GetAssetPreview(obj);
+
+            SpriteRenderer sr = obj.GetComponentInChildren<SpriteRenderer>();
+            //Texture2D texture = AssetPreview.GetAssetPreview(obj);
+            Texture2D texture = sr.sprite.texture;
+
             Transform imageTransform = transform.FindChild("ThumbnailImage");
-            Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
+            Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero); // All asset previews are 128,128
             imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
 
             GameObject.FindGameObjectWithTag("Ship").GetComponent<ShipProperties>().captain = obj;

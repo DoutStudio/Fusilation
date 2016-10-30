@@ -1,10 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ShipLoaderScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()
+    {
+        switch(SceneManager.GetActiveScene().buildIndex)
+        {
+            case 2: // fitting scene
+                LoadShipInFittingRoom();
+                break;
+            case 6: // battle scene
+                LoadShipInBattleRoom();
+                break;
+        }   
+	}
+
+
+    private void LoadShipInFittingRoom()
     {
         if (PlayerPrefs.GetInt("isSaved") == 1)
         {
@@ -19,14 +34,7 @@ public class ShipLoaderScript : MonoBehaviour {
                 args.gameObject = captain;
                 GameObject.Find("CaptainStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected(this, args);
             }
-            //Transform point2 = GameObject.Find("MovePoint2").transform;
-            //playerShip.transform.position = point2.position;
-            //TestMovement moveScript = playerShip.GetComponent<TestMovement>();
-            //moveScript.enabled = true;
-            //moveScript.Speed = 10;
-            //moveScript.MovePoints = new GameObject[2];
-            //moveScript.MovePoints[0] = GameObject.Find("MovePoint1");
-            //moveScript.MovePoints[1] = GameObject.Find("MovePoint2");
+
         }
         else
         {
@@ -40,11 +48,29 @@ public class ShipLoaderScript : MonoBehaviour {
             {
                 Debug.Log("Could not load Default Ship: FederationFrigate");
             }
-            
+
         }
 
-
-
         Destroy(this.gameObject);
-	}
+    }
+
+    private void LoadShipInBattleRoom()
+    {
+        GameObject playerShip = ShipSaveLoadScript.LoadPlayerShip();
+        GameObject captain = ShipSaveLoadScript.LoadPlayerCaptain();
+        if (captain)
+        {
+            captain = Instantiate(captain);
+            captain.transform.parent = playerShip.transform;
+            playerShip.GetComponent<ShipProperties>().captain = captain;
+        }
+        //Transform point2 = GameObject.Find("MovePoint2").transform;
+        //playerShip.transform.position = point2.position;
+        //TestMovement moveScript = playerShip.GetComponent<TestMovement>();
+        //moveScript.enabled = true;
+        //moveScript.Speed = 10;
+        //moveScript.MovePoints = new GameObject[2];
+        //moveScript.MovePoints[0] = GameObject.Find("MovePoint1");
+        //moveScript.MovePoints[1] = GameObject.Find("MovePoint2");
+    }
 }

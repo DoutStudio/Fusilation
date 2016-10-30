@@ -249,6 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000012051047414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,12 +262,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Shiny AF armor
+  description: 'Take 25% more damage every turn, Active Ability: Take no damage for
+    one turn'
   type: 1
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!135 &135000010404147744
 SphereCollider:
   m_ObjectHideFlags: 1

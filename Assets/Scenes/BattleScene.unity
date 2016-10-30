@@ -157,7 +157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &112408698
 Transform:
   m_ObjectHideFlags: 0
@@ -338,7 +338,6 @@ MonoBehaviour:
   Track: 1
   Target: {fileID: 1934015743}
   Offset: {x: 0, y: 5, z: 0}
-  Rotation: {x: 0, y: 0, z: 0}
 --- !u!81 &489840694
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1394,6 +1393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7075d6bddbd8fc4f8d9335767506390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  FloatSpeed: 2
+  WarpSpeed: 200
   MovePoints: []
+  WarpPoints: []
+  StopPoints: []
   TurnSpeed: 5

@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: '!!TITLE NOTE SET!!'
-  description: '!!DESC NOT SET!!'
+  title: Basic Attack Speed Module
+  description: '10% increase in # of Shots'
   type: 0
 --- !u!114 &114000011590128946
 MonoBehaviour:
@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000011724232476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectTarget: {fileID: 0}
   effectCondition: {fileID: 0}
-  attackSpeedMultiplier: 0
+  attackSpeedMultiplier: 0.1
 --- !u!135 &135000013844842882
 SphereCollider:
   m_ObjectHideFlags: 1
