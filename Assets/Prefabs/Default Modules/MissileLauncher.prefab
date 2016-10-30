@@ -88,6 +88,7 @@ GameObject:
   - 114: {fileID: 114000013124581022}
   - 114: {fileID: 114000014291862480}
   - 58: {fileID: 58000012606010136}
+  - 114: {fileID: 114000012239284032}
   m_Layer: 10
   m_Name: MissileLauncher
   m_TagString: Turret
@@ -232,6 +233,21 @@ PolygonCollider2D:
     - - {x: -0.43301272, y: -0.24999994}
       - {x: 0.43301272, y: -0.25000003}
       - {x: 0, y: 0.5}
+--- !u!114 &114000012239284032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013378339062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33398bed283d5a4c9b827370f13e59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 100
+  MaxHealth: 100
+  RegenRate: 0
+  DoesRegen: 0
 --- !u!114 &114000013124581022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,6 +279,7 @@ MonoBehaviour:
   TargetBody: {fileID: 0}
   SimplePointToTarget: 1
   TurnSpeed: 5
+  defaultRotation: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011724672682
 SpriteRenderer:
   m_ObjectHideFlags: 1

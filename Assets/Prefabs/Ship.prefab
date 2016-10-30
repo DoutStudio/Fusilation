@@ -73,6 +73,7 @@ GameObject:
   - 50: {fileID: 50000012143130472}
   - 114: {fileID: 114000010270782928}
   - 114: {fileID: 114000012961879832}
+  - 114: {fileID: 114000011790618254}
   m_Layer: 9
   m_Name: Ship
   m_TagString: Ship
@@ -1641,11 +1642,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7075d6bddbd8fc4f8d9335767506390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  FloatSpeed: 2
+  WarpSpeed: 300
   MovePoints:
   - {fileID: 0}
   - {fileID: 0}
-  TurnSpeed: 20
+  WarpPoints: []
+  StopPoints: []
+  TurnSpeed: 5
+--- !u!114 &114000011790618254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010425290982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33398bed283d5a4c9b827370f13e59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 1000
+  MaxHealth: 1000
+  RegenRate: 0
+  DoesRegen: 0
+  DisplayText: 0
+  DisplayDot: 0
 --- !u!114 &114000012961879832
 MonoBehaviour:
   m_ObjectHideFlags: 1
