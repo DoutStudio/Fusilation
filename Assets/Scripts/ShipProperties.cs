@@ -5,7 +5,11 @@ using System.Collections.Generic;
 public class ShipProperties : MonoBehaviour {
 
     public float damageBuffMultiplier = 1;
+    public float flatDamageBuff = 0;
     public float attackSpeedMultiplier = 1;
+    public float flatAttackSpeedBuff = 0;
+    public float healthBuffMultiplier = 1;
+    public float flatHealthBuff = 0;
     public List<GameObject> modules;
     public GameObject captain;
     // TODO: active abilities

@@ -230,9 +230,6 @@ MonoBehaviour:
   title: 
   description: 
   type: 2
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!114 &114000011218450538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000012827631186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,6 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000012830981538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,9 +270,6 @@ MonoBehaviour:
   title: 
   description: 
   type: 2
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!114 &114000013278287472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,6 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000013480561452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,12 +294,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Don't wanna die
+  description: Take 25% less damage but do 50% less Damage
   type: 2
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!135 &135000010923322866
 SphereCollider:
   m_ObjectHideFlags: 1

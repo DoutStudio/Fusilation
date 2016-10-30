@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000012779264086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000013359070892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -173,9 +177,6 @@ MonoBehaviour:
   title: 
   description: 
   type: 2
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!114 &114000013651763476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,12 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: 
-  description: 
+  title: Need More Bullets
+  description: Doubles the number of projectiles from any gun, halves the accruacy
+    and take 10% more damage
   type: 2
-  firerate: 0
-  delay: 0
-  power: 0
 --- !u!135 &135000010784555042
 SphereCollider:
   m_ObjectHideFlags: 1
