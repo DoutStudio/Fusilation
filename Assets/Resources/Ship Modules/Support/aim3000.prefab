@@ -103,6 +103,8 @@ GameObject:
   - 54: {fileID: 54000010084654818}
   - 135: {fileID: 135000012628512022}
   - 114: {fileID: 114000011225569550}
+  - 114: {fileID: 114000012957511346}
+  - 114: {fileID: 114000013292574696}
   m_Layer: 0
   m_Name: aim3000
   m_TagString: Untagged
@@ -222,6 +224,20 @@ MonoBehaviour:
   title: Super Aim 3000
   description: Boosts accuracy by 10%
   type: 2
+--- !u!114 &114000012957511346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013339754852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773084c4bab3dbc428a7dec08eed56e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+  effectCondition: {fileID: 0}
+  accuracyMultiplier: 0.1
 --- !u!114 &114000013148330276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,6 +251,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOverSlot: 0
   currentHoveredSlot: {fileID: 0}
+--- !u!114 &114000013292574696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013339754852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135000012628512022
 SphereCollider:
   m_ObjectHideFlags: 1

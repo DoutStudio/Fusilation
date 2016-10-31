@@ -13,4 +13,9 @@ public class CooldownCondition : ModuleCondition
     {
         throw new NotImplementedException();
     }
+
+    public override void removeCondition()
+    {
+        throw new NotImplementedException();
+    }
 }

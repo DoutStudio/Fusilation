@@ -13,4 +13,9 @@ public class NeverActivateCondition : ModuleCondition
     {
         return false;
     }
+
+    public override void removeCondition()
+    {
+        // do nothing
+    }
 }

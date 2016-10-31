@@ -2,13 +2,17 @@
 using System.Collections;
 using System;
 
-public class AttackSpeedEffect : ModuleEffect
+public class AccuracyPercentageEffect : ModuleEffect
 {
     [Range(0, 1)]
-    public float attackSpeedMultiplier = 0;
+    public float accuracyMultiplier = 0;
 
-    ShipProperties shipProperties;
+    private ShipProperties shipProperties;
 
+    public override void activateEffect()
+    {
+       // do nothing
+    }
 
     public override void initEffect()
     {
@@ -16,16 +20,12 @@ public class AttackSpeedEffect : ModuleEffect
         //effectCondition = GetComponent<AlwaysActivateCondition>();
 
         shipProperties = effectTarget.GetComponent<ShipProperties>();
-        shipProperties.attackSpeedMultiplier *= (1 + attackSpeedMultiplier);
-    }
+        shipProperties.accuracyMultiplier += accuracyMultiplier;
 
-    public override void activateEffect()
-    {
-        // the module only has a passive effect
     }
 
     public override void removeEffect()
     {
-        shipProperties.attackSpeedMultiplier /= (1 + attackSpeedMultiplier);
+        shipProperties.accuracyMultiplier -= accuracyMultiplier;
     }
 }

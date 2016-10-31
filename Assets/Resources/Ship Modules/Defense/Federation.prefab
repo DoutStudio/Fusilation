@@ -119,6 +119,8 @@ GameObject:
   - 54: {fileID: 54000012163410904}
   - 135: {fileID: 135000012848483438}
   - 114: {fileID: 114000010627398446}
+  - 114: {fileID: 114000011407097534}
+  - 114: {fileID: 114000012080617924}
   m_Layer: 0
   m_Name: Federation
   m_TagString: Untagged
@@ -461,6 +463,31 @@ MonoBehaviour:
   title: Federation Armor
   description: 40 health
   type: 1
+--- !u!114 &114000011407097534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012081896300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012080617924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012081896300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13d648715b204e43878fec2cb4059f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+  effectCondition: {fileID: 0}
+  healthIncrease: 40
 --- !u!114 &114000012661217070
 MonoBehaviour:
   m_ObjectHideFlags: 1

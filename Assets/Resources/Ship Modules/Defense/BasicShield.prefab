@@ -55,6 +55,8 @@ GameObject:
   - 54: {fileID: 54000011182524340}
   - 135: {fileID: 135000011822478758}
   - 114: {fileID: 114000011767452278}
+  - 114: {fileID: 114000013442232192}
+  - 114: {fileID: 114000013182782320}
   m_Layer: 0
   m_Name: BasicShield
   m_TagString: Untagged
@@ -145,6 +147,31 @@ MonoBehaviour:
   title: Basic Shield
   description: 5% Damage reduction
   type: 1
+--- !u!114 &114000013182782320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014007544518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000013442232192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014007544518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13012748c0980e6439d86533f1c4fef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+  effectCondition: {fileID: 0}
+  damageReduction: 0.5
 --- !u!135 &135000011822478758
 SphereCollider:
   m_ObjectHideFlags: 1

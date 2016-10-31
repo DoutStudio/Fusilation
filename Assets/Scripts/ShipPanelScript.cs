@@ -21,7 +21,7 @@ public class ShipPanelScript : MonoBehaviour
         //{
             //StartCoroutine(WaitForResourceLoad(10));
             GameObject[] listItemModules = Resources.LoadAll<GameObject>(rootFolderName + FolderName);
-            statPanel = GameObject.Find("ShipStatsPanel");
+            statPanel = GameObject.Find("ModuleStatsPanel");
 
             for (int i = 0; i < listItemModules.Length; ++i)
             {

@@ -39,6 +39,8 @@ GameObject:
   - 54: {fileID: 54000010180978784}
   - 135: {fileID: 135000011011201436}
   - 114: {fileID: 114000012797816352}
+  - 114: {fileID: 114000011348571162}
+  - 114: {fileID: 114000013479434872}
   m_Layer: 0
   m_Name: basicbitch
   m_TagString: Untagged
@@ -131,6 +133,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOverSlot: 0
   currentHoveredSlot: {fileID: 0}
+--- !u!114 &114000011348571162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010322978260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13d648715b204e43878fec2cb4059f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+  effectCondition: {fileID: 0}
+  healthIncrease: 10
 --- !u!114 &114000012797816352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,6 +161,17 @@ MonoBehaviour:
   title: Basic Bitch Armor
   description: 10 Health
   type: 1
+--- !u!114 &114000013479434872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010322978260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135000011011201436
 SphereCollider:
   m_ObjectHideFlags: 1

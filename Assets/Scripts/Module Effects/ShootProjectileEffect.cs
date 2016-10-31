@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class FireBulletEffect : ModuleEffect
+public class ShootProjectileEffect : ModuleEffect
 {
     public override void activateEffect()
     {

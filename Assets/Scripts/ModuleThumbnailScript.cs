@@ -31,7 +31,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         }
         else
         {
-            itemSelected += GameObject.Find("ShipStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+            itemSelected += GameObject.Find("ModuleStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
 
         }
 

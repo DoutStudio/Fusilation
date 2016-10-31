@@ -39,6 +39,8 @@ GameObject:
   - 54: {fileID: 54000011468738474}
   - 135: {fileID: 135000012463164716}
   - 114: {fileID: 114000012376692712}
+  - 114: {fileID: 114000012315952310}
+  - 114: {fileID: 114000011008056608}
   m_Layer: 0
   m_Name: accuracyModule
   m_TagString: Untagged
@@ -88,6 +90,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000011008056608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011954304040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012315952310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011954304040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773084c4bab3dbc428a7dec08eed56e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+  effectCondition: {fileID: 0}
+  accuracyMultiplier: 0.05
 --- !u!114 &114000012376692712
 MonoBehaviour:
   m_ObjectHideFlags: 1

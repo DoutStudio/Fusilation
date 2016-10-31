@@ -10,6 +10,8 @@ public class ShipProperties : MonoBehaviour {
     public float flatAttackSpeedBuff = 0;
     public float healthBuffMultiplier = 1;
     public float flatHealthBuff = 0;
+    public float damageReductionPercentage = 0;
+    public float accuracyMultiplier = 0;
     public List<GameObject> modules;
     public GameObject captain;
     // TODO: active abilities
@@ -49,8 +51,16 @@ public class ShipProperties : MonoBehaviour {
 
         // Called delayed start functions
         // NOTE: order of these functions matter
-        module.GetComponent<ModuleCondition>().initCondition();
-        module.GetComponent<ModuleEffect>().initEffect();
+        if (!isDebuff)
+        {
+            module.GetComponent<ModuleCondition>().initCondition();
+            module.GetComponent<ModuleEffect>().initEffect();
+        }
+        else
+        {
+            module.GetComponent<ModuleEffect>().removeEffect();
+            module.GetComponent<ModuleCondition>().removeCondition();
+        }
     }
 
     public void ModuleHasBeenAttached(GameObject module)

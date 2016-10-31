@@ -259,6 +259,7 @@ GameObject:
   - 114: {fileID: 114000013502266040}
   - 60: {fileID: 60000013953899610}
   - 114: {fileID: 114000013835902672}
+  - 114: {fileID: 114000012964097458}
   m_Layer: 0
   m_Name: FederationFrigate
   m_TagString: Ship
@@ -1257,6 +1258,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114000012964097458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013164041186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Federation Frigate
+  description: 'TODO: Describe Federation Frigate'
+  type: 4
 --- !u!114 &114000013502266040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1268,8 +1283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7075d6bddbd8fc4f8d9335767506390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  FloatSpeed: 2
+  WarpSpeed: 200
   MovePoints: []
+  WarpPoints: []
+  StopPoints: []
   TurnSpeed: 5
 --- !u!114 &114000013835902672
 MonoBehaviour:
@@ -1283,8 +1301,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageBuffMultiplier: 1
-  attackSpeedBuffMultiplier: 1
+  flatDamageBuff: 0
+  attackSpeedMultiplier: 1
+  flatAttackSpeedBuff: 0
+  healthBuffMultiplier: 1
+  flatHealthBuff: 0
   modules: []
+  captain: {fileID: 0}
 --- !u!212 &212000010049019080
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,7 +8,8 @@ public class DescriptionScript : MonoBehaviour {
         ATTACK,
         DEFENSE,
         SUPPORT,
-        CAPTAIN
+        CAPTAIN,
+        SHIP
     }
 
     // Generic Properties
