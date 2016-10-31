@@ -16,7 +16,7 @@ public class AttackSpeedEffect : ModuleEffect
         //effectCondition = GetComponent<AlwaysActivateCondition>();
 
         shipProperties = effectTarget.GetComponent<ShipProperties>();
-        shipProperties.attackSpeedMultiplier *= (1 + attackSpeedMultiplier);
+        shipProperties.attackSpeedMultiplier += attackSpeedMultiplier;
     }
 
     public override void activateEffect()
@@ -26,6 +26,6 @@ public class AttackSpeedEffect : ModuleEffect
 
     public override void removeEffect()
     {
-        shipProperties.attackSpeedMultiplier /= (1 + attackSpeedMultiplier);
+        shipProperties.attackSpeedMultiplier -= attackSpeedMultiplier;
     }
 }

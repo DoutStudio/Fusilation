@@ -3,40 +3,70 @@ using System.Collections;
 
 /// <summary>
 /// Ryan Scopio
-/// [Not in use]
 /// Dictates health of an object
-/// Alpha value correlates to health %
 /// Regenative health an option
 /// </summary>
-[RequireComponent(typeof(SpriteRenderer))]
 public class Health : MonoBehaviour
 {
 
     public float CurrentHealth;
     public float MaxHealth;
     public float RegenRate;
-    public bool DoesRegen;
+    public bool DoesRegen = false;
+    public bool DisplayText = false;
+    public bool DisplayDot = false;
+    public GameObject HealthDot;
 
-    SpriteRenderer spriteRenderer;
+    private SpriteRenderer dot;
+    private TextMesh textMesh;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        CurrentHealth = MaxHealth;
-        if(DoesRegen)
+        //CurrentHealth = MaxHealth;
+        CurrentHealth = Random.Range(0, MaxHealth);
+        if (DisplayText)
+        {
+            MeshRenderer mesh = GetComponent<MeshRenderer>();
+            mesh.sortingLayerName = "Text";
+            textMesh = GetComponent<TextMesh>();
+        }
+
+        if (DisplayDot)
+        {
+            dot = HealthDot.GetComponent<SpriteRenderer>();
+        }
+        else if (HealthDot)
+        {
+            HealthDot.SetActive(false);
+        }
+
+        if (DoesRegen)
         {
             StartCoroutine(RegenHealth());
         }
+
     }
 
     void Update()
     {
-        spriteRenderer.color = new Color(spriteRenderer.color.a, spriteRenderer.color.g, spriteRenderer.color.b, CurrentHealth / MaxHealth);
+        if (DisplayDot)
+        {
+            dot.color = Color.Lerp(Color.red, Color.green, CurrentHealth / MaxHealth);
+        }
+        if (DisplayText)
+        {
+            textMesh.text = (int)CurrentHealth + "/" + MaxHealth;
+            textMesh.color = Color.Lerp(Color.red, Color.green, CurrentHealth / MaxHealth);
+        }
+        if (CurrentHealth <= 0)
+        {
+            transform.gameObject.SetActive(false);
+        }
     }
 
     IEnumerator RegenHealth()
     {
-        while(true)
+        while (true)
         {
             CurrentHealth += 0.01f;
             yield return new WaitForSeconds(RegenRate);

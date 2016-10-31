@@ -450,7 +450,6 @@ MonoBehaviour:
   Track: 0
   Target: {fileID: 0}
   Offset: {x: 0, y: -5, z: 0}
-  Rotation: {x: 0, y: 0, z: 0}
 --- !u!1001 &375243677
 Prefab:
   m_ObjectHideFlags: 0
@@ -1400,6 +1399,15 @@ Prefab:
       propertyPath: PlayerCam
       value: 
       objectReference: {fileID: 1231489198}
+    - target: {fileID: 114000010270782928, guid: d938162d7fefc52499cd27826a14960d,
+        type: 2}
+      propertyPath: WarpSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d938162d7fefc52499cd27826a14960d, type: 2}
   m_IsPrefabParent: 0
@@ -1564,7 +1572,6 @@ MonoBehaviour:
   Track: 1
   Target: {fileID: 1534414786}
   Offset: {x: 0, y: 5, z: 0}
-  Rotation: {x: 0, y: 0, z: 0}
 --- !u!81 &1216831107
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1771,7 +1778,6 @@ MonoBehaviour:
   Track: 1
   Target: {fileID: 752982138}
   Offset: {x: 0, y: -5, z: 0}
-  Rotation: {x: 0, y: 0, z: 0}
 --- !u!81 &1231489201
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1867,7 +1873,7 @@ MonoBehaviour:
   StarCount: 7000
   SpawnAreaRadius: 500
   MinZ: 20
-  MaxZ: 80
+  MaxZ: 200
   StarPrefab: {fileID: 1000013823710796, guid: b5c37981959b1484196104efce97b41f, type: 2}
   StarParent: {fileID: 1158783807}
   StarSpawnCenter: {x: 0, y: 0, z: 0}
@@ -2283,6 +2289,19 @@ Prefab:
       propertyPath: PlayerCam
       value: 
       objectReference: {fileID: 1216831104}
+    - target: {fileID: 114000010270782928, guid: d938162d7fefc52499cd27826a14960d,
+        type: 2}
+      propertyPath: WarpSpeed
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d938162d7fefc52499cd27826a14960d, type: 2}
   m_IsPrefabParent: 0

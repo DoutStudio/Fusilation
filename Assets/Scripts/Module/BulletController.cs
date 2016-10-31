@@ -31,7 +31,7 @@ public class BulletController : MonoBehaviour
     {
         if (collision.transform.tag == Target.tag && collision.transform.root.gameObject != Creator)
         {
-            Health itemHealth = collision.gameObject.GetComponent<Health>();
+            Health itemHealth = collision.transform.root.GetComponent<Health>();
             if (itemHealth)
             {
                 itemHealth.CurrentHealth -= Damage;

@@ -1300,12 +1300,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6369123759a5f2143ad8722142627192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageBuffMultiplier: 1
+  damageBuffMultiplier: 0
   flatDamageBuff: 0
-  attackSpeedMultiplier: 1
+  attackSpeedMultiplier: 0
   flatAttackSpeedBuff: 0
-  healthBuffMultiplier: 1
+  healthBuffMultiplier: 0
   flatHealthBuff: 0
+  damageReductionPercentage: 0
+  accuracyMultiplier: 0
   modules: []
   captain: {fileID: 0}
 --- !u!212 &212000010049019080
