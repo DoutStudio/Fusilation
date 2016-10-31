@@ -64,6 +64,7 @@ public class ShipLoaderScript : MonoBehaviour {
             captain = Instantiate(captain);
             captain.transform.parent = playerShip.transform;
             captain.GetComponent<ConnectModuleScript>().enabled = false;
+            captain.GetComponentInChildren<Renderer>().enabled = false;
             playerShip.GetComponent<ShipProperties>().captain = captain;
         }
         //Transform point2 = GameObject.Find("MovePoint2").transform;

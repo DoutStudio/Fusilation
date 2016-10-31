@@ -27,53 +27,19 @@ public class ShipProperties : MonoBehaviour {
 	
 	}
 
-    private void ApplyModuleBuff(GameObject module, bool isDebuff = false)
-    {
-        //int factor = 1;
-        //if (isDebuff)
-        //{
-        //    factor = -1;
-        //}
-
-        //DescriptionScript moduleDesc = module.GetComponent<DescriptionScript>();
-        //switch (moduleDesc.type)
-        //{
-        //    case DescriptionScript.ModuleType.ATTACK:
-        //        Debug.Log("TODO: Apply Ship Attack BUFFERINOS");
-        //        break;
-        //    case DescriptionScript.ModuleType.DEFENSE:
-        //        Debug.Log("TODO: Apply Ship Attack BUFFERINOS");
-        //        break;
-        //    case DescriptionScript.ModuleType.SUPPORT:
-        //        Debug.Log("TODO: Apply Ship Attack BUFFERINOS");
-        //        break;
-        //}
-
-        // Called delayed start functions
-        // NOTE: order of these functions matter
-        if (!isDebuff)
-        {
-            module.GetComponent<ModuleCondition>().initCondition();
-            module.GetComponent<ModuleEffect>().initEffect();
-        }
-        else
-        {
-            module.GetComponent<ModuleEffect>().removeEffect();
-            module.GetComponent<ModuleCondition>().removeCondition();
-        }
-    }
-
     public void ModuleHasBeenAttached(GameObject module)
     {
         modules.Add(module);
-        ApplyModuleBuff(module);
+        module.GetComponent<ModuleCondition>().initCondition();
+        module.GetComponent<ModuleEffect>().initEffect();
         //Debug.Log(modules.Count);
     }
 
     public void ModuleHasBeenRemoved(GameObject module)
     {
         modules.Remove(module);
-        ApplyModuleBuff(module, true);
+        module.GetComponent<ModuleCondition>().removeCondition();
+        module.GetComponent<ModuleEffect>().removeEffect();
         //Debug.Log(modules.Count);
     }
 }

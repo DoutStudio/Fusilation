@@ -44,6 +44,7 @@ public class ConnectModuleScript : MonoBehaviour {
                 //currentHoveredSlot.SetActive(true);
                 currentHoveredSlot.GetComponent<Renderer>().enabled = true;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = true;
+                transform.SendMessageUpwards("ModuleHasBeenRemoved", transform.gameObject);
             }
         }
         if (!Input.GetMouseButton(0) && isDragging)
@@ -65,7 +66,6 @@ public class ConnectModuleScript : MonoBehaviour {
             {
                 // if we are not over a slot then remove the module from existence
                 Debug.Log("Module not attached -- Destroying Module");
-                transform.SendMessageUpwards("ModuleHasBeenRemoved", transform.gameObject);
                 Destroy(transform.gameObject);
             }
         }
