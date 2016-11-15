@@ -5,7 +5,7 @@ using System.Collections;
 public abstract class ModuleEffect : MonoBehaviour
 {
     public GameObject effectTarget;
-    public ModuleCondition effectCondition;
+    private ModuleCondition effectCondition;
 
     void Start()
     {
