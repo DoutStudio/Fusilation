@@ -17,7 +17,6 @@ public class AccuracyPercentageEffect : ModuleEffect
     public override void initEffect()
     {
         effectTarget = UtilScripts.FindParentWithTag(this.gameObject, "Ship");
-        //effectCondition = GetComponent<AlwaysActivateCondition>();
 
         shipProperties = effectTarget.GetComponent<ShipProperties>();
         shipProperties.accuracyMultiplier += accuracyMultiplier;

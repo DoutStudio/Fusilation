@@ -74,7 +74,6 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
         Transform imageTransform = transform.FindChild("ItemThumbnailImage");
         Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
-        //imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
         imageTransform.GetComponent<Image>().sprite = spriteThumbnail;
     }
 	
@@ -89,14 +88,10 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         mPos.z = 0;
         GameObject module = (GameObject) Instantiate(shipModule, mPos, Quaternion.identity);
         module.GetComponent<ConnectModuleScript>().enabled = true;
-        //module.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        //Debug.Log("held is false");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //ConnectModuleScript connectScript = shipModule.GetComponent<ConnectModuleScript>();
-        //bool value = connectScript.enabled;
         if (Input.GetMouseButton(0) && spawnReset)
         {
             SpawnModuleAtMousePosition();

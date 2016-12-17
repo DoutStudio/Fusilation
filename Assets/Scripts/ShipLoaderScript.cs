@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class ShipLoaderScript : MonoBehaviour {
 
+    public delegate void ShipReadyEvent();
+    public event ShipReadyEvent readyE;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -50,6 +53,11 @@ public class ShipLoaderScript : MonoBehaviour {
                 Debug.Log("Could not load Default Ship: FederationFrigate");
             }
 
+        }
+
+        if (readyE != null)
+        {
+            readyE.Invoke();
         }
 
         Destroy(this.gameObject);

@@ -6,35 +6,6 @@ using UnityEngine.SceneManagement;
 
 public abstract class ShipSaveLoadScript : MonoBehaviour {
 
-    //public int battleSceneNumber;
-    //private GameObject captian;
-    //private GameObject ship;
-
-    //void Start()
-    //{
-    //    Button button = GetComponent<Button>();
-    //    button.onClick.AddListener(TransferShipToBattle);
-
-    //    ship = GameObject.FindGameObjectWithTag("Ship");
-    //}
-
-    //void TransferShipToBattle()
-    //{
-    //    // NOTE: The numebr of modules will change per ship
-    //    PlayerPrefs.SetString("Ship", ship.name);
-    //    for (int i = 0; i < ship.transform.childCount; ++i)
-    //    {
-    //        GameObject module = ship.transform.GetChild(i).gameObject;
-    //        PlayerPrefs.SetString("Module_" + i, module.name);
-    //    }
-    //    //PlayerPrefs.SetString("Captain", captian.name);
-    //    Debug.Log("Captain not saved in PlayerPrefs");
-
-    //    Debug.Log("LEVEL LOAD METHOD NOT IMPLEMENTED");
-    //    //DontDestroyOnLoad(ship);
-    //    //SceneManager.LoadScene(battleSceneNumber);
-    //}
-
     public static void SavePlayerShip(GameObject shipGameObject)
     {
         PlayerPrefs.SetInt("isSaved", 1);
@@ -51,7 +22,6 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
         for (int i = 0; i < fittingSlots.childCount; ++i)
         {
             GameObject latchSlot = fittingSlots.GetChild(i).gameObject;
-            //PlayerPrefs.SetString("Module_" + i + "_location", latchSlot.name);
             if (latchSlot.transform.childCount > 0)
             {
                 GameObject module = latchSlot.transform.GetChild(0).gameObject;
@@ -86,7 +56,6 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
         Transform fittingSlots = ship.transform.FindChild("FittingSlots");
         for (int i = 0; i < fittingSlots.childCount; ++i)
         {
-            //string slotLocation = PlayerPrefs.GetString("Module_" + i + "_location");
             string moduleName = PlayerPrefs.GetString("Module_" + i);
             if (moduleName != "NULL")
             {
@@ -104,12 +73,10 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
                     Debug.Log("The module " + moduleName + " could not be loaded");
                 }
                 GameObject moduleInGame = Instantiate(module, fittingSlots.GetChild(i).transform.position, Quaternion.identity) as GameObject; // might need location
-                //moduleInGame.GetComponent<ConnectModuleScript>().isOverSlot = true;
                 moduleInGame.GetComponent<ConnectModuleScript>().enabled = true;
                 moduleInGame.GetComponent<ConnectModuleScript>().currentHoveredSlot = fittingSlots.GetChild(i).gameObject;
                 moduleInGame.transform.parent = fittingSlots.GetChild(i).transform;
             }
-            //fittingSlots.GetChild(i).GetComponent<Renderer>().enabled = false;
         }
 
         return ship;

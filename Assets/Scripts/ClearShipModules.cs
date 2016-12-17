@@ -27,11 +27,9 @@ public class ClearShipModules : MonoBehaviour {
 
         // Turn back on the latch slots
         Transform fittingTrans = shipObject.transform.FindChild("FittingSlots");
-        //Renderer[] renders = fittingTrans.GetComponentsInChildren<Renderer>();
         for (int i = 0; i < fittingTrans.childCount; ++i)
         {
             fittingTrans.GetChild(i).GetComponent<Renderer>().enabled = true;
-            //renders[i].gameObject.SetActive(true);
             fittingTrans.GetChild(i).GetComponent<Collider>().enabled = true;
         }
 
