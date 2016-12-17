@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+  Accuracy: 0.8
   Target: {fileID: 0}
   Creator: {fileID: 0}
   Explosion: {fileID: 1000014292932906, guid: dd710a465c3430b41b181b63c06c3bc7, type: 2}

@@ -27,14 +27,14 @@ public class TargetingComputer : MonoBehaviour
             float rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, rot - 90), TurnSpeed * Time.deltaTime);
         }
-        
+
         //rotate to default
-        if(!Target)
+        if (!Target)
         {
             transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(defaultRotation), TurnSpeed * Time.deltaTime);
         }
 
-       
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)
@@ -52,9 +52,14 @@ public class TargetingComputer : MonoBehaviour
             if (collision.gameObject.tag == "Ship" && collision.gameObject != transform.root.gameObject)
             {
                 //check which target the ship is set to, default now is hull so...
+                //if target == hull
+
                 Transform[] cores = collision.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();
                 Target = cores[Random.Range(0, cores.Length)].gameObject;
                 TargetBody = collision.gameObject.GetComponent<Rigidbody2D>();
+
+                //if target == attack, defense, support, special
+
             }
         }
     }

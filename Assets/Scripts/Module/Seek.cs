@@ -14,23 +14,27 @@ public class Seek : MonoBehaviour
     [HideInInspector]
     public float Power = 1;
 
-    private GameObject Target;
+    private GameObject target;
+    private BulletController bulletController;
 
     void Start()
     {
-        Target = GetComponent<BulletController>().Target;
+        bulletController = GetComponent<BulletController>();
+        target = bulletController.Target;
     }
 
 
     void Update()
     {
-
+        target = bulletController.Target;
         //Pointing To the Object
-        Vector3 diff = Target.transform.position - transform.position;
-        diff.Normalize();
-        float rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, rot - 90), TurnSpeed * Time.deltaTime);
-
+        if (target)
+        {
+            Vector3 diff = target.transform.position - transform.position;
+            diff.Normalize();
+            float rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, rot - 90), TurnSpeed * Time.deltaTime);
+        }
         //Translating To the Object
         transform.position += transform.up * Time.deltaTime * Power;
 
