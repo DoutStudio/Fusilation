@@ -11,41 +11,71 @@ public class ClickChange : MonoBehaviour {
     //public Sprite spriteToSelect;
     SpriteRenderer render;
     public GameObject tempGO;
-    public Text descriptionBox;
-	public Text moduleSelection;
+    public Text textBoxToChange;
     private GameObject dunno;
-	public int idNumber;
+    public int idNumber;
+    public bool grabName;
     public bool isEnemy;
     public bool isCaptain;
 
     // Use this for initialization
     void Start () {
-		//Get the current sprite renderer
         render = GetComponent<SpriteRenderer>();
+        Transform currentObjectSize = GetComponent<Transform>();
+        //Debug.Log(Path.GetDirectoryName("/Assets/Prefabs/Ship Modules/Attack/BasicTurret.prefab"));
+		//GameObject prefab = Resources.Load<GameObject>("Ship Modules/Attack/BasicTurret");
+		//Instantiate (prefab);
+		//PLs or y
+		//GameObject fml = new GameObject();
+		//renderer = fml.AddComponent<SpriteRenderer> ();
+		//renderer.sprite = Resources.Load("Sprites/BasicTurret", typeof(Sprite)) as Sprite;
+		//render.sprite = renderer.sprite;
 
-		//Get ready to transform the object based on loaded image
-		//Transform currentObjectSize = GetComponent<Transform> ();
+        Texture2D fuckBoats = AssetPreview.GetAssetPreview(tempGO);
+        //fuckBoats
 
-		//Get Sprite Renderer's current size
-		float currX = render.bounds.size.x;
-		float currY = render.bounds.size.y;
-		float currZ = render.bounds.size.z;
 
-		//Vector3 sizeToScale = new Vector3 (currX, currY, currZ);
 
-		//Load the image
-        // fuckBoats = AssetPreview.GetAssetPreview(tempGO);
-
-		//Create a duplicate item with same properties
-
-		dunno = (GameObject)Instantiate(tempGO, render.transform, false);
+        //dunno = Resources.Load<GameObject>("Ship Modules\\Attack\\BasicTurret");
+        
+        dunno = (GameObject)Instantiate(tempGO, render.transform, false);
         dunno.gameObject.name = "Module#" + idNumber;
-        //dunno.transform.localScale = new Vector3(.5f, .5f, 1);
-		//dunno.transform.localScale = sizeToScale;
-        //dunno.transform.localScale = new Vector3(currentObjectSize.localScale.x,
-        //currentObjectSize.localScale.y, currentObjectSize.localScale.z);
+        dunno.transform.localScale = new Vector3(1, 1, 1);
+        dunno.transform.localScale = new Vector3(currentObjectSize.localScale.x,
+            currentObjectSize.localScale.y, currentObjectSize.localScale.z);
+        //dunno.AddComponent<SpriteRenderer>();
+        //render.sprite = dunno.GetComponent<SpriteRenderer>().sprite;
+        //Sprite tempSprite = Sprite.Create(fuckBoats, new Rect(0, 0, fuckBoats.width, fuckBoats.height), Vector2.zero);
+        //dunno.GetComponent<SpriteRenderer>().sprite = tempSprite;
+        //dunno.transform.SetParent(render.transform);
+        
+        //GetComponent<Collider>().gameObject.name = dunno.gameObject.name;
 
-		//Disable vision of standard object
+        //Destroy(render.gameObject);
+        /*allTextBoxes = FindObjectsOfType<GUIText>();
+        for(int i = 0; i < allTextBoxes.Length; i++)
+        {
+            if (allTextBoxes[i].name == "messageBoxTextEnemy")
+            {
+                enemyText = allTextBoxes[i];
+            }
+            else if (allTextBoxes[i].name == "messageBoxTextEnemy")
+            {
+                allyText = allTextBoxes[i];
+            }
+        }
+*/
+
+        //SpriteRenderer renderer2 = prefab.GetComponent<SpriteRenderer>();
+        //render.sprite = spriteToSelect;
+
+        //Texture2D tempTexture = AssetPreview.GetAssetPreview (prefab);
+        //Sprite prefabSprite = Sprite.Create (tempTexture, new Rect (0, 0, 128, 128), Vector2.zero);
+        //render.GetComponent<GameObject> = prefab;
+
+        //GameObject hello = Instantiate (prefab);
+        //hello.transform.position = 	new Vector3 (render.transform.position.x, render.transform.position.y, 0);
+        //dunno.transform.SetParent(dunno.transform);
         render.enabled = false;
         //Destroy (render.gameObject);
         //Debug.Log (renderer2.sprite);
@@ -59,23 +89,22 @@ public class ClickChange : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             bool didItHitACollider = Physics.Raycast(ray, out hit);
-
-			//If the user clicked on the object
-			if (didItHitACollider && hit.collider.gameObject.name == dunno.gameObject.name)
+            if (didItHitACollider && hit.collider.gameObject.name == dunno.gameObject.name)
             {
-				
-				if (moduleSelection != null)
+                if (!grabName)
                 {
-					descriptionBox.text = dunno.GetComponent<DescriptionScript>().description;
-                }
-                
-                if (isEnemy)
-                {
-					moduleSelection.text = dunno.GetComponent<DescriptionScript>().title + " has been targeted";
+                    textBoxToChange.text = dunno.GetComponent<DescriptionScript>().description;
                 }
                 else
                 {
-					moduleSelection.text = dunno.GetComponent<DescriptionScript>().title + " has been selected for repair";
+                    if (isEnemy)
+                    {
+                        textBoxToChange.text = dunno.gameObject.name + " has been targeted";
+                    }
+                    else
+                    {
+                        textBoxToChange.text = dunno.gameObject.name + " has been selected for repair";
+                    }
                 }
             }
         }
