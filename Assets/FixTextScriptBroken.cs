@@ -12,9 +12,10 @@ public class FixTextScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+		//NOT WORKING
         //Vector3 worldPosition = Camera.main.ScreenToWorldPoint(enemyTextObj.GetComponent<RectTransform>().position);
         Vector3 worldPosition = enemyTextObj.transform.position;
-        Vector3 targetPosition = enemyTextTarget.transform.position;
+        Vector3 targetPosition = enemyTextObj.transform.position;
         Vector3 specialtargetPosition = enemyTextObj.GetComponent<RectTransform>().position;
         int scaleFactor = Camera.main.pixelHeight - (int)enemyTextTarget.transform.position.y;
         //targetPosition.y = enemyTextTarget.transform.position.y;
