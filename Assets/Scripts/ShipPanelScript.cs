@@ -7,24 +7,23 @@ using UnityEditor;
 public class ShipPanelScript : MonoBehaviour
 {
     // A list of all ship modules in this panel
-    public string FolderName;
+    public string folderPath;
     public GameObject listItem;
 
-
     private GameObject statPanel;
-    private const string rootFolderName = "Ship Modules\\";
 
 	// Use this for initialization
 	void Start () {
-            GameObject[] listItemModules = Resources.LoadAll<GameObject>(rootFolderName + FolderName);
-            statPanel = GameObject.Find("ModuleStatsPanel");
+        GameObject[] listItemModules = Resources.LoadAll<GameObject>(folderPath);
 
-            for (int i = 0; i < listItemModules.Length; ++i)
-            {
-                GameObject newItem = Instantiate(listItem);
-                newItem.GetComponent<ModuleThumbnailScript>().shipModule = listItemModules[i];
-                newItem.GetComponent<ModuleThumbnailScript>().shipStatPanel = statPanel;
-                newItem.transform.SetParent(transform);
-            }
+        statPanel = GameObject.Find("ModuleStatsPanel");
+
+        for (int i = 0; i < listItemModules.Length; ++i)
+        {
+            GameObject newItem = Instantiate(listItem);
+            newItem.GetComponent<ModuleThumbnailScript>().shipModule = listItemModules[i];
+            newItem.GetComponent<ModuleThumbnailScript>().shipStatPanel = statPanel;
+            newItem.transform.SetParent(transform);
+        }
     }
 }
