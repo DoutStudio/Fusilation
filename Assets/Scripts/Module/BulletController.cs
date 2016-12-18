@@ -10,12 +10,15 @@ public class BulletController : MonoBehaviour
 {
 
     public float Damage = 1;
+    [Range(0, 1)]
+    public float Accuracy = 0.8f;
     [HideInInspector]
     public GameObject Target;
     [HideInInspector]
     public GameObject Creator;
 
     public GameObject Explosion;
+
 
     void Start()
     {
@@ -29,19 +32,28 @@ public class BulletController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == Target.tag && collision.transform.root.gameObject != Creator)
+        if (Target && collision.transform.tag == Target.tag && collision.transform.root.gameObject != Creator)
         {
-            Health itemHealth = collision.transform.root.GetComponent<Health>();
-            if (itemHealth)
+            if (Random.Range(0f, 1f) <= Accuracy) //HIT
             {
-                itemHealth.CurrentHealth -= Damage;
+                Health itemHealth = collision.transform.root.GetComponent<Health>();
+                if (itemHealth)
+                {
+                    itemHealth.CurrentHealth -= Damage;
+                }
+                if (/*I dunno if i want to keep this yet*/false && Explosion)
+                {
+                    ((GameObject)Instantiate(Explosion, transform.position, Quaternion.Euler(Vector3.zero))).transform.parent = GameObject.Find("ExplosionParent").transform;
+                }
+                Target = null;
+                ((GameObject)Instantiate(Resources.Load("Prefabs/Hit FX"), transform.position, Quaternion.Euler(Vector3.zero))).transform.parent = GameObject.Find("Comic FX Parent").transform;
+                Destroy(transform.gameObject);
             }
-            //create explosion
-            if (Explosion)
+            else //MISS
             {
-                ((GameObject)Instantiate(Explosion, transform.position, Quaternion.Euler(Vector3.zero))).transform.parent = GameObject.Find("ExplosionParent").transform;
+                Target = null;
+                ((GameObject)Instantiate(Resources.Load("Prefabs/Miss FX"), transform.position, Quaternion.Euler(Vector3.zero))).transform.parent = GameObject.Find("Comic FX Parent").transform;
             }
-            Destroy(transform.gameObject);
         }
     }
 }

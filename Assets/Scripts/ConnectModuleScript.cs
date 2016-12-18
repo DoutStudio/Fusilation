@@ -5,8 +5,6 @@ using System;
 
 public class ConnectModuleScript : MonoBehaviour {
 
-    //Transform moduleTransform;
-
     private static bool userCanMouse = false;
     bool isDragging;
 
@@ -28,10 +26,7 @@ public class ConnectModuleScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //moduleTransform = GetComponent<Transform>(); // unneeded
         isDragging = true;
-        //isOverSlot = false;
-        //currentHoveredSlot = null;
 	}
 	
 	// Update is called once per frame
@@ -41,7 +36,6 @@ public class ConnectModuleScript : MonoBehaviour {
             transform.position = mouseWorldPosition;
             if (currentHoveredSlot && !currentHoveredSlot.GetComponent<Renderer>().enabled) 
             {
-                //currentHoveredSlot.SetActive(true);
                 currentHoveredSlot.GetComponent<Renderer>().enabled = true;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = true;
                 transform.SendMessageUpwards("ModuleHasBeenRemoved", transform.gameObject);
@@ -55,12 +49,10 @@ public class ConnectModuleScript : MonoBehaviour {
             {
                 isOverSlot = false;
                 transform.position = currentHoveredSlot.transform.position;
-                //currentHoveredSlot.SetActive(false);
                 currentHoveredSlot.GetComponent<Renderer>().enabled = false;
                 currentHoveredSlot.GetComponent<BoxCollider>().enabled = false;
                 transform.parent = currentHoveredSlot.transform;
                 currentHoveredSlot.SendMessageUpwards("ModuleHasBeenAttached", transform.gameObject);
-                //Debug.Log("set");
             }
             else
             {

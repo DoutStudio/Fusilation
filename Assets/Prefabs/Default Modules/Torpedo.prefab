@@ -41,7 +41,7 @@ GameObject:
   - 114: {fileID: 114000011955016798}
   m_Layer: 0
   m_Name: Torpedo
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
+  Accuracy: 0.8
   Target: {fileID: 0}
   Creator: {fileID: 0}
   Explosion: {fileID: 1000013595791696, guid: 68d351f4184e67b4da4dccc66c997d00, type: 2}
@@ -199,7 +200,7 @@ SpriteRenderer:
   m_SortingLayerID: -459521681
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f0006b8f0f101e047a6fff6d342c3241, type: 3}
-  m_Color: {r: 1, g: 0.08374383, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &212000012225886280

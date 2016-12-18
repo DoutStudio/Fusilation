@@ -18,8 +18,10 @@ public class ModuleThumbnailScript : MonoBehaviour ,
     public GameObject shipStatPanel; // all have a ref but whatevs
 
     private bool downReset = true;
+    private bool captainOrShip = false;
 
     private static bool spawnReset = true; // MWAHAHAHAHA
+
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +30,11 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         if (shipModule.GetComponent<DescriptionScript>().type == DescriptionScript.ModuleType.CAPTAIN)
         {
             itemSelected += GameObject.Find("CaptainStatsPanel").GetComponent<SelectedItemScript>().SelectedItemScript_itemSelected;
+            captainOrShip = true;
+        }
+        else if (shipModule.GetComponent<DescriptionScript>().type == DescriptionScript.ModuleType.SHIP)
+        {
+            captainOrShip = true;
         }
         else
         {
@@ -42,7 +49,7 @@ public class ModuleThumbnailScript : MonoBehaviour ,
             //shipModule.GetComponent<ConnectModuleScript>().enabled = true;
         }
         // check if the rigid body is added
-        if (shipModule.GetComponent<Rigidbody>() == null)
+        if (shipModule.GetComponent<Rigidbody>() == null && shipModule.GetComponent<Rigidbody2D>() == null)
         {
             shipModule.AddComponent<Rigidbody>();
             shipModule.GetComponent<Rigidbody>().useGravity = false;
@@ -50,8 +57,8 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         // check if the module has a collider
         if (shipModule.GetComponent<Collider>() == null)
         {
-            shipModule.AddComponent<SphereCollider>();
-            shipModule.GetComponent<SphereCollider>().isTrigger = true;
+            //shipModule.AddComponent<SphereCollider>();
+            //shipModule.GetComponent<SphereCollider>().isTrigger = true;
         }
 
         // Set the name of the list item
@@ -74,7 +81,6 @@ public class ModuleThumbnailScript : MonoBehaviour ,
 
         Transform imageTransform = transform.FindChild("ItemThumbnailImage");
         Sprite spriteThumbnail = Sprite.Create(texture, new Rect(0, 0, 128, 128), Vector2.zero); // All asset previews are 128,128
-        //imageTransform.GetComponent<Image>().overrideSprite = spriteThumbnail;
         imageTransform.GetComponent<Image>().sprite = spriteThumbnail;
     }
 	
@@ -89,15 +95,11 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         mPos.z = 0;
         GameObject module = (GameObject) Instantiate(shipModule, mPos, Quaternion.identity);
         module.GetComponent<ConnectModuleScript>().enabled = true;
-        //module.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        //Debug.Log("held is false");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //ConnectModuleScript connectScript = shipModule.GetComponent<ConnectModuleScript>();
-        //bool value = connectScript.enabled;
-        if (Input.GetMouseButton(0) && spawnReset)
+        if (Input.GetMouseButton(0) && spawnReset && !captainOrShip)
         {
             SpawnModuleAtMousePosition();
             spawnReset = false;
