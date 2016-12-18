@@ -401,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arc: 1
   ArcScale: 0.2
+  DPS: 3
 --- !u!114 &114000013756925350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,10 +453,10 @@ LineRenderer:
     endWidth: 0.2
     m_StartColor:
       serializedVersion: 2
-      rgba: 4294948539
+      rgba: 4287924223
     m_EndColor:
       serializedVersion: 2
-      rgba: 4283506459
+      rgba: 4278519218
   m_UseWorldSpace: 1
 --- !u!120 &120000013212300542
 LineRenderer:
