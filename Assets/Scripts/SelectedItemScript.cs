@@ -16,15 +16,10 @@ public class SelectedItemScript : MonoBehaviour {
 	void Start () {
         titleTextScript = transform.FindChild("TitleText").GetComponent<Text>();
         descTextScript = transform.FindChild("DescriptionText").GetComponent<Text>();
-
-        //titleTextScript.text = "";
-        //descTextScript.text = "";
     }
 
     public void SelectedItemScript_itemSelected(object sender, EventArgs e)
     {
-        //Debug.Log("test");
-
         GameObject obj = ((ItemSelectedArgs)e).gameObject;
 
         titleTextScript.text = obj.GetComponent<DescriptionScript>().title;
@@ -36,7 +31,6 @@ public class SelectedItemScript : MonoBehaviour {
             // Set thumbnail image
 
             SpriteRenderer sr = obj.GetComponentInChildren<SpriteRenderer>();
-            //Texture2D texture = AssetPreview.GetAssetPreview(obj);
             Texture2D texture = sr.sprite.texture;
 
             Transform imageTransform = transform.FindChild("ThumbnailImage");
