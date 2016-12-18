@@ -35,6 +35,12 @@ public class TargetingComputer : MonoBehaviour
         }
 
 
+        //CHECK IF ENEMY SHIP EXISTS
+        if (Target && !Target.transform.root.gameObject.activeSelf)
+        {
+            Target = null;
+        }
+
     }
 
     public void OnTriggerExit2D(Collider2D collision)

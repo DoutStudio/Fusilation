@@ -1667,6 +1667,7 @@ MonoBehaviour:
   DoesRegen: 0
   DisplayText: 0
   DisplayDot: 0
+  HealthDot: {fileID: 0}
 --- !u!114 &114000012961879832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1681,6 +1682,7 @@ MonoBehaviour:
   Modules:
   - {fileID: 1000011969296208, guid: 9b4aed1478f56834c90ac5da43d1f216, type: 2}
   - {fileID: 1000013378339062, guid: 70adbf6f5c258af40a7eef07dba6263a, type: 2}
+  - {fileID: 1000011393980106, guid: 664a0761d627e054da00f8d4e96b5b1d, type: 2}
 --- !u!212 &212000010072433398
 SpriteRenderer:
   m_ObjectHideFlags: 1

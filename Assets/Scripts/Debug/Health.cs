@@ -22,8 +22,8 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        //CurrentHealth = MaxHealth;
-        CurrentHealth = Random.Range(0, MaxHealth);
+        CurrentHealth = MaxHealth;
+        //CurrentHealth = Random.Range(0, MaxHealth);
         if (DisplayText)
         {
             MeshRenderer mesh = GetComponent<MeshRenderer>();

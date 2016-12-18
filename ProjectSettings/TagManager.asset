@@ -16,6 +16,7 @@ TagManager:
   - CenterSlot
   - Camera
   - Captain
+  - Arc
   layers:
   - Default
   - TransparentFX

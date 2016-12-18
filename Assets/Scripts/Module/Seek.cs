@@ -27,6 +27,7 @@ public class Seek : MonoBehaviour
     void Update()
     {
         target = bulletController.Target;
+
         //Pointing To the Object
         if (target)
         {

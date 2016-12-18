@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ShinyRed
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
+  m_Name: LaserBeam
+  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -46,15 +46,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _GlossMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6e1ccc36e7cafe044a92e5704c03b84e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -75,22 +69,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ShadowOffset
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _TranslucencyMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
     - first:
         name: _BumpScale
       second: 1
@@ -117,7 +96,7 @@ Material:
       second: 1
     - first:
         name: _Metallic
-      second: 0.72
+      second: 0
     - first:
         name: _Mode
       second: 0
@@ -128,17 +107,11 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _Shininess
-      second: 0.078125
-    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
         name: _SpecularHighlights
-      second: 1
-    - first:
-        name: _SquashAmount
-      second: 1
+      second: 0
     - first:
         name: _SrcBlend
       second: 1
@@ -154,13 +127,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
-      second: {r: 1, g: 0, b: 0, a: 1}
+      second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _TintColor
-      second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - first:
-        name: _TreeInstanceColor
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _TreeInstanceScale
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 0.5}
