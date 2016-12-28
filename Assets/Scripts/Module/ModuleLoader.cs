@@ -21,7 +21,10 @@ public class ModuleLoader : MonoBehaviour
             GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
             module.transform.parent = slot.root.FindChild("Modules");
             Vector3 rot = new Vector3(0, 0, 90);
-            module.GetComponent<TargetingComputer>().defaultRotation = rot;
+            if (module.GetComponent<TargetingComputer>())
+            {
+                module.GetComponent<TargetingComputer>().defaultRotation = rot;
+            }
             module.transform.Rotate(rot);
             module.layer = 10;
         }
@@ -30,7 +33,10 @@ public class ModuleLoader : MonoBehaviour
             GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
             module.transform.parent = slot.root.FindChild("Modules");
             Vector3 rot = new Vector3(0, 0, -90);
-            module.GetComponent<TargetingComputer>().defaultRotation = rot;
+            if (module.GetComponent<TargetingComputer>())
+            {
+                module.GetComponent<TargetingComputer>().defaultRotation = rot;
+            }
             module.transform.Rotate(rot);
             module.layer = 10;
         }
