@@ -60,11 +60,11 @@ public abstract class ShipSaveLoadScript : MonoBehaviour {
             if (moduleName != "NULL")
             {
                 GameObject module = Resources.Load<GameObject>("Ship Modules/Attack/" + moduleName);
-                if (!module)
+                if (module == null)
                 {
                     module = Resources.Load<GameObject>("Ship Modules/Defense/" + moduleName);
                 }
-                else if(!module)
+                if(module == null)
                 {
                     module = Resources.Load<GameObject>("Ship Modules/Support/" + moduleName);
                 }

@@ -55,6 +55,8 @@ GameObject:
   - 54: {fileID: 54000012350287134}
   - 135: {fileID: 135000010256529414}
   - 114: {fileID: 114000010213519488}
+  - 114: {fileID: 114000012013312074}
+  - 114: {fileID: 114000011576216600}
   m_Layer: 0
   m_Name: LargeTurret
   m_TagString: Untagged
@@ -162,6 +164,29 @@ MonoBehaviour:
   title: Large Turret
   description: Max 15 Damage, Fires 15 Shots, 1 Damage per shot
   type: 0
+--- !u!114 &114000011576216600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011515377808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+--- !u!114 &114000012013312074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011515377808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000014032886690
 MonoBehaviour:
   m_ObjectHideFlags: 1

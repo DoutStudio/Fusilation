@@ -199,6 +199,8 @@ GameObject:
   - 54: {fileID: 54000011290455048}
   - 135: {fileID: 135000012328225996}
   - 114: {fileID: 114000012151864324}
+  - 114: {fileID: 114000013969541254}
+  - 114: {fileID: 114000013996972802}
   m_Layer: 0
   m_Name: Repair
   m_TagString: Untagged
@@ -595,6 +597,29 @@ MonoBehaviour:
   title: Repair module
   description: Heal 5 health per turn
   type: 1
+--- !u!114 &114000013969541254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013523646692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+--- !u!114 &114000013996972802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013523646692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135000012328225996
 SphereCollider:
   m_ObjectHideFlags: 1

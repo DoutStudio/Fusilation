@@ -119,6 +119,8 @@ GameObject:
   - 54: {fileID: 54000010491252578}
   - 135: {fileID: 135000013579257474}
   - 114: {fileID: 114000014101018824}
+  - 114: {fileID: 114000011828032746}
+  - 114: {fileID: 114000012046834698}
   m_Layer: 0
   m_Name: Guardian
   m_TagString: Untagged
@@ -251,6 +253,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOverSlot: 0
   currentHoveredSlot: {fileID: 0}
+--- !u!114 &114000011828032746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013999333530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012046834698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013999333530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
 --- !u!114 &114000014101018824
 MonoBehaviour:
   m_ObjectHideFlags: 1

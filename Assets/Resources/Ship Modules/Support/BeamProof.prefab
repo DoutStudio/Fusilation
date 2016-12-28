@@ -39,6 +39,8 @@ GameObject:
   - 114: {fileID: 114000011793854702}
   - 54: {fileID: 54000011116603790}
   - 135: {fileID: 135000012503070986}
+  - 114: {fileID: 114000012601042714}
+  - 114: {fileID: 114000011948893682}
   m_Layer: 0
   m_Name: BeamProof
   m_TagString: Untagged
@@ -534,6 +536,29 @@ MonoBehaviour:
   title: Beam Proof armor
   description: Lazers no longer do damage
   type: 2
+--- !u!114 &114000011948893682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011018018052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8def74da17b56248b84cc7ca2d9927b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012601042714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011018018052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
 --- !u!135 &135000012503070986
 SphereCollider:
   m_ObjectHideFlags: 1

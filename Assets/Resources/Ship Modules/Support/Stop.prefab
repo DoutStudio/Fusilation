@@ -39,6 +39,8 @@ GameObject:
   - 54: {fileID: 54000012725576556}
   - 135: {fileID: 135000010101902014}
   - 114: {fileID: 114000011712925374}
+  - 114: {fileID: 114000013691939654}
+  - 114: {fileID: 114000011533684034}
   m_Layer: 0
   m_Name: Stop
   m_TagString: Untagged
@@ -101,6 +103,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOverSlot: 0
   currentHoveredSlot: {fileID: 0}
+--- !u!114 &114000011533684034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014168273898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
 --- !u!114 &114000011712925374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +130,17 @@ MonoBehaviour:
   description: 'Active ability: Disables all further active abilities for the next
     3 turns (100 turn cooldown)'
   type: 2
+--- !u!114 &114000013691939654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014168273898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135000010101902014
 SphereCollider:
   m_ObjectHideFlags: 1

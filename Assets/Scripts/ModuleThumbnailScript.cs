@@ -65,6 +65,9 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         Transform childTransform = transform.FindChild("ItemNameText");
         childTransform.GetComponent<Text>().text = shipModule.name;
 
+        // Set the description of the list item
+        transform.FindChild("DescriptionText").GetComponent<Text>().text = shipModule.GetComponent<DescriptionScript>().description;
+
         // Set thumbnail image
         Texture2D texture = null;
         while (!texture)

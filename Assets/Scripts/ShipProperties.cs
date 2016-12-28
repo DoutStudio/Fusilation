@@ -4,13 +4,16 @@ using System.Collections.Generic;
 
 public class ShipProperties : MonoBehaviour
 {
-    public float health;
-    public float hpBuff;
+    public float health = 0;
+    public float hpBuff = 0;
     public float damageBuffMultiplier = 0;
+    [Range(0,1)]
     public float attackSpeedMultiplier = 0;
     public float shieldFlatBuff = 0;
     public float healthFlatBuff = 0;
+    [Range(0,1)]
     public float damageReductionPercentage = 0;
+    [Range(0,1)]
     public float accuracyMultiplier = 0;
 
     public List<GameObject> modules;

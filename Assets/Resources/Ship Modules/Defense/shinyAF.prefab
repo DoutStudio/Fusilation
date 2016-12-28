@@ -39,6 +39,8 @@ GameObject:
   - 114: {fileID: 114000012051047414}
   - 54: {fileID: 54000012594316118}
   - 135: {fileID: 135000010404147744}
+  - 114: {fileID: 114000011303102826}
+  - 114: {fileID: 114000012989558098}
   m_Layer: 0
   m_Name: shinyAF
   m_TagString: Untagged
@@ -238,6 +240,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000011303102826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010626408412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011372498638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +279,18 @@ MonoBehaviour:
   description: 'Take 25% more damage every turn, Active Ability: Take no damage for
     one turn'
   type: 1
+--- !u!114 &114000012989558098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010626408412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
 --- !u!135 &135000010404147744
 SphereCollider:
   m_ObjectHideFlags: 1
