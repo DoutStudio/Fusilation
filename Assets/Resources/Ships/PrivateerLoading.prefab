@@ -336,6 +336,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011135906600}
+  - 60: {fileID: 60000011750542052}
+  - 50: {fileID: 50000010246985716}
+  - 114: {fileID: 114000010462092402}
+  - 114: {fileID: 114000011264074592}
   m_Layer: 0
   m_Name: PrivateerLoading
   m_TagString: Untagged
@@ -401,10 +405,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014278676824}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7049556, w: 0.70925146}
-  m_LocalPosition: {x: -0.4676268, y: 2.9110403, z: -2445.0352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000014127249200}
   - {fileID: 4000013116285726}
@@ -622,6 +626,23 @@ Transform:
   - {fileID: 4000011153132068}
   m_Father: {fileID: 4000011135906600}
   m_RootOrder: 0
+--- !u!50 &50000010246985716
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014278676824}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &60000011472419574
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -764,6 +785,25 @@ PolygonCollider2D:
       - {x: 0.49458826, y: -0.07336545}
       - {x: 0.49759233, y: -0.049008787}
       - {x: 0.49939775, y: -0.024534047}
+--- !u!60 &60000011750542052
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014278676824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
 --- !u!60 &60000012618268092
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -1062,11 +1102,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempGO: {fileID: 1000014166694166, guid: 56a00b0ffbc02684db10d1222423633d, type: 2}
-  descriptionBox: {fileID: 0}
-  moduleSelection: {fileID: 0}
+  textBoxToChange: {fileID: 0}
   idNumber: 4
+  grabName: 0
   isEnemy: 1
   isCaptain: 0
+--- !u!114 &114000010462092402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014278676824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6369123759a5f2143ad8722142627192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  hpBuff: 0
+  damageBuffMultiplier: 0
+  attackSpeedMultiplier: 0
+  shieldFlatBuff: 0
+  healthFlatBuff: 0
+  damageReductionPercentage: 0
+  accuracyMultiplier: 0
+  modules: []
+  captain: {fileID: 0}
 --- !u!114 &114000010930226930
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1079,11 +1140,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempGO: {fileID: 1000010313164594, guid: 9f806d3a5b027b247ac750ad91f2ce02, type: 2}
-  descriptionBox: {fileID: 0}
-  moduleSelection: {fileID: 0}
+  textBoxToChange: {fileID: 0}
   idNumber: 1
+  grabName: 0
   isEnemy: 1
   isCaptain: 0
+--- !u!114 &114000011264074592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014278676824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Privateer
+  description: 'TODO: Description'
+  type: 4
 --- !u!114 &114000011279674884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1096,9 +1171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempGO: {fileID: 1000011886958336, guid: 07aef1dff42a24ab09cf59b40044f42d, type: 2}
-  descriptionBox: {fileID: 0}
-  moduleSelection: {fileID: 0}
+  textBoxToChange: {fileID: 0}
   idNumber: 6
+  grabName: 0
   isEnemy: 1
   isCaptain: 0
 --- !u!114 &114000011394237218
@@ -1113,9 +1188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempGO: {fileID: 1000013987215862, guid: 161a5a4634618544cb0fbdd7a5877cf3, type: 2}
-  descriptionBox: {fileID: 0}
-  moduleSelection: {fileID: 0}
+  textBoxToChange: {fileID: 0}
   idNumber: 3
+  grabName: 0
   isEnemy: 1
   isCaptain: 0
 --- !u!114 &114000011843623074
@@ -1130,9 +1205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempGO: {fileID: 1000010949394084, guid: f26396b3815a6414f8f40ee4f40b3b41, type: 2}
-  descriptionBox: {fileID: 0}
-  moduleSelection: {fileID: 0}
+  textBoxToChange: {fileID: 0}
   idNumber: 2
+  grabName: 0
   isEnemy: 1
   isCaptain: 0
 --- !u!114 &114000013708909222
@@ -1147,9 +1222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempGO: {fileID: 1000010622267622, guid: f5f499be2a05e493a8360bcad933c0bf, type: 2}
-  descriptionBox: {fileID: 0}
-  moduleSelection: {fileID: 0}
+  textBoxToChange: {fileID: 0}
   idNumber: 5
+  grabName: 0
   isEnemy: 1
   isCaptain: 0
 --- !u!212 &212000010208400670
