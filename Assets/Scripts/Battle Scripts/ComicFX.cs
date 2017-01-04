@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Ryan Scopio
+/// Picks a random sprite and moves it in a random direction upon spawning
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D))]
 public class ComicFX : MonoBehaviour
 {

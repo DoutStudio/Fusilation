@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Ryan Scopio
+/// Destroys bullets on trigger enter
+/// </summary>
 [RequireComponent(typeof(CircleCollider2D))]
 public class ShieldDeflector : MonoBehaviour
 {

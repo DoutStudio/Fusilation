@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
-
+/// <summary>
+/// Ryan Scopio
+/// Creates a cool laser effect via broken sin waves
+/// </summary>
 [RequireComponent(typeof(LineRenderer))]
 public class RayGun : MonoBehaviour
 {

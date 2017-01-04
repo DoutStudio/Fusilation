@@ -473,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 1000013164041186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1141343, y: 3.1141355, z: 3.1141355}
+  m_LocalScale: {x: 3.1, y: 3.1, z: 3.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012929551034}
@@ -552,7 +552,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013062288352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.087, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -586,7 +586,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010494683358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.051378645, y: -0.47204113, z: 0}
+  m_LocalPosition: {x: -0.051378645, y: -0.385, z: 0}
   m_LocalScale: {x: 0.19266993, y: 0.19266985, z: 0.19266985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1121,11 +1121,21 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: 0.95105654, y: 0.30901697}
-      - {x: 0.5877852, y: -0.80901706}
-      - {x: -0.58778536, y: -0.80901694}
-      - {x: -0.9510565, y: 0.30901712}
+    - - {x: -0.47972977, y: 0.88323784}
+      - {x: 0, y: 1.2387187}
+      - {x: 0.48032403, y: 0.88464695}
+      - {x: 0.48223144, y: -0.208266}
+      - {x: 0.68441296, y: -0.32529095}
+      - {x: 0.68162906, y: -0.82498926}
+      - {x: 0.4812357, y: -0.9407242}
+      - {x: 0.4832638, y: -1.1133764}
+      - {x: 0.32698318, y: -1.239359}
+      - {x: -0.35801825, y: -1.2399347}
+      - {x: -0.48111072, y: -1.0931102}
+      - {x: -0.48247018, y: -0.9616654}
+      - {x: -0.68466043, y: -0.84178585}
+      - {x: -0.6834082, y: -0.3448284}
+      - {x: -0.48358354, y: -0.22386235}
 --- !u!65 &65000010233530718
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1300,12 +1310,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6369123759a5f2143ad8722142627192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  hpBuff: 0
   damageBuffMultiplier: 0
-  flatDamageBuff: 0
   attackSpeedMultiplier: 0
-  flatAttackSpeedBuff: 0
-  healthBuffMultiplier: 0
-  flatHealthBuff: 0
+  shieldFlatBuff: 0
+  healthFlatBuff: 0
   damageReductionPercentage: 0
   accuracyMultiplier: 0
   modules: []

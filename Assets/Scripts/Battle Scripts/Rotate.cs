@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Ryan Scopio
+/// rotates an object at static rate
+/// </summary>
 public class Rotate : MonoBehaviour
 {
 

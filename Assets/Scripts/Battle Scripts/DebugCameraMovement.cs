@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Ryan Scopio
+/// Translate camera with arrow keys
+/// </summary>
 public class DebugCameraMovement : MonoBehaviour
 {
 
@@ -10,10 +13,7 @@ public class DebugCameraMovement : MonoBehaviour
     public Vector3 Offset;
     //public Vector3 Rotation;
 
-    /// <summary>
-    /// Ryan Scopio
-    /// Translate camera with arrow keys
-    /// </summary>
+  
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))

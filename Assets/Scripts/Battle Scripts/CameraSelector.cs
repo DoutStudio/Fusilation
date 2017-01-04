@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Ryan Scopio
+/// Allows to switch between 3 camera's in Test Battle scene using Alpha 1,2,3
+/// </summary>
 public class CameraSelector : MonoBehaviour
 {
 
