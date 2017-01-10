@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// Uses the physics body of an object to move to a set of points
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
-public class TestMovement : MonoBehaviour
+public class ShipMovement : MonoBehaviour
 {
     public float FloatSpeed = 2f;
     public float WarpSpeed = 200f;

@@ -480,6 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipModule: {fileID: 1000013141783824, guid: 15c16e878b4fd2c4dbdd61942de4db9e, type: 2}
+  shipStatPanel: {fileID: 0}
 --- !u!114 &114000013581491638
 MonoBehaviour:
   m_ObjectHideFlags: 1

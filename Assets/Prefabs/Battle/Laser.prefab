@@ -84,6 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arc: 1
   ArcScale: 0.2
+  DPS: 3
 --- !u!120 &120000013243472378
 LineRenderer:
   m_ObjectHideFlags: 1
