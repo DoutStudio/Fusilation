@@ -1873,6 +1873,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1304341215}
   - 114: {fileID: 1304341214}
+  - 114: {fileID: 1304341216}
   m_Layer: 0
   m_Name: ShipLoader
   m_TagString: Untagged
@@ -1898,12 +1899,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1304341213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27200004, y: 0.684, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1304341216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1304341213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e294236fc73540478091bb63f672caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318499439
 GameObject:
   m_ObjectHideFlags: 0
