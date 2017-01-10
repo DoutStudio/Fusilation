@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using System;
 
-public class ConnectModuleScript : MonoBehaviour {
+public class ConnectModuleScript : MonoBehaviour
+{
 
     private static bool userCanMouse = false;
     bool isDragging;
@@ -24,20 +25,22 @@ public class ConnectModuleScript : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         isDragging = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (isDragging)
         {
             transform.position = mouseWorldPosition;
-            if (currentHoveredSlot && !currentHoveredSlot.GetComponent<Renderer>().enabled) 
+            if (currentHoveredSlot && !currentHoveredSlot.GetComponent<Renderer>().enabled)
             {
                 currentHoveredSlot.GetComponent<Renderer>().enabled = true;
-                currentHoveredSlot.GetComponent<BoxCollider>().enabled = true;
+                currentHoveredSlot.GetComponent<Collider2D>().enabled = true;
                 transform.SendMessageUpwards("ModuleHasBeenRemoved", transform.gameObject);
             }
         }
@@ -50,7 +53,7 @@ public class ConnectModuleScript : MonoBehaviour {
                 isOverSlot = false;
                 transform.position = currentHoveredSlot.transform.position;
                 currentHoveredSlot.GetComponent<Renderer>().enabled = false;
-                currentHoveredSlot.GetComponent<BoxCollider>().enabled = false;
+                currentHoveredSlot.GetComponent<Collider2D>().enabled = false;
                 transform.parent = currentHoveredSlot.transform;
                 currentHoveredSlot.SendMessageUpwards("ModuleHasBeenAttached", transform.gameObject);
             }
@@ -61,7 +64,7 @@ public class ConnectModuleScript : MonoBehaviour {
                 Destroy(transform.gameObject);
             }
         }
-	}
+    }
 
     void OnMouseOver()
     {
@@ -79,6 +82,8 @@ public class ConnectModuleScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter");
+
         if (other.tag == "LatchSlot")
         {
             isOverSlot = true;
@@ -88,6 +93,30 @@ public class ConnectModuleScript : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
+        Debug.Log("Leave");
+
+        if (other.tag == "LatchSlot")
+        {
+            isOverSlot = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Enter2D " + other.tag);
+
+        if (other.tag == "LatchSlot")
+        {
+            Debug.Log("Is Over Slot");
+            isOverSlot = true;
+            currentHoveredSlot = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Leave2D " + other.tag);
+
         if (other.tag == "LatchSlot")
         {
             isOverSlot = false;

@@ -136,6 +136,8 @@ GameObject:
   - 114: {fileID: 114000014291862480}
   - 58: {fileID: 58000012606010136}
   - 114: {fileID: 114000012239284032}
+  - 114: {fileID: 114000010375661170}
+  - 114: {fileID: 114000012474155730}
   m_Layer: 10
   m_Name: MissileLauncher
   m_TagString: Turret
@@ -322,6 +324,20 @@ PolygonCollider2D:
     - - {x: -0.43301272, y: -0.24999994}
       - {x: 0.43301272, y: -0.25000003}
       - {x: 0, y: 0.5}
+--- !u!114 &114000010375661170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013378339062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Missile Launcher
+  description: TODO Description
+  type: 0
 --- !u!114 &114000012239284032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,6 +356,19 @@ MonoBehaviour:
   DisplayText: 0
   DisplayDot: 1
   HealthDot: {fileID: 1000012493816714}
+--- !u!114 &114000012474155730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013378339062}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000013124581022
 MonoBehaviour:
   m_ObjectHideFlags: 1

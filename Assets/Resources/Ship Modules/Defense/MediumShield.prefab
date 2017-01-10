@@ -52,11 +52,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000011430938926}
   - 114: {fileID: 114000010516462068}
-  - 54: {fileID: 54000010492674354}
-  - 135: {fileID: 135000014245841030}
   - 114: {fileID: 114000012866116344}
   - 114: {fileID: 114000010883931552}
   - 114: {fileID: 114000012344092846}
+  - 58: {fileID: 58000013010732082}
   m_Layer: 0
   m_Name: MediumShield
   m_TagString: Untagged
@@ -135,21 +134,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011430938926}
   m_RootOrder: 2
---- !u!54 &54000010492674354
-Rigidbody:
+--- !u!58 &58000013010732082
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011242536038}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000010516462068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -175,7 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTarget: {fileID: 0}
-  effectCondition: {fileID: 0}
   damageReduction: 0.1
 --- !u!114 &114000012344092846
 MonoBehaviour:
@@ -202,18 +199,6 @@ MonoBehaviour:
   title: Medium Shield
   description: 10% Damage Reduction
   type: 1
---- !u!135 &135000014245841030
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011242536038}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000010237596236
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -69,10 +69,9 @@ GameObject:
   - 4: {fileID: 4000011019325526}
   - 114: {fileID: 114000012162159282}
   - 114: {fileID: 114000010580775032}
-  - 54: {fileID: 54000010040280154}
-  - 135: {fileID: 135000012275017956}
   - 114: {fileID: 114000011827640404}
   - 114: {fileID: 114000013716215784}
+  - 58: {fileID: 58000012861883764}
   m_Layer: 0
   m_Name: LargeAttackSpeed
   m_TagString: Untagged
@@ -165,21 +164,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011019325526}
   m_RootOrder: 3
---- !u!54 &54000010040280154
-Rigidbody:
+--- !u!58 &58000012861883764
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012879243954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000010580775032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,7 +203,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTarget: {fileID: 0}
-  effectCondition: {fileID: 0}
   attackSpeedMultiplier: 0.2
 --- !u!114 &114000012162159282
 MonoBehaviour:
@@ -232,18 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135000012275017956
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012879243954}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011707397260
 SpriteRenderer:
   m_ObjectHideFlags: 1

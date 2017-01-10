@@ -196,11 +196,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013239727424}
   - 114: {fileID: 114000010084015228}
-  - 54: {fileID: 54000011290455048}
-  - 135: {fileID: 135000012328225996}
   - 114: {fileID: 114000012151864324}
   - 114: {fileID: 114000013969541254}
   - 114: {fileID: 114000013996972802}
+  - 58: {fileID: 58000010093707926}
   m_Layer: 0
   m_Name: Repair
   m_TagString: Untagged
@@ -555,21 +554,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013239727424}
   m_RootOrder: 8
---- !u!54 &54000011290455048
-Rigidbody:
+--- !u!58 &58000010093707926
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013523646692}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000010084015228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -620,18 +618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135000012328225996
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013523646692}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000010249036036
 SpriteRenderer:
   m_ObjectHideFlags: 1

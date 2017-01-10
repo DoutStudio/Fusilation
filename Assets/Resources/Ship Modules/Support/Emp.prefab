@@ -545,11 +545,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012448008816}
   - 114: {fileID: 114000012818389282}
-  - 54: {fileID: 54000013454177394}
-  - 135: {fileID: 135000011682455932}
   - 114: {fileID: 114000011329568216}
   - 114: {fileID: 114000014272347884}
   - 114: {fileID: 114000010300155500}
+  - 58: {fileID: 58000012773574444}
   m_Layer: 0
   m_Name: Emp
   m_TagString: Untagged
@@ -1152,21 +1151,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010459325428}
   m_RootOrder: 4
---- !u!54 &54000013454177394
-Rigidbody:
+--- !u!58 &58000012773574444
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013770269432}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000010300155500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1217,18 +1215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135000011682455932
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013770269432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000010203293442
 SpriteRenderer:
   m_ObjectHideFlags: 1

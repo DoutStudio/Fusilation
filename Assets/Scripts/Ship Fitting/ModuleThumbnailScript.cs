@@ -51,8 +51,8 @@ public class ModuleThumbnailScript : MonoBehaviour ,
         // check if the rigid body is added
         if (shipModule.GetComponent<Rigidbody>() == null && shipModule.GetComponent<Rigidbody2D>() == null)
         {
-            shipModule.AddComponent<Rigidbody>();
-            shipModule.GetComponent<Rigidbody>().useGravity = false;
+            //shipModule.AddComponent<Rigidbody>();
+            //shipModule.GetComponent<Rigidbody>().useGravity = false;
         }
         // check if the module has a collider
         if (shipModule.GetComponent<Collider>() == null)

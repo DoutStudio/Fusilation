@@ -36,11 +36,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014086352356}
   - 114: {fileID: 114000012159091250}
-  - 54: {fileID: 54000013335688398}
-  - 135: {fileID: 135000012795808972}
   - 114: {fileID: 114000012231375518}
   - 114: {fileID: 114000010157600630}
   - 114: {fileID: 114000011120440046}
+  - 58: {fileID: 58000014103713576}
   m_Layer: 0
   m_Name: DamageReflector
   m_TagString: Untagged
@@ -255,21 +254,20 @@ Transform:
   - {fileID: 4000012441701822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &54000013335688398
-Rigidbody:
+--- !u!58 &58000014103713576
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010622267622}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000010157600630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,18 +318,6 @@ MonoBehaviour:
   title: Damage reflector
   description: Take 50% more damage from enemies buyt reflect 25% back to attackers
   type: 1
---- !u!135 &135000012795808972
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010622267622}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000010195924080
 SpriteRenderer:
   m_ObjectHideFlags: 1

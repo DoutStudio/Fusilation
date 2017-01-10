@@ -122,6 +122,7 @@ GameObject:
   - 4: {fileID: 4000012154787574}
   - 58: {fileID: 58000010629331684}
   - 114: {fileID: 114000011104043812}
+  - 114: {fileID: 114000011690839396}
   m_Layer: 10
   m_Name: ShieldGenerator
   m_TagString: Turret
@@ -400,6 +401,20 @@ MonoBehaviour:
   DisplayText: 0
   DisplayDot: 1
   HealthDot: {fileID: 1000013926704058}
+--- !u!114 &114000011690839396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012941725956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Shield Generator
+  description: TODO Description
+  type: 1
 --- !u!114 &114000012432434988
 MonoBehaviour:
   m_ObjectHideFlags: 1

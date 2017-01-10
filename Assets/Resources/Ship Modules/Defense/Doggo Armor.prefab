@@ -68,11 +68,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013689602252}
   - 114: {fileID: 114000010044477346}
-  - 54: {fileID: 54000013354529690}
-  - 135: {fileID: 135000012176685276}
   - 114: {fileID: 114000012087591528}
   - 114: {fileID: 114000012083472328}
   - 114: {fileID: 114000011088186350}
+  - 58: {fileID: 58000011124318680}
   m_Layer: 0
   m_Name: Doggo Armor
   m_TagString: Untagged
@@ -135,21 +134,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013689602252}
   m_RootOrder: 0
---- !u!54 &54000013354529690
-Rigidbody:
+--- !u!58 &58000011124318680
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012943773736}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000010044477346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,7 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectTarget: {fileID: 0}
-  effectCondition: {fileID: 0}
   healthIncrease: 100
 --- !u!114 &114000012087591528
 MonoBehaviour:
@@ -202,18 +199,6 @@ MonoBehaviour:
   title: Greater Doggo Armor
   description: 100 Health
   type: 1
---- !u!135 &135000012176685276
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012943773736}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000010166465774
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -30,7 +30,7 @@ public class ClearShipModules : MonoBehaviour {
         for (int i = 0; i < fittingTrans.childCount; ++i)
         {
             fittingTrans.GetChild(i).GetComponent<Renderer>().enabled = true;
-            fittingTrans.GetChild(i).GetComponent<Collider>().enabled = true;
+            fittingTrans.GetChild(i).GetComponent<Collider2D>().enabled = true;
         }
 
     }

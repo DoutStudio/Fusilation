@@ -37,10 +37,9 @@ GameObject:
   - 4: {fileID: 4000011658041314}
   - 114: {fileID: 114000013080140638}
   - 114: {fileID: 114000012156000376}
-  - 54: {fileID: 54000013914066262}
-  - 135: {fileID: 135000011139641922}
   - 114: {fileID: 114000011026690622}
   - 114: {fileID: 114000012102338294}
+  - 58: {fileID: 58000011501800706}
   m_Layer: 0
   m_Name: SolarFlare
   m_TagString: Untagged
@@ -105,21 +104,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011658041314}
   m_RootOrder: 1
---- !u!54 &54000013914066262
-Rigidbody:
+--- !u!58 &58000011501800706
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011408367736}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Radius: 0.5
 --- !u!114 &114000011026690622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,18 +168,6 @@ MonoBehaviour:
   title: Solar Flare
   description: Deals 10 Damage per turn, cannot be dodged
   type: 0
---- !u!135 &135000011139641922
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011408367736}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212000011782549134
 SpriteRenderer:
   m_ObjectHideFlags: 1

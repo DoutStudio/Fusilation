@@ -39,6 +39,8 @@ GameObject:
   - 114: {fileID: 114000011901989300}
   - 58: {fileID: 58000010191984006}
   - 114: {fileID: 114000010135744192}
+  - 114: {fileID: 114000013342284130}
+  - 114: {fileID: 114000010548186766}
   m_Layer: 10
   m_Name: Autocannon
   m_TagString: Turret
@@ -284,6 +286,19 @@ MonoBehaviour:
   DisplayText: 0
   DisplayDot: 1
   HealthDot: {fileID: 1000013185161396}
+--- !u!114 &114000010548186766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011969296208}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
 --- !u!114 &114000011901989300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,6 +342,20 @@ MonoBehaviour:
   FireRate: 1
   Delay: 0.1
   Power: 15
+--- !u!114 &114000013342284130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011969296208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30036db151fdff49942a5e00642cfde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Autocannon
+  description: TODO Descriptoin
+  type: 0
 --- !u!212 &212000011433281298
 SpriteRenderer:
   m_ObjectHideFlags: 1
