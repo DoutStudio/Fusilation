@@ -11,11 +11,11 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayChoice.unity
   - enabled: 1
     path: Assets/Scenes/ShipFittingScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test Battle.unity
   - enabled: 1
     path: Assets/Scenes/SettingsScene.unity
   - enabled: 1
     path: Assets/Scenes/HelpScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BattleScene.unity

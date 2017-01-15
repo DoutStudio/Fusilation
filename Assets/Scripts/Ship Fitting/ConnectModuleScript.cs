@@ -6,7 +6,7 @@ using System;
 public class ConnectModuleScript : MonoBehaviour
 {
 
-    private static bool userCanMouse = false;
+    private static bool userCanMouse = true;
     bool isDragging;
 
     [HideInInspector]
@@ -61,15 +61,18 @@ public class ConnectModuleScript : MonoBehaviour
             {
                 // if we are not over a slot then remove the module from existence
                 Debug.Log("Module not attached -- Destroying Module");
-                Destroy(transform.gameObject);
+                //Destroy(transform.gameObject);
             }
         }
     }
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButton(0) && userCanMouse)
+        Debug.Log("Mouse Over");
+        bool mouseCheck = Input.GetMouseButton(0);
+        if (mouseCheck && userCanMouse)
         {
+            Debug.Log("is Drag is now true");
             isDragging = true;
             userCanMouse = false;
         }
@@ -77,12 +80,13 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnMouseUp()
     {
+        Debug.Log("UP UP");
         userCanMouse = true;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter");
+        //Debug.Log("Enter");
 
         if (other.tag == "LatchSlot")
         {
@@ -93,7 +97,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Leave");
+        //Debug.Log("Leave");
 
         if (other.tag == "LatchSlot")
         {
@@ -103,7 +107,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Enter2D " + other.tag);
+        //Debug.Log("Enter2D " + other.tag);
 
         if (other.tag == "LatchSlot")
         {
@@ -115,7 +119,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Leave2D " + other.tag);
+        //Debug.Log("Leave2D " + other.tag);
 
         if (other.tag == "LatchSlot")
         {
