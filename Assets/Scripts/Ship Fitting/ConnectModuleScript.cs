@@ -61,7 +61,7 @@ public class ConnectModuleScript : MonoBehaviour
             {
                 // if we are not over a slot then remove the module from existence
                 Debug.Log("Module not attached -- Destroying Module");
-                //Destroy(transform.gameObject);
+                Destroy(transform.gameObject);
             }
         }
     }
@@ -86,7 +86,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Enter");
+        Debug.Log("Enter");
 
         if (other.tag == "LatchSlot")
         {
@@ -97,7 +97,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        //Debug.Log("Leave");
+        Debug.Log("Leave");
 
         if (other.tag == "LatchSlot")
         {
@@ -107,7 +107,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("Enter2D " + other.tag);
+        Debug.Log("Enter2D " + other.tag);
 
         if (other.tag == "LatchSlot")
         {
@@ -119,7 +119,7 @@ public class ConnectModuleScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        //Debug.Log("Leave2D " + other.tag);
+        Debug.Log("Leave2D " + other.tag);
 
         if (other.tag == "LatchSlot")
         {

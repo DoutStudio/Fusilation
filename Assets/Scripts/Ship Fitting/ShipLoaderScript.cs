@@ -27,6 +27,7 @@ public class ShipLoaderScript : MonoBehaviour {
         if (PlayerPrefs.GetInt("isSaved") == 1)
         {
             GameObject playerShip = ShipSaveLoadScript.LoadPlayerShip();
+            playerShip.GetComponent<Rigidbody2D>().isKinematic = true;
             GameObject captain = ShipSaveLoadScript.LoadPlayerCaptain();
             if (captain)
             {
