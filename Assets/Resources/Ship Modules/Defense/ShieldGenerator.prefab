@@ -104,7 +104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012330616584}
   - component: {fileID: 212000013754227970}
-  - component: {fileID: 58000011948581072}
   m_Layer: 10
   m_Name: Turret
   m_TagString: Turret
@@ -122,6 +121,10 @@ GameObject:
   - component: {fileID: 4000012154787574}
   - component: {fileID: 114000011104043812}
   - component: {fileID: 114000011690839396}
+  - component: {fileID: 114158498984505042}
+  - component: {fileID: 114538931152891806}
+  - component: {fileID: 114220036906824018}
+  - component: {fileID: 58792156726933342}
   m_Layer: 10
   m_Name: ShieldGenerator
   m_TagString: Turret
@@ -316,20 +319,6 @@ Transform:
   m_Father: {fileID: 4000012500927734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58000011948581072
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011778455416}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!58 &58000012033124934
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -344,6 +333,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!58 &58792156726933342
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012941725956}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114000010523836044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,6 +436,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08efaf43894626d4ea304b01eec7a4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114158498984505042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012941725956}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef185522a8f164d49ad062fb9e33081b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverSlot: 0
+  currentHoveredSlot: {fileID: 0}
+--- !u!114 &114220036906824018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012941725956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+--- !u!114 &114538931152891806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012941725956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212000010298356844

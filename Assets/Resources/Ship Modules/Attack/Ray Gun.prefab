@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010238468384}
   - component: {fileID: 212000014170741444}
+  - component: {fileID: 58000011282375304}
   m_Layer: 10
   m_Name: Tip
   m_TagString: Turret
@@ -67,10 +68,12 @@ GameObject:
   - component: {fileID: 4000010849691886}
   - component: {fileID: 114000013756925350}
   - component: {fileID: 58000011642353106}
-  - component: {fileID: 58969501930468632}
   - component: {fileID: 114000011421044884}
   - component: {fileID: 114000013553098566}
   - component: {fileID: 114000012240903622}
+  - component: {fileID: 114933978878349754}
+  - component: {fileID: 114940335215677830}
+  - component: {fileID: 58532875661190828}
   m_Layer: 10
   m_Name: Ray Gun
   m_TagString: Turret
@@ -87,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010883916614}
   - component: {fileID: 212000012239088602}
+  - component: {fileID: 58000013876962718}
   m_Layer: 10
   m_Name: Base
   m_TagString: Turret
@@ -152,6 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000011098934566}
   - component: {fileID: 212000012175707952}
+  - component: {fileID: 58000012084634492}
   m_Layer: 10
   m_Name: Turret
   m_TagString: Turret
@@ -314,6 +319,20 @@ Transform:
   m_Father: {fileID: 4000012371572270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58000011282375304
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010016503024}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!58 &58000011642353106
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -328,7 +347,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 30
---- !u!58 &58969501930468632
+--- !u!58 &58000012084634492
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014064762784}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!58 &58000013876962718
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012273621748}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!58 &58532875661190828
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -337,11 +384,11 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.2}
+  m_Offset: {x: 0, y: 0.15}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.65
 --- !u!114 &114000011421044884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,6 +464,29 @@ MonoBehaviour:
   SimplePointToTarget: 1
   TurnSpeed: 5
   defaultRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &114933978878349754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011393980106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
+--- !u!114 &114940335215677830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011393980106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!120 &120000011048230620
 LineRenderer:
   m_ObjectHideFlags: 1

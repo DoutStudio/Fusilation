@@ -50,6 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013700584798}
   - component: {fileID: 212000011724672682}
+  - component: {fileID: 60000012701380634}
   m_Layer: 10
   m_Name: PointLeft
   m_TagString: Turret
@@ -82,6 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000013271658274}
   - component: {fileID: 212000013182608938}
+  - component: {fileID: 60000013897907786}
   m_Layer: 10
   m_Name: PointRight
   m_TagString: Turret
@@ -114,6 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000014115278312}
   - component: {fileID: 212000012900409942}
+  - component: {fileID: 60000011879761216}
   m_Layer: 10
   m_Name: Turret
   m_TagString: Turret
@@ -132,10 +135,12 @@ GameObject:
   - component: {fileID: 114000013124581022}
   - component: {fileID: 114000014291862480}
   - component: {fileID: 58000012606010136}
-  - component: {fileID: 58372344238574960}
   - component: {fileID: 114000012239284032}
   - component: {fileID: 114000010375661170}
   - component: {fileID: 114000012474155730}
+  - component: {fileID: 114962396230282448}
+  - component: {fileID: 114774982947209482}
+  - component: {fileID: 58039263436670562}
   m_Layer: 10
   m_Name: MissileLauncher
   m_TagString: Turret
@@ -268,7 +273,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 15
---- !u!58 &58372344238574960
+--- !u!58 &58039263436670562
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -277,11 +282,65 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0.1}
+  m_Offset: {x: 0, y: 0.11}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.36
+--- !u!60 &60000011879761216
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012594301580}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.43301272, y: 0.25}
+      - {x: 0, y: 0.5}
+      - {x: -0.43301272, y: 0.24999994}
+      - {x: -0.43301272, y: -0.24999994}
+      - {x: -0.000000029802322, y: -0.5}
+      - {x: 0.43301272, y: -0.25000003}
+--- !u!60 &60000012701380634
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010863871858}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.43301272, y: -0.24999994}
+      - {x: 0.43301272, y: -0.25000003}
+      - {x: 0, y: 0.5}
+--- !u!60 &60000013897907786
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011859375954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.43301272, y: -0.24999994}
+      - {x: 0.43301272, y: -0.25000003}
+      - {x: 0, y: 0.5}
 --- !u!114 &114000010375661170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,6 +418,29 @@ MonoBehaviour:
   SimplePointToTarget: 1
   TurnSpeed: 5
   defaultRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &114774982947209482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013378339062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c32471375559c46884394184a1a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114962396230282448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013378339062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ce9a8179fa82548a151903c019b824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectTarget: {fileID: 0}
 --- !u!212 &212000011520999994
 SpriteRenderer:
   m_ObjectHideFlags: 1

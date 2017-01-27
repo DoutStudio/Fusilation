@@ -15,7 +15,7 @@ public class ShipLoaderScript : MonoBehaviour {
             case 2: // fitting scene
                 LoadShipInFittingRoom();
                 break;
-            case 6: // battle scene
+            default: // battle scene
                 LoadShipInBattleRoom();
                 break;
         }   
