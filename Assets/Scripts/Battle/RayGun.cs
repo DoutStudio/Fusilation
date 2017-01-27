@@ -31,8 +31,8 @@ public class RayGun : MonoBehaviour
         line = GetComponent<LineRenderer>();
         arcLine = GetComponentsInChildren<LineRenderer>()[1];
 
-        line.SetVertexCount(2);
-        arcLine.SetVertexCount(vertexCount);
+        line.numPositions = 2;
+        arcLine.numPositions = vertexCount;
         arcLine.enabled = false;
 
         line.sortingLayerName = "Projectiles";

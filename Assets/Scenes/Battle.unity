@@ -1428,7 +1428,7 @@ Prefab:
         type: 2}
     - target: {fileID: 1000010425290982, guid: d938162d7fefc52499cd27826a14960d, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010270782928, guid: d938162d7fefc52499cd27826a14960d,
         type: 2}
@@ -1895,7 +1895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1304341214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2404,7 +2404,7 @@ Prefab:
         type: 2}
     - target: {fileID: 1000010425290982, guid: d938162d7fefc52499cd27826a14960d, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010270782928, guid: d938162d7fefc52499cd27826a14960d,
         type: 2}
