@@ -75,7 +75,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012125742632}
   - component: {fileID: 212000012774034346}
-  - component: {fileID: 58000010066823632}
   m_Layer: 10
   m_Name: Turret
   m_TagString: Turret
@@ -124,7 +123,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4000012967333024}
   - component: {fileID: 212000012487450818}
-  - component: {fileID: 61000012532038190}
   m_Layer: 10
   m_Name: Gun
   m_TagString: Turret
@@ -229,20 +227,6 @@ Transform:
   m_Father: {fileID: 4000011957623912}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58000010066823632
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012368344634}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!58 &58097856121630684
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -252,7 +236,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -271,20 +255,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.2}
   serializedVersion: 2
   m_Radius: 0.77
---- !u!61 &61000012532038190
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013675304960}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
 --- !u!114 &114000010135744192
 MonoBehaviour:
   m_ObjectHideFlags: 1
