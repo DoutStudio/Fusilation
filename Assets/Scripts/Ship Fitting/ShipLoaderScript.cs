@@ -74,7 +74,9 @@ public class ShipLoaderScript : MonoBehaviour {
     private void LoadShipInBattleRoom()
     {
         GameObject playerShip = ShipSaveLoadScript.LoadPlayerShip();
-        playerShip.transform.position = ShipStartPosition;
+        float offset = playerShip.transform.Find("Nose").position.magnitude;
+        Debug.Log(offset);
+        playerShip.transform.position = new Vector3(ShipStartPosition.x + offset, ShipStartPosition.y, ShipStartPosition.z);
         playerShip.transform.rotation = Quaternion.Euler(0, 0, ShipStartRotation);
         ShipMovement movementScript = playerShip.GetComponent<ShipMovement>();
         movementScript.MovePoints = PlayerMovePoints;
