@@ -21,6 +21,7 @@ public class ShipMovement : MonoBehaviour
     private Vector3 desiredVelocity;
     private float lastSqrMag;
     private int curP = 0;
+    private WarpReady warpReadyController;
 
 
     void Start()
@@ -31,9 +32,7 @@ public class ShipMovement : MonoBehaviour
         lastSqrMag = Mathf.Infinity;
         desiredVelocity = directionalVector;
 
-        //WarpPoints = new List<GameObject>();
-        //StopPoints = new List<GameObject>();
-
+        warpReadyController = GameObject.FindGameObjectWithTag("GameController").GetComponent<WarpReady>();
     }
 
     void Update()
@@ -63,10 +62,13 @@ public class ShipMovement : MonoBehaviour
         {
             if (WarpPoints.Contains(collision.gameObject))
             {
-                speed = WarpSpeed;
+                speed = 0.01f;
+                warpReadyController.ShipsReadyForWarpIn++;
+                //speed = WarpSpeed;
             }
             if (StopPoints.Contains(collision.gameObject))
             {
+                warpReadyController.ShipsReadyForWarpIn--;
                 speed = FloatSpeed;
             }
 
@@ -79,5 +81,20 @@ public class ShipMovement : MonoBehaviour
             lastSqrMag = Mathf.Infinity;
             desiredVelocity = directionalVector;
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (WarpPoints.Contains(collision.gameObject))
+        {
+            if (warpReadyController.WarpIsReady)
+            {
+                speed = WarpSpeed;
+                Vector3 directionalVector = (MovePoints[curP].transform.position - transform.position).normalized * speed;
+                lastSqrMag = Mathf.Infinity;
+                desiredVelocity = directionalVector;
+            }
+        }
+
     }
 }

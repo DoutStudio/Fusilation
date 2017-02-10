@@ -17,6 +17,7 @@ TagManager:
   - Camera
   - Captain
   - Arc
+  - Nose
   layers:
   - Default
   - TransparentFX
