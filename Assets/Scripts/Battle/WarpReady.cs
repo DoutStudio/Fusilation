@@ -6,6 +6,7 @@ public class WarpReady : MonoBehaviour
 {
     [HideInInspector]
     public int ShipsReadyForWarpIn = 0;
+    [HideInInspector]
     public bool WarpIsReady = false;
 
     void Update()
