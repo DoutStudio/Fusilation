@@ -64,7 +64,6 @@ public class ShipMovement : MonoBehaviour
             {
                 speed = 0.01f;
                 warpReadyController.ShipsReadyForWarpIn++;
-                //speed = WarpSpeed;
             }
             if (StopPoints.Contains(collision.gameObject))
             {

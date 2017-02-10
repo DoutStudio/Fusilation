@@ -8,6 +8,13 @@ using System.Collections;
 /// </summary>
 public class TargetingComputer : MonoBehaviour
 {
+    public enum TargetMode
+    {
+        Hull,
+        Attack,
+        Defense,
+        Support
+    }
 
 
 
@@ -18,6 +25,8 @@ public class TargetingComputer : MonoBehaviour
 
     [HideInInspector]
     public Vector3 defaultRotation;
+
+    TargetMode targetMode = TargetMode.Hull;
 
     void Update()
     {
@@ -60,13 +69,24 @@ public class TargetingComputer : MonoBehaviour
             if (collision.gameObject.tag == "Ship" && collision.gameObject != transform.root.gameObject)
             {
                 //check which target the ship is set to, default now is hull so...
-                //if target == hull
+                if (targetMode == TargetMode.Hull)
+                {
+                    Transform[] cores = collision.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();
+                    Target = cores[Random.Range(0, cores.Length)].gameObject;
+                    TargetBody = collision.gameObject.GetComponent<Rigidbody2D>();
+                }
+                if(targetMode == TargetMode.Attack)
+                {
 
-                Transform[] cores = collision.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();
-                Target = cores[Random.Range(0, cores.Length)].gameObject;
-                TargetBody = collision.gameObject.GetComponent<Rigidbody2D>();
+                }
+                if (targetMode == TargetMode.Defense)
+                {
 
-                //if target == attack, defense, support, special
+                }
+                if (targetMode == TargetMode.Support)
+                {
+
+                }
 
             }
         }
