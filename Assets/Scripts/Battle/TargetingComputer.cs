@@ -66,16 +66,16 @@ public class TargetingComputer : MonoBehaviour
     {
         if (!Target)
         {
-            if (collision.gameObject.tag == "Ship" && collision.gameObject != transform.root.gameObject)
+            if (collision.transform.root.tag == "Ship" && collision.gameObject != transform.root.gameObject)
             {
                 //check which target the ship is set to, default now is hull so...
                 if (targetMode == TargetMode.Hull)
                 {
-                    Transform[] cores = collision.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();
+                    Transform[] cores = collision.transform.root.GetComponentsInChildren<Transform>().Where(x => x.tag == "Core").ToArray();
                     Target = cores[Random.Range(0, cores.Length)].gameObject;
-                    TargetBody = collision.gameObject.GetComponent<Rigidbody2D>();
+                    TargetBody = collision.transform.root.gameObject.GetComponent<Rigidbody2D>();
                 }
-                if(targetMode == TargetMode.Attack)
+                if (targetMode == TargetMode.Attack)
                 {
 
                 }

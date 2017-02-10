@@ -3457,6 +3457,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f0663975e47db745ad3a22e6d60a1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShipStartPosition: {x: 0, y: 0, z: 0}
+  ShipStartRotation: 0
+  PlayerMovePoints: []
+  PlayerWarpPoints: []
+  PlayerStopPoints: []
 --- !u!4 &1475779993
 Transform:
   m_ObjectHideFlags: 0
@@ -3686,7 +3691,7 @@ Prefab:
     - target: {fileID: 224000010617741922, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 87.84008
+      value: 84.590515
       objectReference: {fileID: 0}
     - target: {fileID: 224000010617741922, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
@@ -3696,7 +3701,7 @@ Prefab:
     - target: {fileID: 224000010617741922, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 175.68016
+      value: 169.18103
       objectReference: {fileID: 0}
     - target: {fileID: 224000010617741922, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
@@ -3716,7 +3721,7 @@ Prefab:
     - target: {fileID: 224000011266983816, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 94.511475
+      value: 89.16297
       objectReference: {fileID: 0}
     - target: {fileID: 224000011266983816, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
@@ -3726,7 +3731,7 @@ Prefab:
     - target: {fileID: 224000011266983816, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 189.02295
+      value: 178.32594
       objectReference: {fileID: 0}
     - target: {fileID: 224000011266983816, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
@@ -3746,7 +3751,7 @@ Prefab:
     - target: {fileID: 224000013856676436, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 30.577242
+      value: 28.577875
       objectReference: {fileID: 0}
     - target: {fileID: 224000013856676436, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
@@ -3756,7 +3761,7 @@ Prefab:
     - target: {fileID: 224000013856676436, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 61.154484
+      value: 57.15575
       objectReference: {fileID: 0}
     - target: {fileID: 224000013856676436, guid: 3450fbab8995d8a43a824395a403fd45,
         type: 2}
