@@ -21,10 +21,18 @@ public class ModuleLoader : MonoBehaviour
             GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
             module.transform.parent = slot.root.FindChild("Modules");
             Vector3 rot = new Vector3(0, 0, 90);
-            if (module.GetComponent<TargetingComputer>())
+
+            TargetingComputer targetComp = module.GetComponent<TargetingComputer>();
+            Track tracking = module.GetComponent<Track>();
+            GunController gun = module.GetComponent<GunController>();
+            if (targetComp)
             {
-                module.GetComponent<TargetingComputer>().defaultRotation = rot;
+                targetComp.enabled = true;
+                targetComp.defaultRotation = rot;
             }
+            if (tracking) tracking.enabled = true;
+            if (gun) gun.enabled = true;
+
             module.transform.Rotate(rot);
             module.layer = 10;
         }
@@ -33,10 +41,18 @@ public class ModuleLoader : MonoBehaviour
             GameObject module = (GameObject)Instantiate(Modules[Random.Range(0, Modules.Length)], slot.transform.position, slot.transform.rotation);
             module.transform.parent = slot.root.FindChild("Modules");
             Vector3 rot = new Vector3(0, 0, -90);
-            if (module.GetComponent<TargetingComputer>())
+
+            TargetingComputer targetComp = module.GetComponent<TargetingComputer>();
+            Track tracking = module.GetComponent<Track>();
+            GunController gun = module.GetComponent<GunController>();
+            if (targetComp)
             {
-                module.GetComponent<TargetingComputer>().defaultRotation = rot;
+                targetComp.enabled = true;
+                targetComp.defaultRotation = rot;
             }
+            if (tracking) tracking.enabled = true;
+            if (gun) gun.enabled = true;
+
             module.transform.Rotate(rot);
             module.layer = 10;
         }
