@@ -75,7 +75,6 @@ public class ShipLoaderScript : MonoBehaviour {
     {
         GameObject playerShip = ShipSaveLoadScript.LoadPlayerShip();
         float offset = playerShip.transform.Find("Nose").position.magnitude;
-        Debug.Log(offset);
         playerShip.transform.position = new Vector3(ShipStartPosition.x + offset, ShipStartPosition.y, ShipStartPosition.z);
         playerShip.transform.rotation = Quaternion.Euler(0, 0, ShipStartRotation);
         ShipMovement movementScript = playerShip.GetComponent<ShipMovement>();
@@ -83,6 +82,44 @@ public class ShipLoaderScript : MonoBehaviour {
         movementScript.WarpPoints = new List<GameObject>(PlayerWarpPoints);
         movementScript.StopPoints = new List<GameObject>(PlayerStopPoints);
         movementScript.enabled = true;
+
+        // Enable ship weapons
+        GameObject[] modules = playerShip.GetComponent<ShipProperties>().GetAllShipModules();
+        foreach (GameObject module in modules)
+        {
+            DescriptionScript desc = module.GetComponent<DescriptionScript>();
+            switch (desc.type)
+            {
+                case DescriptionScript.ModuleType.ATTACK:
+                    GunController gun = module.GetComponent<GunController>();
+                    if (gun != null)
+                    {
+                        gun.enabled = true;
+                    }
+                    TargetingComputer targ = module.GetComponent<TargetingComputer>();
+                    if (targ != null)
+                    {
+                        targ.enabled = true;
+                    }
+                    Track track = module.GetComponent<Track>();
+                    if (track != null)
+                    {
+                        track.enabled = true;
+                    }
+                    Transform laser = module.transform.Find("Laser");
+                    if (laser != null)
+                    {
+                        laser.gameObject.SetActive(true);
+                    }
+                    break;
+                case DescriptionScript.ModuleType.DEFENSE:
+                    break;
+                case DescriptionScript.ModuleType.SUPPORT:
+                    break;
+            }
+        }
+
+
         GameObject captain = ShipSaveLoadScript.LoadPlayerCaptain();
         if (captain)
         {

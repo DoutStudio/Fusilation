@@ -60,4 +60,15 @@ public class ShipProperties : MonoBehaviour
             addRmEvent.Invoke(false, module);
         }
     }
+
+    public GameObject[] GetAllShipModules()
+    {
+        ConnectModuleScript[] pms = GetComponentsInChildren<ConnectModuleScript>();
+        GameObject[] modules = new GameObject[pms.Length];
+        for (int i = 0; i < pms.Length; ++i)
+        {
+            modules[i] = pms[i].gameObject;
+        }
+        return modules;
+    }
 }
