@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class ShipLoaderScript : MonoBehaviour {
+
+    public Vector3 ShipStartPosition;
+    public float ShipStartRotation;
+    public GameObject[] PlayerMovePoints;
+    public GameObject[] PlayerWarpPoints;
+    public GameObject[] PlayerStopPoints;
 
     public delegate void ShipReadyEvent();
     public event ShipReadyEvent readyE;
@@ -67,6 +74,13 @@ public class ShipLoaderScript : MonoBehaviour {
     private void LoadShipInBattleRoom()
     {
         GameObject playerShip = ShipSaveLoadScript.LoadPlayerShip();
+        playerShip.transform.position = ShipStartPosition;
+        playerShip.transform.rotation = Quaternion.Euler(0, 0, ShipStartRotation);
+        ShipMovement movementScript = playerShip.GetComponent<ShipMovement>();
+        movementScript.MovePoints = PlayerMovePoints;
+        movementScript.WarpPoints = new List<GameObject>(PlayerWarpPoints);
+        movementScript.StopPoints = new List<GameObject>(PlayerStopPoints);
+        movementScript.enabled = true;
         GameObject captain = ShipSaveLoadScript.LoadPlayerCaptain();
         if (captain)
         {

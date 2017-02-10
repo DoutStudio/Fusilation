@@ -259,6 +259,8 @@ GameObject:
   - component: {fileID: 60000013953899610}
   - component: {fileID: 114000013835902672}
   - component: {fileID: 114000012964097458}
+  - component: {fileID: 114819784826414762}
+  - component: {fileID: 114038234094970538}
   m_Layer: 0
   m_Name: FederationFrigate
   m_TagString: Ship
@@ -1349,6 +1351,41 @@ MonoBehaviour:
   accuracyMultiplier: 0
   modules: []
   captain: {fileID: 0}
+--- !u!114 &114038234094970538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013164041186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33398bed283d5a4c9b827370f13e59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentHealth: 1000
+  MaxHealth: 1000
+  RegenRate: 0
+  DoesRegen: 0
+  DisplayText: 0
+  DisplayDot: 0
+  HealthDot: {fileID: 0}
+--- !u!114 &114819784826414762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013164041186}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7075d6bddbd8fc4f8d9335767506390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FloatSpeed: 2
+  WarpSpeed: 300
+  MovePoints: []
+  WarpPoints: []
+  StopPoints: []
+  TurnSpeed: 5
 --- !u!212 &212000010049019080
 SpriteRenderer:
   m_ObjectHideFlags: 1
